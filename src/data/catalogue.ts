@@ -6,8 +6,8 @@ export type CatalogueItem = {
 	images: string[];
 };
 
-// Import all image assets under src/CATALOGUE as URLs at build time
-const files = import.meta.glob('/src/CATALOGUE/**/*.{png,jpg,jpeg,webp,svg,gif}', { eager: true, import: 'default' }) as Record<string, string>;
+// Import all image assets under src/CATALOGUE and src/ACCEUIL as URLs at build time
+const files = import.meta.glob('/src/{CATALOGUE,ACCEUIL}/**/*.{png,jpg,jpeg,webp,svg,gif}', { eager: true, import: 'default' }) as Record<string, string>;
 
 function toSlug(input: string): string {
 	return input
@@ -26,10 +26,19 @@ function fileNameToName(fileName: string): string {
 }
 
 function extractCategoryFromPath(path: string): string {
-	// path like /src/CATALOGUE/HELIX/New folder/xxx.jpg
+	// path like /src/CATALOGUE/HELIX/New folder/xxx.jpg or /src/ACCEUIL/Capture5.PNG
 	const parts = path.split('/').filter(Boolean);
-	const idx = parts.indexOf('CATALOGUE');
-	if (idx >= 0 && parts[idx + 1]) return parts[idx + 1].toUpperCase();
+	const roots = ['CATALOGUE', 'ACCEUIL'];
+	const rootIdx = parts.findIndex(p => roots.includes(p));
+	if (rootIdx >= 0) {
+		const root = parts[rootIdx].toUpperCase();
+		const next = parts[rootIdx + 1];
+		// If there is a subfolder under the root, use that as category for CATALOGUE; for ACCEUIL without subfolder, use root name
+		if (next && next.includes('.')) {
+			return root; // next is a file, so no subfolder
+		}
+		return (next ?? root).toUpperCase();
+	}
 	return 'AUTRE';
 }
 
