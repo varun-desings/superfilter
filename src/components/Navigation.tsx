@@ -25,7 +25,6 @@ const Navigation = () => {
     { label: 'Accueil', href: '#home', isSection: true },
     { label: 'À propos', href: '#chi-siamo', isSection: true },
     { label: 'Produits', href: '/products', isSection: false },
-    { label: 'Projets', href: '#progetti', isSection: true },
     { label: 'Contact', href: '#contatti', isSection: true },
   ];
 
