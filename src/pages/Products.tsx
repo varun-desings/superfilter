@@ -1,4 +1,5 @@
 import products from '@/data/products';
+import catalogueItems from '@/data/catalogue';
 import CATEGORIES, { deriveCategory as deriveCategoryFromName } from '@/data/categories';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { useCart } from '@/contexts/CartContext';
@@ -243,7 +244,13 @@ const ProductsPage = () => {
 	];
 	const byKey: Record<string, any> = {};
 	for (const p of products as any[]) { const k = normalize(p.slug || p.name || ""); if (k) byKey[k] = p; }
-	const ordered = desiredOrder.map(k => byKey[k]).filter(Boolean);
+	const oilOrdered = desiredOrder.map(k => byKey[k]).filter(Boolean);
+
+	// Merge catalogue items (images, covers) with our oil items by name match fallback
+	const ordered = (oilOrdered as any[]).map((oil) => {
+		const cat = (catalogueItems as any[]).find((ci) => deriveCategoryFromName(ci?.name) === deriveCategoryFromName(oil?.name));
+		return cat ? { ...oil, cover: cat.cover ?? oil.cover, images: cat.images?.length ? cat.images : oil.images } : oil;
+	});
 
 	const categories = Array.from(new Set((ordered as any[]).map((it) => deriveCategoryFromName(it?.name)))).sort();
 	const baseOptions = Array.from(new Set([...CATEGORIES, ...categories])).sort();
@@ -488,7 +495,6 @@ const ProductsPage = () => {
 							</section>
 						);
 					})}
-					</div>
 				</div>
 			</section>
 			<Footer />
