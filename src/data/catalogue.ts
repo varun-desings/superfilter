@@ -77,6 +77,10 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		if (/\/src\/CATALOGUE\/MOTUL\/motul-5w40-8100-1l\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
 			name = 'Motul 8100 X-CLEAN 5W40 – 1 L Front';
 		}
+		// Donaldson filter rename
+		if (/\/src\/CATALOGUE\/AUTRE\/64e8c9dcf25dfe3f312a82e0-b085011-donaldson-air-filter-primary\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
+			name = 'Donaldson Filter';
+		}
 		const slug = `${category.toLowerCase()}-${toSlug(name)}`;
 		return {
 			slug,
