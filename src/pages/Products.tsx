@@ -220,10 +220,10 @@ const ProductsPage = () => {
 
 	const ordered = catalogueItems as any[];
 
-	const categories = Array.from(new Set((ordered as any[]).map((it) => deriveCategoryFromName(it?.name)))).sort();
+	const categories = Array.from(new Set((ordered as any[]).map((it) => it?.category || deriveCategoryFromName(it?.name)))).sort();
 	const baseOptions = Array.from(new Set([...CATEGORIES, ...categories])).sort();
 	const categoryOptions = ['Tous', ...baseOptions];
-	const filtered = activeCategory === 'Tous' ? ordered : (ordered as any[]).filter((it) => deriveCategoryFromName(it?.name) === activeCategory);
+	const filtered = activeCategory === 'Tous' ? ordered : (ordered as any[]).filter((it) => (it?.category || deriveCategoryFromName(it?.name)) === activeCategory);
 
 	const getCustomDescription = (item: any): string | null => {
 		const n = String(item?.name || '').toLowerCase();
