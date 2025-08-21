@@ -64,7 +64,7 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		}
 		// Override only the specific MANN image to requested label
 		if (/\/src\/CATALOGUE\/MANN FILTRE\/61ZF4lAEncL\._AC_SL1500_\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
-			name = 'oil filter W 1022';
+			name = 'mann filter oil filter W 1022';
 		}
 		const slug = `${category.toLowerCase()}-${toSlug(name)}`;
 		return {
