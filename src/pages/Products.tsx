@@ -64,7 +64,8 @@ const ProductsPage = () => {
 	const { addToCart, totalItems } = useCart();
 	const navigate = useNavigate();
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+	const [activeCategory, setActiveCategory] = useState<string>('Tous');
+	
 	const excerpt = (text?: string, len: number = 160) => {
 		if (!text) return '';
 		const t = String(text).replace(/\s+/g, ' ').trim();
@@ -243,6 +244,21 @@ const ProductsPage = () => {
 	for (const p of products as any[]) { const k = normalize(p.slug || p.name || ""); if (k) byKey[k] = p; }
 	const ordered = desiredOrder.map(k => byKey[k]).filter(Boolean);
 
+	// Derive brand category from product name
+	const deriveCategory = (item: any): string => {
+		const n = String(item?.name || '').toUpperCase();
+		if (n.includes('SHELL')) return 'SHELL';
+		if (n.includes('YACCO')) return 'YACCO';
+		if (n.includes('MOTUL')) return 'MOTUL';
+		if (n.includes('ACCOR')) return 'ACCOR';
+		if (n.includes('KENNOL')) return 'KENNOL';
+		return 'AUTRE';
+	};
+
+	const categories = Array.from(new Set((ordered as any[]).map(deriveCategory))).sort();
+	const categoryOptions = ['Tous', ...categories];
+	const filtered = activeCategory === 'Tous' ? ordered : (ordered as any[]).filter((it) => deriveCategory(it) === activeCategory);
+	
 	return (
 		<div className="min-h-screen">
 			{/* Mobile Header */}
@@ -342,8 +358,21 @@ const ProductsPage = () => {
 						</p>
 					</div>
 
+					{/* Category Filters */}
+					<div className="mb-6 sm:mb-8 flex gap-2 flex-wrap justify-center">
+						{categoryOptions.map((cat) => (
+							<button
+								key={cat}
+								onClick={() => setActiveCategory(cat)}
+								className={`px-3 py-1.5 rounded-full border text-sm transition-colors ${activeCategory === cat ? 'bg-accent text-white border-accent' : 'bg-background text-primary border-border hover:bg-muted'}`}
+							>
+								{cat}
+							</button>
+						))}
+					</div>
+					
 					<div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 stagger-children">
-						{ordered.map((item: any, index: number) => (
+						{filtered.map((item: any, index: number) => (
 							<Dialog key={item.slug}>
 								<DialogTrigger asChild>
 									<div className="card-elegant overflow-hidden animate-scale-in cursor-pointer group" style={{ ['--stagger' as any]: index }}>
@@ -352,7 +381,7 @@ const ProductsPage = () => {
 												<img src={item.cover} alt={item.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
 												{/* Category badge */}
 												<span className="absolute top-2 sm:top-3 left-2 sm:left-3 rounded-full bg-background/80 backdrop-blur px-2 sm:px-3 py-1 text-xs font-medium border border-border">
-													{item.category || item.name}
+													{deriveCategory(item)}
 												</span>
 												{Array.isArray(item.images) && item.images.length > 0 && (
 													<span className="absolute top-2 sm:top-3 right-2 sm:right-3 rounded-full bg-background/80 backdrop-blur px-2 sm:px-3 py-1 text-xs font-medium border border-border">
