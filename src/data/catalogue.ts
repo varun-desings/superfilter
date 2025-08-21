@@ -25,10 +25,11 @@ function fileNameToName(fileName: string): string {
 	// Normalize separators
 	let norm = base.replace(/[-_]+/g, ' ').replace(/\s+/g, ' ').trim();
 	// Drop leading hash-like ids (hex/uuid-looking) and SKUs at the start
-	// Examples: "64e8c9dcf25dfe3f312a82e0 b085011 donaldson air filter primary" -> "donaldson air filter primary"
 	norm = norm.replace(/^([a-f0-9]{8,}|[a-z0-9]{4,})\b\s*/i, '');
 	// If still starts with a short alphanumeric code followed by name, drop it (e.g., B085011)
 	norm = norm.replace(/^[a-z0-9]{5,}\b\s*/i, '');
+	// Remove Amazon-like resolution suffix tokens such as 'AC SL1500'
+	norm = norm.replace(/\bac\s*sl\s*\d+\b/gi, '').replace(/\s{2,}/g, ' ').trim();
 	// Title case
 	return norm.replace(/\b\w/g, (c) => c.toUpperCase());
 }
@@ -61,8 +62,8 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		if (/\/src\/ACCEUIL\/.+\/Capture5\.[^.]+$/i.test(absPath) || /\/src\/ACCEUIL\/Capture5\.[^.]+$/i.test(absPath)) {
 			name = 'Shell Spirax S4 TXM';
 		}
-		// Override first AUTRE card in MANN FILTRE to requested label
-		if (/\/src\/CATALOGUE\/MANN FILTRE\/61ZF4lAEncL\._AC_SL1500_\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
+		// Override any MANN image with _AC_SL1500_ suffix to requested label
+		if (/\/src\/CATALOGUE\/MANN FILTRE\/.*_AC_SL1500_\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
 			name = 'Filtre à huile W 1022';
 		}
 		const slug = `${category.toLowerCase()}-${toSlug(name)}`;
