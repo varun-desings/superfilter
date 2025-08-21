@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Mail, Phone } from 'lucide-react';
 import partnersImage from '@/ACCEUIL/Partners.JPG';
+import partnerrImage from '@/ACCEUIL/partnerr.JPG';
 
 const Footer = () => {
 	return (
@@ -28,11 +29,16 @@ const Footer = () => {
 							<li>AFRILUB</li>
 							<li>WIXFILTER</li>
 						</ul>
-						<div>
+						<div className="flex gap-4 justify-center">
 							<img 
 								src={partnersImage} 
 								alt="Nos partenaires" 
-								className="w-full h-auto rounded-lg shadow-md"
+								className="w-1/2 h-auto rounded-lg shadow-md"
+							/>
+							<img 
+								src={partnerrImage} 
+								alt="Nos partenaires" 
+								className="w-1/2 h-auto rounded-lg shadow-md"
 							/>
 						</div>
 					</div>
@@ -69,14 +75,7 @@ const Footer = () => {
 						</div>
 									</div>
 
-				{/* Partners Image */}
-				<div className="text-center mb-8">
-					<img 
-						src={partnersImage} 
-						alt="Nos partenaires" 
-						className="max-w-md mx-auto h-auto rounded-lg shadow-md"
-					/>
-				</div>
+
 
 				{/* Bottom Bar */}
 					<div className="border-t border-primary-foreground/20 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
