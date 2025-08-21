@@ -231,6 +231,10 @@ const ProductsPage = () => {
 		if (n.includes('helix ultra') && n.includes('5w40') && !n.includes('ect') && !n.includes('(')) {
 			return 'Viscosité : 5W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume : 209 L (drum)';
 		}
+		// Shell Helix Ultra 5W40 (1) - specific variant 5L
+		if (n.includes('helix ultra') && n.includes('5w40') && !n.includes('ect') && n.includes('(1')) {
+			return 'Viscosité : 5W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume : 5 L';
+		}
 		// Shell Helix Ultra 5W40
 		if (n.includes('helix ultra') && n.includes('5w40') && !n.includes('ect')) {
 			return 'Synthétique\n\nAPI SN/CF\n\nNormes : ACEA A3/B4, MB-Approval 229.5, VW 502.00/505.00, BMW LL-01\n\nConditionnements : 1L / 5L';
