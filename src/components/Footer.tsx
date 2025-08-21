@@ -1,6 +1,7 @@
 import { Facebook, Instagram, Mail, Phone } from 'lucide-react';
 import partnersImage from '@/ACCEUIL/Partners.JPG';
 import partnerrImage from '@/ACCEUIL/partnerr.JPG';
+import partnerrrImage from '@/ACCEUIL/partnerrr.jpg';
 
 const Footer = () => {
 	return (
@@ -33,12 +34,17 @@ const Footer = () => {
 							<img 
 								src={partnersImage} 
 								alt="Nos partenaires" 
-								className="w-1/2 h-auto rounded-lg shadow-md"
+								className="w-1/3 h-auto rounded-lg shadow-md"
 							/>
 							<img 
 								src={partnerrImage} 
 								alt="Nos partenaires" 
-								className="w-1/2 h-auto rounded-lg shadow-md"
+								className="w-1/3 h-auto rounded-lg shadow-md"
+							/>
+							<img 
+								src={partnerrrImage} 
+								alt="Nos partenaires" 
+								className="w-1/3 h-auto rounded-lg shadow-md"
 							/>
 						</div>
 					</div>
