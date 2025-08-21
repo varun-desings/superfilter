@@ -17,7 +17,7 @@ const Progetti = () => {
     <section id="progetti" className="py-24 shadow-gradient">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-up">
-          				<h2 className="heading-lg text-primary mb-6">Découvrez nos produits de haute qualité</h2>
+          				<h2 className="heading-lg text-primary mb-6 font-inter">Découvrez nos produits de haute qualité</h2>
           				<p className="body-lg max-w-2xl mx-auto">
 					Des huiles et filtres conçus pour optimiser la durée de vie de votre moteur.
 				</p>
