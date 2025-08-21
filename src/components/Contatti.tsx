@@ -300,9 +300,14 @@ const Contatti = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-primary mb-1">Téléphone</h4>
-                  <a href="tel:+21623514440" className="text-muted-foreground hover:text-accent transition-colors duration-300">
-                    +216 23 514 440
-                  </a>
+                  <div className="space-y-2">
+                    <a href="tel:25557143" className="block text-muted-foreground hover:text-accent transition-colors duration-300">
+                      25557143
+                    </a>
+                    <a href="tel:79391964" className="block text-muted-foreground hover:text-accent transition-colors duration-300">
+                      79391964
+                    </a>
+                  </div>
                 </div>
               </div>
 
@@ -347,7 +352,7 @@ const Contatti = () => {
                 Nous offrons une consultation technique gratuite pour évaluer la faisabilité de votre projet et vous proposer la meilleure solution.
               </p>
               <button 
-                onClick={() => window.open('tel:+21623514440')}
+                onClick={() => window.open('tel:25557143')}
                 className="w-full bg-primary text-white border-2 border-primary rounded-lg px-6 py-4 text-lg font-semibold hover:bg-primary/90 hover:border-primary/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 cursor-pointer"
               >
                 <Phone size={20} />
