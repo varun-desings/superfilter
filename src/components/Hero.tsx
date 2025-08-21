@@ -43,7 +43,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-10 md:gap-12 justify-center sm:justify-start mt-2 sm:mt-0">
               <button 
                 onClick={() => scrollToSection('progetti')}
-                className="inline-flex items-center justify-center gap-3 bg-white text-black px-8 py-3 sm:py-4 rounded-none font-medium tracking-wide text-base sm:text-sm uppercase hover:bg-gray-100 transition-all duration-300 group"
+                className="inline-flex items-center justify-center gap-3 bg-white text-black px-8 py-3 sm:py-4 rounded-none font-medium tracking-wide text-base sm:text-sm uppercase hover:bg-gray-100 transition-all duration-300 group mt-5 sm:mt-0"
               >
                 						Voir nos produits
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
