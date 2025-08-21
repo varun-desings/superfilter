@@ -16,9 +16,9 @@ const Progetti = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-up">
           				<h2 className="heading-lg text-primary mb-6">Découvrez nos produits de haute qualité</h2>
-          <p className="body-lg max-w-2xl mx-auto">
-            Découvrez comment nous avons transformé des maisons grâce à notre savoir‑faire et à notre souci du détail.
-          </p>
+          				<p className="body-lg max-w-2xl mx-auto">
+					Des huiles et filtres conçus pour optimiser la durée de vie de votre moteur.
+				</p>
         </div>
 
         {/* Featured Products Grid (replaces projects grid) */}
