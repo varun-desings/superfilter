@@ -1,5 +1,6 @@
 
 import { ArrowRight } from 'lucide-react';
+import heroBg from '@/ACCEUIL/Capture3.PNG';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -14,7 +15,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <img
-          src="/src/ACCEUIL/Capture3.PNG"
+          src={heroBg}
           alt="Super Filtre hero background"
           className="w-full h-full object-cover"
         />
