@@ -247,6 +247,10 @@ const ProductsPage = () => {
 		if (n.includes('spirax') && n.includes('s4') && n.includes('txm')) {
 			return 'Minérale\n\nAPI SF/CD\n\nNormes : MB 226.1 / 227.0 ; MIL-L-2104 D\n\nConditionnements : 20L / 209L';
 		}
+		// Motul 8100 X-Clean 5W40
+		if (n.includes('motul') && n.includes('8100') && n.includes('x-clean') && n.includes('5w40')) {
+			return 'Viscosité : 5W-40\n\nMarque : Motul\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nPoint d’éclair : 228 °C\n\nFabricant : Motul\n\nVolume : 5 L (5000 ml)';
+		}
 		return null;
 	};
 	
