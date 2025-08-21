@@ -283,6 +283,14 @@ const ProductsPage = () => {
 		if (n.includes('donaldson') && n.includes('air') && n.includes('filter') && n.includes('primary')) {
 			return 'Type : Filtre à air primaire\n\nMarque : Donaldson\n\nFonction : Protège le moteur en filtrant la poussière et les particules\n\nApplication : Véhicules légers, camions et machines industrielles (selon modèle)\n\nVolume / Taille : Selon référence spécifique';
 		}
+		// MANN-FILTER W 1022 (Oil Filter)
+		if (
+			n.includes('mann') &&
+			(n.includes('w 1022') || n.includes('w1022') || n.includes('w-1022')) &&
+			(n.includes('oil filter') || n.includes('filtre à huile') || n.includes('filter'))
+		) {
+			return 'Type : Filtre à huile\n\nMarque : MANN-FILTER\n\nRéférence : W 1022\n\nFonction : Élimine les impuretés et particules de l’huile pour protéger le moteur\n\nApplication : Véhicules particuliers et utilitaires légers (selon compatibilité)';
+		}
 		return null;
 	};
 	
