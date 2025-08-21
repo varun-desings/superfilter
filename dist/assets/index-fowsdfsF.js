@@ -410,7 +410,15 @@ Application : Boîtes automatiques et systèmes hydrauliques légers
 
 Normes / Homologations : Dexron® II D, Allison C‑4, MB 236.1 / 236.5
 
-Volume : 1 L`:c.includes("spirax")&&c.includes("s4")&&c.includes("txm")?`Minérale
+Volume : 1 L`:c.includes("spirax")&&c.includes("s2")&&c.includes("atf")&&c.includes("d2")&&c.includes("(1")?`Type : Huile de transmission automatique (ATF)
+
+Marque : Shell
+
+Application : Boîtes automatiques et systèmes hydrauliques légers
+
+Normes / Homologations : Dexron® II D, Allison C‑4, MB 236.1 / 236.5
+
+Volume : 20 L`:c.includes("spirax")&&c.includes("s4")&&c.includes("txm")?`Minérale
 
 API SF/CD
 

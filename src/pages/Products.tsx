@@ -307,6 +307,10 @@ const ProductsPage = () => {
 		if (n.includes('spirax') && n.includes('s2') && n.includes('atf') && n.includes('d2') && !n.includes('(')) {
 			return 'Type : Huile de transmission automatique (ATF)\n\nMarque : Shell\n\nApplication : Boîtes automatiques et systèmes hydrauliques légers\n\nNormes / Homologations : Dexron® II D, Allison C‑4, MB 236.1 / 236.5\n\nVolume : 1 L';
 		}
+		// Shell Spirax S2 ATF D2 (1) - specific variant 20L
+		if (n.includes('spirax') && n.includes('s2') && n.includes('atf') && n.includes('d2') && n.includes('(1')) {
+			return 'Type : Huile de transmission automatique (ATF)\n\nMarque : Shell\n\nApplication : Boîtes automatiques et systèmes hydrauliques légers\n\nNormes / Homologations : Dexron® II D, Allison C‑4, MB 236.1 / 236.5\n\nVolume : 20 L';
+		}
 		// Shell Spirax S4 TXM
 		if (n.includes('spirax') && n.includes('s4') && n.includes('txm')) {
 			return 'Minérale\n\nAPI SF/CD\n\nNormes : MB 226.1 / 227.0 ; MIL-L-2104 D\n\nConditionnements : 20L / 209L';
