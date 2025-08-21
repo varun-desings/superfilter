@@ -22,11 +22,15 @@ function toSlug(input: string): string {
 
 function fileNameToName(fileName: string): string {
 	const base = fileName.replace(/\.[^.]+$/, '');
-	return base
-		.replace(/[-_]+/g, ' ')
-		.replace(/\s+/g, ' ')
-		.trim()
-		.replace(/\b\w/g, (c) => c.toUpperCase());
+	// Normalize separators
+	let norm = base.replace(/[-_]+/g, ' ').replace(/\s+/g, ' ').trim();
+	// Drop leading hash-like ids (hex/uuid-looking) and SKUs at the start
+	// Examples: "64e8c9dcf25dfe3f312a82e0 b085011 donaldson air filter primary" -> "donaldson air filter primary"
+	norm = norm.replace(/^([a-f0-9]{8,}|[a-z0-9]{4,})\b\s*/i, '');
+	// If still starts with a short alphanumeric code followed by name, drop it (e.g., B085011)
+	norm = norm.replace(/^[a-z0-9]{5,}\b\s*/i, '');
+	// Title case
+	return norm.replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
 function extractCategoryFromPath(path: string): string {
