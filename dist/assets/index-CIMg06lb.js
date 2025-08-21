@@ -254,7 +254,17 @@ API SF/CD
 
 Normes : MB 226.1 / 227.0 ; MIL-L-2104 D
 
-Conditionnements : 20L / 209L`:p.includes("motul")&&p.includes("8100")&&p.includes("x-clean")&&p.includes("5w40")?`Viscosité : 5W-40
+Conditionnements : 20L / 209L`:p.includes("tellus")&&p.includes("s2")&&p.includes("m68")?`Viscosité : ISO VG 68
+
+Marque : Shell
+
+Type de fluide : Huile hydraulique industrielle
+
+Point d’éclair : 235 °C (approx.)
+
+Fabricant : Shell
+
+Volume : 208,2 L (55 gallons)`:p.includes("motul")&&p.includes("8100")&&p.includes("x-clean")&&p.includes("5w40")?`Viscosité : 5W-40
 
 Marque : Motul
 
