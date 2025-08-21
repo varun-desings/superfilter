@@ -284,7 +284,17 @@ Point d’éclair : 230 °C (approx.)
 
 Fabricant : Shell
 
-Volume : 20 L`:f.includes("tellus")&&f.includes("s2")&&f.includes("m46")?`Viscosité : ISO VG 46
+Volume : 20 L`:f.includes("tellus")&&f.includes("s2")&&f.includes("m46")&&f.includes("(2")?`Viscosité : ISO VG 46
+
+Marque : Shell
+
+Type de fluide : Huile hydraulique industrielle
+
+Point d’éclair : 230 °C (approx.)
+
+Fabricant : Shell
+
+Volume : 5 L (5000 ml)`:f.includes("tellus")&&f.includes("s2")&&f.includes("m46")?`Viscosité : ISO VG 46
 
 Marque : Shell
 
