@@ -344,20 +344,7 @@ const Contatti = () => {
               </div>
             </div>
 
-            {/* CTA Box */}
-            <div className="mt-12 card-elegant p-8">
-              <h4 className="heading-sm text-primary mb-4">Consultation gratuite</h4>
-              <p className="body-md mb-6">
-                Nous offrons une consultation technique gratuite pour évaluer la faisabilité de votre projet et vous proposer la meilleure solution.
-              </p>
-              <button 
-                onClick={() => window.open('tel:25557143')}
-                className="w-full bg-primary text-white border-2 border-primary rounded-lg px-6 py-4 text-lg font-semibold hover:bg-primary/90 hover:border-primary/90 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-3 cursor-pointer"
-              >
-                <Phone size={20} />
-                Appeler maintenant
-              </button>
-            </div>
+
           </div>
         </div>
       </div>
