@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Mail, Phone } from 'lucide-react';
+import partnersImage from '@/ACCEUIL/Partners.JPG';
 
 const Footer = () => {
 	return (
@@ -29,7 +30,7 @@ const Footer = () => {
 						</ul>
 						<div>
 							<img 
-								src="/src/ACCEUIL/Partners.JPG" 
+								src={partnersImage} 
 								alt="Nos partenaires" 
 								className="w-full h-auto rounded-lg shadow-md"
 							/>
