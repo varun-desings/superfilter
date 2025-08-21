@@ -32,7 +32,7 @@ export const products: Product[] = [
   { slug: "done", name: "Huile Moteur YACCO VX 1000 LE 5W30 C2/C3", category: "done", cover: "/placeholder.svg" },
   { slug: "mezzo", name: "Huile Moteur SHELL HELIX ULTRA PRO AV-L 0W20", category: "mezzo", cover: "/placeholder.svg" },
   { slug: "trap", name: "Huile Moteur SHELL Helix HX5 15W40", category: "trap", cover: "/placeholder.svg" },
-  { slug: "trapx", name: "Trap X", category: "Trap X", cover: "/placeholder.svg" },
+  { slug: "trapx", name: "Huile Moteur YACCO VX 1000 LL 0W40", category: "trapx", cover: "/placeholder.svg" },
   { slug: "fino", name: "Fino", category: "Fino", cover: "/placeholder.svg" },
   { slug: "fleur", name: "Fleur", category: "Fleur", cover: "/placeholder.svg" },
   { slug: "petal", name: "Petal", category: "Petal", cover: "/placeholder.svg" },

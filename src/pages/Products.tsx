@@ -100,7 +100,7 @@ const ProductsPage = () => {
 	};
 
 	const buildTitle = (item: any): string => {
-		if (item?.slug === 'bibi' || item?.slug === 'square' || item?.slug === 'victoria' || item?.slug === 'done3d' || item?.slug === 'done' || item?.slug === 'mezzo' || item?.slug === 'trap') return String(item?.name || '');
+		if (item?.slug === 'bibi' || item?.slug === 'square' || item?.slug === 'victoria' || item?.slug === 'done3d' || item?.slug === 'done' || item?.slug === 'mezzo' || item?.slug === 'trap' || item?.slug === 'trapx') return String(item?.name || '');
 		const size = extractPrimarySizeInches(item?.description);
 		const parts = [item?.name, size && size, 'Cement Breeze Block'].filter(Boolean);
 		return parts.join(' ');
@@ -391,6 +391,10 @@ const ProductsPage = () => {
 												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
 													{"Minérale\n\nAPI SL/CF"}
 												</div>
+											) : item.slug === 'trapx' ? (
+												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+													{"100% Synthèse\n\nLONG LIFE\n\nAPI SN/CF; ACEA A3/B4\n\n✔ MB- 229.5; PORSCHE A40\n\nBMW Longlife-01 (jusqu’à fin 2018); FORD WWS-M2C937-A; Renault RN0710/0700; VW 502.00/505.00"}
+												</div>
 											) : (
 												<>
 													{buildDimensionsCm(item) && (
@@ -444,6 +448,8 @@ const ProductsPage = () => {
 											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nPure Plus (Gaz Naturel)\n\nACEA C5\n\nAPI SN\n✔ VW 508.00/509.00\n\n✔ Porsche C20"}</p>
 										) : item.slug === 'trap' ? (
 											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale\n\nAPI SL/CF"}</p>
+										) : item.slug === 'trapx' ? (
+											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nLONG LIFE\n\nAPI SN/CF; ACEA A3/B4\n\n✔ MB- 229.5; PORSCHE A40\n\nBMW Longlife-01 (jusqu’à fin 2018); FORD WWS-M2C937-A; Renault RN0710/0700; VW 502.00/505.00"}</p>
 										) : (
 											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{item.description}</p>
 										)}
