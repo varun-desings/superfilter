@@ -6,8 +6,10 @@ export type CatalogueItem = {
 	images: string[];
 };
 
-// Import all image assets under src/CATALOGUE and src/ACCEUIL as URLs at build time
-const files = import.meta.glob('/src/{CATALOGUE,ACCEUIL}/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,webp,WEBP,svg,SVG,gif,GIF}', { eager: true, import: 'default' }) as Record<string, string>;
+// Import all image assets under src/CATALOGUE (all) and only Capture5.* under src/ACCEUIL
+const catalogueFiles = import.meta.glob('/src/CATALOGUE/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,webp,WEBP,svg,SVG,gif,GIF}', { eager: true, import: 'default' }) as Record<string, string>;
+const accueilFiles = import.meta.glob('/src/ACCEUIL/**/Capture5.{png,PNG,jpg,JPG,jpeg,JPEG,webp,WEBP,svg,SVG,gif,GIF}', { eager: true, import: 'default' }) as Record<string, string>;
+const files = { ...catalogueFiles, ...accueilFiles } as Record<string, string>;
 
 const EXCLUDED_PATH_REGEX = /partnerrr/i;
 
