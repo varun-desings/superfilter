@@ -52,7 +52,7 @@ const Footer = () => {
 							<img
 								src={partnerssImage}
 								alt="Nos partenaires"
-								className="max-w-md w-full h-auto rounded-lg shadow-md"
+								className="w-1/3 h-auto rounded-lg shadow-md"
 							/>
 						</div>
 					</div>
