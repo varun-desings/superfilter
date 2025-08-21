@@ -255,6 +255,10 @@ const ProductsPage = () => {
 		if (n.includes('tellus') && n.includes('s2') && n.includes('m46') && n.includes('(3')) {
 			return 'Viscosité : ISO VG 46\n\nMarque : Shell\n\nType de fluide : Huile hydraulique industrielle\n\nPoint d’éclair : 230 °C (approx.)\n\nFabricant : Shell\n\nVolume : 1 L (1000 ml)';
 		}
+		// Shell Tellus S2 M46 (1) - specific variant 20L
+		if (n.includes('tellus') && n.includes('s2') && n.includes('m46') && n.includes('(1')) {
+			return 'Viscosité : ISO VG 46\n\nMarque : Shell\n\nType de fluide : Huile hydraulique industrielle\n\nPoint d’éclair : 230 °C (approx.)\n\nFabricant : Shell\n\nVolume : 20 L';
+		}
 		// Shell Tellus S2 M46
 		if (n.includes('tellus') && n.includes('s2') && n.includes('m46')) {
 			return 'Viscosité : ISO VG 46\n\nMarque : Shell\n\nType de fluide : Huile hydraulique industrielle\n\nPoint d’éclair : 230 °C (approx.)\n\nFabricant : Shell\n\nVolume : 208,2 L (55 gallons)';
