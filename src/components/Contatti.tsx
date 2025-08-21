@@ -86,7 +86,7 @@ const Contatti = () => {
     <section id="contatti" className="py-24 bg-background">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-up">
-          <h2 className="heading-lg text-primary mb-6">Contact</h2>
+          <h2 className="heading-lg text-primary mb-6 font-inter">Contact</h2>
           <p className="body-lg max-w-2xl mx-auto">
             Une question ou un projet ? Contactez‑nous pour une consultation personnalisée et transformez votre espace dès aujourd'hui.
           </p>
@@ -95,7 +95,7 @@ const Contatti = () => {
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Form */}
           <div className="animate-fade-up">
-            <h3 className="heading-md text-primary mb-8">Demander un devis</h3>
+            <h3 className="heading-md text-primary mb-8 font-inter">Demander un devis</h3>
             
             {/* Cart Summary */}
             {totalItems > 0 && (
@@ -272,7 +272,7 @@ const Contatti = () => {
 
           {/* Contact Information */}
           <div className="animate-slide-left">
-            <h3 className="heading-md text-primary mb-8">Informations de contact</h3>
+            <h3 className="heading-md text-primary mb-8 font-inter">Informations de contact</h3>
             
             <div className="space-y-8">
               {/* Email */}
@@ -281,7 +281,7 @@ const Contatti = () => {
                   <Mail className="text-accent" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary mb-1">Email</h4>
+                  <h4 className="font-semibold text-primary mb-1 font-inter">Email</h4>
                   <div className="space-y-2">
                     <a href="mailto:Superfiltre2@gnet.tn" className="block text-muted-foreground hover:text-accent transition-colors duration-300">
                       Superfiltre2@gnet.tn
@@ -299,7 +299,7 @@ const Contatti = () => {
                   <Phone className="text-accent" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary mb-1">Téléphone</h4>
+                  <h4 className="font-semibold text-primary mb-1 font-inter">Téléphone</h4>
                   <div className="space-y-2">
                     <a href="tel:25557143" className="block text-muted-foreground hover:text-accent transition-colors duration-300">
                       25557143
@@ -317,7 +317,7 @@ const Contatti = () => {
                   <MapPin className="text-accent" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-primary mb-1">Adresse</h4>
+                  <h4 className="font-semibold text-primary mb-1 font-inter">Adresse</h4>
                   <p className="text-muted-foreground">
                     24 avenue de france, Ben Arous 2013
                   </p>
@@ -326,7 +326,7 @@ const Contatti = () => {
 
               {/* Social Links */}
               <div>
-                <h4 className="font-semibold text-primary mb-4">Suivez‑nous</h4>
+                <h4 className="font-semibold text-primary mb-4 font-inter">Suivez‑nous</h4>
                 <div className="flex gap-4">
                   <a 
                     href="https://www.facebook.com/claustrah" 
