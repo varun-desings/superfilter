@@ -59,7 +59,7 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 	.map(([absPath, url]) => {
 		const pathParts = absPath.split('/');
 		const file = pathParts[pathParts.length - 1];
-		const category = extractCategoryFromPath(absPath);
+		let category = extractCategoryFromPath(absPath);
 		let name = fileNameToName(file);
 		// Override ACCEUIL/Capture5 card name
 		if (/\/src\/ACCEUIL\/.+\/Capture5\.[^.]+$/i.test(absPath) || /\/src\/ACCEUIL\/Capture5\.[^.]+$/i.test(absPath)) {
@@ -81,6 +81,12 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		if (/\/src\/CATALOGUE\/AUTRE\/64e8c9dcf25dfe3f312a82e0-b085011-donaldson-air-filter-primary\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
 			name = 'Donaldson Air Filter Primary';
 		}
+		
+		// Category overrides
+		if (/\/src\/CATALOGUE\/AUTRE\/64e8c9dcf25dfe3f312a82e0-b085011-donaldson-air-filter-primary\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
+			category = 'DONALDSON FILTER';
+		}
+		
 		const slug = `${category.toLowerCase()}-${toSlug(name)}`;
 		return {
 			slug,
