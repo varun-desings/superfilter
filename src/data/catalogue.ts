@@ -62,8 +62,8 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		if (/\/src\/ACCEUIL\/.+\/Capture5\.[^.]+$/i.test(absPath) || /\/src\/ACCEUIL\/Capture5\.[^.]+$/i.test(absPath)) {
 			name = 'Shell Spirax S4 TXM';
 		}
-		// Override any MANN image with _AC_SL1500_ suffix to requested label
-		if (/\/src\/CATALOGUE\/MANN FILTRE\/.*_AC_SL1500_\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
+		// Override only the specific MANN image to requested label (avoid duplicates)
+		if (/\/src\/CATALOGUE\/MANN FILTRE\/61ZF4lAEncL\._AC_SL1500_\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
 			name = 'Filtre à huile W 1022';
 		}
 		const slug = `${category.toLowerCase()}-${toSlug(name)}`;
