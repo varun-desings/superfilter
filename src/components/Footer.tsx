@@ -31,28 +31,34 @@ const Footer = () => {
 							<li>AFRILUB</li>
 							<li>WIXFILTER</li>
 						</ul>
-						<div className="flex gap-4 justify-center">
-							<img 
-								src={partnersImage} 
-								alt="Nos partenaires" 
-								className="w-1/3 h-auto rounded-lg shadow-md"
-							/>
-							<img 
-								src={partnerrImage} 
-								alt="Nos partenaires" 
-								className="w-1/3 h-auto rounded-lg shadow-md"
-							/>
-							<img 
-								src={partnerrrImage} 
-								alt="Nos partenaires" 
-								className="w-1/3 h-auto rounded-lg shadow-md"
-							/>
+						<div className="flex gap-4 justify-center items-center">
+							<div className="w-1/3">
+								<img 
+									src={partnersImage} 
+									alt="Nos partenaires" 
+									className="w-full h-24 object-contain rounded-lg shadow-md bg-white"
+								/>
+							</div>
+							<div className="w-1/3">
+								<img 
+									src={partnerrImage} 
+									alt="Nos partenaires" 
+									className="w-full h-24 object-contain rounded-lg shadow-md bg-white"
+								/>
+							</div>
+							<div className="w-1/3">
+								<img 
+									src={partnerrrImage} 
+									alt="Nos partenaires" 
+									className="w-full h-24 object-contain rounded-lg shadow-md bg-white"
+								/>
+							</div>
 						</div>
 						<div className="mt-4 flex justify-center">
 							<img
 								src={partnerssImage}
 								alt="Nos partenaires"
-								className="w-1/3 h-auto rounded-lg shadow-md"
+								className="w-1/3 h-24 object-contain rounded-lg shadow-md bg-white"
 							/>
 						</div>
 					</div>
