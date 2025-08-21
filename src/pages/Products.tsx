@@ -351,7 +351,7 @@ const ProductsPage = () => {
 												<div className="card-elegant overflow-hidden animate-scale-in cursor-pointer group" style={{ ['--stagger' as any]: index }}>
 													{item.cover && (
 														<div className="relative h-48 sm:h-56 lg:h-64 bg-muted flex items-center justify-center overflow-hidden">
-															<img src={item.cover} alt={item.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
+															<img src={item.cover} alt={item.name} className="max-w-full max-h-full object-contain" />
 															{/* Category badge */}
 															<span className="absolute top-2 sm:top-3 left-2 sm:left-3 rounded-full bg-background/80 backdrop-blur px-2 sm:px-3 py-1 text-xs font-medium border border-border">
 																{deriveCategoryFromName(item?.name)}

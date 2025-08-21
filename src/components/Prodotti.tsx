@@ -28,7 +28,7 @@ const Prodotti = () => {
             <div key={item.slug} className="card-elegant overflow-hidden animate-scale-in group cursor-pointer" style={{ '--stagger': index } as React.CSSProperties}>
               {item.cover && (
                 <div className="h-40 bg-muted flex items-center justify-center overflow-hidden">
-                  <img src={item.cover} alt={item.name} className="w-full h-full object-cover" />
+                  <img src={item.cover} alt={item.name} className="max-w-full max-h-full object-contain" />
                 </div>
               )}
               <div className="p-6">
