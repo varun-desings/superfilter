@@ -282,23 +282,23 @@ const ProductsPage = () => {
 		}
 		// Shell Helix HX7 10W40
 		if (n.includes('helix hx7') && n.includes('10w40')) {
-			return 'Semi-synthétique\n\nAPI SN/CF\n\nNormes: ACEA A3/B3, A3/B4, MB-Approval 229.3, VW 502.00/505.00\n\nConditionnements: 1L / 5L';
+			return 'Semi-synthétique\n\nAPI SN/CF\n\nNormes: A3/B4, MB-Approval 229.3, VW 502.00/505.00\n\nConditionnements: 1L / 5L';
 		}
 		// Shell Helix HX5 15W40 (1) - specific variant 20L
 		if (n.includes('helix hx5') && n.includes('15w40') && n.includes('(1')) {
-			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SL/CF\n\nNormes / Homologations: ACEA A3/B3, MB 229.1\n\nVolume: 20 L';
+			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nVolume: 20 L';
 		}
 		// Shell Helix HX5 15W40 (2) - specific variant 4L
 		if (n.includes('helix hx5') && n.includes('15w40') && n.includes('(2')) {
-			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SL/CF\n\nNormes / Homologations: ACEA A3/B3, MB 229.1\n\nVolume: 4 L';
+			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nVolume: 4 L';
 		}
 		// Shell Helix HX5 15W40 (3) - specific variant 3L
 		if (n.includes('helix hx5') && n.includes('15w40') && n.includes('(3')) {
-			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SL/CF\n\nNormes / Homologations: ACEA A3/B3, MB 229.1\n\nVolume: 3 L';
+			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nVolume: 3 L';
 		}
 		// Shell Helix HX5 15W40
 		if (n.includes('helix hx5') && n.includes('15w40')) {
-			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SL/CF\n\nNormes / Homologations: ACEA A3/B3, MB 229.1\n\nVolume: 5 L';
+			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nVolume: 5 L';
 		}
 		// Shell Spirax S2 A 80W90 - 209L (drum) base variant (no parentheses)
 		if (n.includes('spirax') && n.includes('s2') && n.includes('a') && n.includes('80w90') && !n.includes('(')) {
@@ -519,7 +519,7 @@ const ProductsPage = () => {
 											<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">{getCustomDescription(item) as string}</div>
 														) : item.slug === 'bibi' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-																{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA A3/B3/B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
+																{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
 															</div>
 														) : item.slug === 'acceuil-shell-spirax-s4-txm' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
@@ -527,15 +527,15 @@ const ProductsPage = () => {
 															</div>
 														) : item.slug === 'square' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-																{"Minérale\n\nAPI SL/CF; ACEA A3/B3\n\nMB 229.1; VW 501.01/505.00"}
+																{"Minérale\n\nVW 501.01/505.00"}
 															</div>
 														) : item.slug === 'victoria' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-																{"Semi-Synthèse\n\nAPI SN/CF; ACEA A3/B3/B4\n\nVW 501.01/505.00; MB 229.1; RENAULT RN 0700"}
+																{"Semi-Synthèse\n\nVW 501.01/505.00; RENAULT RN 0700"}
 															</div>
 														) : item.slug === 'done3d' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-																{"Synthèse\n\nAPI SL/CF; ACEA A3/B3"}
+																{"Synthèse"}
 															</div>
 														) : item.slug === 'done' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
@@ -547,7 +547,7 @@ const ProductsPage = () => {
 															</div>
 														) : item.slug === 'trap' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-																{"Minérale\n\nAPI SL/CF"}
+																{"Minérale"}
 															</div>
 														) : item.slug === 'trapx' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
@@ -581,23 +581,23 @@ const ProductsPage = () => {
 													{getCustomDescription(item) ? (
 														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{getCustomDescription(item) as string}</p>
 													) : item.slug === 'bibi' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA A3/B3/B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
 														</p>
 													) : item.slug === 'acceuil-shell-spirax-s4-txm' ? (
 														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"API SF/CD\n\nNormes : MB 226.1 / 227.0 ; MIL-L-2104 D\n\nProtection contre l’usure & oxydation\n\nHaute stabilité thermique et longue durée\n\n📦 Disponible en 20L et 209L"}
 														</p>
 													) : item.slug === 'square' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale\n\nAPI SL/CF; ACEA A3/B3\n\nMB 229.1; VW 501.01/505.00"}</p>
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale\n\nVW 501.01/505.00"}</p>
 													) : item.slug === 'victoria' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Semi-Synthèse\n\nAPI SN/CF; ACEA A3/B3/B4\n\nVW 501.01/505.00; MB 229.1; RENAULT RN 0700"}</p>
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Semi-Synthèse\n\nVW 501.01/505.00; RENAULT RN 0700"}</p>
 													) : item.slug === 'done3d' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Synthèse\n\nAPI SL/CF; ACEA A3/B3"}</p>
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Synthèse"}</p>
 													) : item.slug === 'done' ? (
 														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nMID SAPS\n\nACEA C2/C3; API SP\n\n✔ BMW Longlife-04; MB 229.52/229.51/229.31; VW 505.00/505.01\nFiat 9.55535-S1/S3; Opel OV0401547; GM Dexos 2; P.S.A B71 2290 (<2018)"}</p>
 													) : item.slug === 'mezzo' ? (
 														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nPure Plus (Gaz Naturel)\n\nACEA C5\n\nAPI SN\n✔ VW 508.00/509.00\n\n✔ Porsche C20"}</p>
 													) : item.slug === 'trap' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale\n\nAPI SL/CF"}</p>
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale"}</p>
 													) : item.slug === 'trapx' ? (
 														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nLONG LIFE\n\nAPI SN/CF; ACEA A3/B4\n\n✔ MB- 229.5; PORSCHE A40\n\nBMW Longlife-01 (jusqu’à fin 2018); FORD WWS-M2C937-A; Renault RN0710/0700; VW 502.00/505.00"}</p>
 													) : item.slug === 'fino' ? (
