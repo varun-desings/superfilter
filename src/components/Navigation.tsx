@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import CartMini from './CartMini';
+import logoImg from '@/components/Ste Super Filtre.jpg';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -36,7 +37,7 @@ const Navigation = () => {
           <div className="flex-1">
             <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <img 
-                src="/src/components/Ste Super Filtre.jpg" 
+                src={logoImg} 
                 alt="Super Filtre Logo" 
                 className="w-8 h-8 rounded object-cover"
               />

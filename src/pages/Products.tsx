@@ -1,6 +1,7 @@
 import products from '@/data/products';
 import catalogueItems from '@/data/catalogue';
 import CATEGORIES, { deriveCategory as deriveCategoryFromName } from '@/data/categories';
+import logoImg from '@/components/Ste Super Filtre.jpg';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { useCart } from '@/contexts/CartContext';
 import { ShoppingCart, ArrowRight, Menu, X } from 'lucide-react';
@@ -382,7 +383,7 @@ const ProductsPage = () => {
 					{/* Logo on Left */}
 					<div className="flex items-center">
 						<img 
-							src="/src/components/Ste Super Filtre.jpg" 
+							src={logoImg} 
 							alt="Super Filtre Logo" 
 							className="w-8 h-8 rounded object-cover mr-2"
 						/>
@@ -433,7 +434,7 @@ const ProductsPage = () => {
 						{/* Logo on Left */}
 						<div className="flex items-center">
 													<img 
-							src="/src/components/Ste Super Filtre.jpg" 
+							src={logoImg} 
 							alt="Super Filtre Logo" 
 							className="w-10 h-10 rounded object-cover mr-3"
 						/>
