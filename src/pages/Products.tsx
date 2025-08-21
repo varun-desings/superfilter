@@ -259,6 +259,10 @@ const ProductsPage = () => {
 		if (n.includes('rimula') && n.includes('r4') && n.includes('15w40') && !n.includes('(')) {
 			return 'Viscosité : 15W-40\n\nMarque : Shell\n\nType de véhicule : Moteurs diesel pour véhicules lourds et utilitaires\n\nAPI : CI-4 / CH-4 / CG-4 / CF-4 / CF\n\nNormes / Homologations : ACEA E7 / E5 / E3, MB 228.3, MAN M3275, Volvo VDS-3\n\nVolume : 20 L';
 		}
+		// Shell Rimula R4 X 15W40 (1) - specific variant 5L
+		if (n.includes('rimula') && n.includes('r4') && n.includes('15w40') && n.includes('(1')) {
+			return 'Viscosité : 15W-40\n\nMarque : Shell\n\nType de véhicule : Moteurs diesel pour véhicules lourds et utilitaires\n\nAPI : CI-4 / CH-4 / CG-4 / CF-4 / CF\n\nNormes / Homologations : ACEA E7 / E5 / E3, MB 228.3, MAN M3275, Volvo VDS-3\n\nVolume : 5 L';
+		}
 		// Shell Helix HX7 10W40 - 209L (drum) base variant (no parentheses)
 		if (n.includes('helix hx7') && n.includes('10w40') && !n.includes('(')) {
 			return 'Viscosité : 10W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA A3/B4, MB 229.3\n\nVolume : 209 L (drum)';
