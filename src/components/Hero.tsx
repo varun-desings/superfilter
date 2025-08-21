@@ -28,13 +28,13 @@ const Hero = () => {
           <div className="animate-fade-up text-white">
             {/* Main Title */}
             <div className="mb-4 sm:mb-12">
-              <h1 className="font-playfair text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] tracking-[0.02em] mb-3 sm:mb-6 text-white/95">
+              <h1 className="font-playfair text-5xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.2] tracking-[0.02em] mb-3 sm:mb-6 text-white/95">
                 STE SUPER FILTRE
               </h1>
-              <p className="font-inter text-lg sm:text-base md:text-lg leading-relaxed tracking-wide opacity-90 max-w-2xl">
+              <p className="font-inter text-lg sm:text-base md:text-lg leading-[1.4] tracking-wide opacity-90 max-w-2xl">
                 Depuis plus de 20 ans, spécialiste des filtres, huiles et lubrifiants en Tunisie.
               </p>
-              <p className="mt-2 sm:mt-3 font-inter text-lg sm:text-base md:text-lg leading-relaxed tracking-wide opacity-90 max-w-2xl">
+              <p className="mt-2 sm:mt-3 font-inter text-lg sm:text-base md:text-lg leading-[1.4] tracking-wide opacity-90 max-w-2xl">
                 Votre partenaire de confiance pour la performance et la longévité de vos moteurs.
               </p>
             </div>
