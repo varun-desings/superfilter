@@ -26,7 +26,7 @@ export const products: Product[] = [
     cover: "/placeholder.svg",
     images: [],
   },
-  { slug: "square", name: "square", category: "square", cover: "/placeholder.svg" },
+  { slug: "square", name: "Huile Moteur KENNOL XTURBO 15W50", category: "square", cover: "/placeholder.svg" },
   { slug: "victoria", name: "victoria", category: "victoria", cover: "/placeholder.svg" },
   { slug: "done3d", name: "Done 3D", category: "Done 3D", cover: "/placeholder.svg" },
   { slug: "done", name: "DONE", category: "DONE", cover: "/placeholder.svg" },

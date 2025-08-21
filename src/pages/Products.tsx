@@ -100,7 +100,7 @@ const ProductsPage = () => {
 	};
 
 	const buildTitle = (item: any): string => {
-		if (item?.slug === 'bibi') return String(item?.name || '');
+		if (item?.slug === 'bibi' || item?.slug === 'square') return String(item?.name || '');
 		const size = extractPrimarySizeInches(item?.description);
 		const parts = [item?.name, size && size, 'Cement Breeze Block'].filter(Boolean);
 		return parts.join(' ');
@@ -367,6 +367,10 @@ const ProductsPage = () => {
 												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
 													{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA A3/B3/B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
 												</div>
+											) : item.slug === 'square' ? (
+												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+													{"Minérale\n\nAPI SL/CF; ACEA A3/B3\n\nMB 229.1; VW 501.01/505.00"}
+												</div>
 											) : (
 												<>
 													{buildDimensionsCm(item) && (
@@ -408,6 +412,8 @@ const ProductsPage = () => {
 										{item.slug === 'bibi' ? (
 											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA A3/B3/B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
 											</p>
+										) : item.slug === 'square' ? (
+											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale\n\nAPI SL/CF; ACEA A3/B3\n\nMB 229.1; VW 501.01/505.00"}</p>
 										) : (
 											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{item.description}</p>
 										)}
