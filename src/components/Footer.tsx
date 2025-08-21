@@ -67,9 +67,18 @@ const Footer = () => {
 								</a>
 							</div>
 						</div>
-					</div>
+									</div>
 
-					{/* Bottom Bar */}
+				{/* Partners Image */}
+				<div className="text-center mb-8">
+					<img 
+						src={partnersImage} 
+						alt="Nos partenaires" 
+						className="max-w-md mx-auto h-auto rounded-lg shadow-md"
+					/>
+				</div>
+
+				{/* Bottom Bar */}
 					<div className="border-t border-primary-foreground/20 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
 						<p className="text-primary-foreground/60 text-sm">
 							© 2024 STE SUPER FILTRE. Tous droits réservés.
