@@ -69,6 +69,10 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		if (/\/src\/CATALOGUE\/MANN FILTRE\/61ZF4lAEncL\._AC_SL1500_\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
 			name = 'mann filter oil filter W 1022';
 		}
+		// MOTUL 5L image rename
+		if (/\/src\/CATALOGUE\/MOTUL\/motul-x-clean-8100-5w-40-5-l-front\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
+			name = 'Motul 8100 X-Clean 5W40 5L';
+		}
 		const slug = `${category.toLowerCase()}-${toSlug(name)}`;
 		return {
 			slug,
