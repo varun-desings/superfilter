@@ -1,8 +1,8 @@
 export const CATALOGUE_CATEGORIES: string[] = [
 	'DONALDSON FILTER',
 	'MOTUL',
-	'SHELL',
 	'HELIX',
+	'SHELL',
 	'MANN FILTRE',
 ];
 

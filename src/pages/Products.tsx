@@ -361,152 +361,133 @@ const ProductsPage = () => {
 							</button>
 						))}
 					</div>
-					
-					<div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 stagger-children">
-						{filtered.map((item: any, index: number) => (
-							<Dialog key={item.slug}>
-								<DialogTrigger asChild>
-									<div className="card-elegant overflow-hidden animate-scale-in cursor-pointer group" style={{ ['--stagger' as any]: index }}>
-										{item.cover && (
-											<div className="relative h-48 sm:h-56 lg:h-64 bg-muted flex items-center justify-center overflow-hidden">
-												<img src={item.cover} alt={item.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
-												{/* Category badge */}
-												<span className="absolute top-2 sm:top-3 left-2 sm:left-3 rounded-full bg-background/80 backdrop-blur px-2 sm:px-3 py-1 text-xs font-medium border border-border">
-													{deriveCategoryFromName(item?.name)}
-												</span>
-												{Array.isArray(item.images) && item.images.length > 0 && (
-													<span className="absolute top-2 sm:top-3 right-2 sm:right-3 rounded-full bg-background/80 backdrop-blur px-2 sm:px-3 py-1 text-xs font-medium border border-border">
-														{item.images.length} photos
-													</span>
-												)}
-											</div>
-										)}
-										<div className="p-3 sm:p-4 lg:p-6 xl:p-8">
-											<h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-bold text-primary mb-1 sm:mb-2 leading-tight">{buildTitle(item)}</h3>
-											{item.slug === 'bibi' ? (
-												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-													{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA A3/B3/B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
-												</div>
-											) : item.slug === 'square' ? (
-												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-													{"Minérale\n\nAPI SL/CF; ACEA A3/B3\n\nMB 229.1; VW 501.01/505.00"}
-												</div>
-											) : item.slug === 'victoria' ? (
-												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-													{"Semi-Synthèse\n\nAPI SN/CF; ACEA A3/B3/B4\n\nVW 501.01/505.00; MB 229.1; RENAULT RN 0700"}
-												</div>
-											) : item.slug === 'done3d' ? (
-												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-													{"Synthèse\n\nAPI SL/CF; ACEA A3/B3"}
-												</div>
-											) : item.slug === 'done' ? (
-												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-													{"100% Synthèse\n\nMID SAPS\n\nACEA C2/C3; API SP\n\n✔ BMW Longlife-04; MB 229.52/229.51/229.31; VW 505.00/505.01\nFiat 9.55535-S1/S3; Opel OV0401547; GM Dexos 2; P.S.A B71 2290 (<2018)"}
-												</div>
-											) : item.slug === 'mezzo' ? (
-												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-													{"100% Synthèse\n\nPure Plus (Gaz Naturel)\n\nACEA C5\n\nAPI SN\n✔ VW 508.00/509.00\n\n✔ Porsche C20"}
-												</div>
-											) : item.slug === 'trap' ? (
-												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-													{"Minérale\n\nAPI SL/CF"}
-												</div>
-											) : item.slug === 'trapx' ? (
-												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-													{"100% Synthèse\n\nLONG LIFE\n\nAPI SN/CF; ACEA A3/B4\n\n✔ MB- 229.5; PORSCHE A40\n\nBMW Longlife-01 (jusqu’à fin 2018); FORD WWS-M2C937-A; Renault RN0710/0700; VW 502.00/505.00"}
-												</div>
-											) : item.slug === 'fino' ? (
-												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-													{"5W-40\n\nMarque : Motul\n\nCompatibilité : Voiture, SUV, Camion\n\nPoint d’éclair : 228°C (442°F)"}
-												</div>
-											) : (
-												<>
-													{buildDimensionsCm(item) && (
-														<div className="mt-1 text-xs sm:text-sm text-muted-foreground">{buildDimensionsCm(item)}</div>
-													)}
-													<div className="mt-1 text-xs sm:text-sm text-muted-foreground">{buildStockLine(item)}</div>
-													{item?.specs && (
-														<div className="mt-2 text-xs text-muted-foreground flex flex-wrap gap-x-2 sm:gap-x-3 gap-y-1">
-															{(item.specs.width_mm || item.specs.height_mm || item.specs.depth_mm) && (
-																<span>Dimensions: {formatDimensions(item.specs)}</span>
-															)}
-															{item.specs.thickness_mm && (
-																<span>Épaisseur: {item.specs.thickness_mm / 10}cm</span>
-															)}
-															{item.specs.weight_kg && (
-																<span>Poids: {item.specs.weight_kg}kg</span>
+
+					{/* Grouped Sections */}
+					{(activeCategory === 'Tous' ? baseOptions : [activeCategory]).map((cat) => {
+						const items = (ordered as any[]).filter((it) => deriveCategoryFromName(it?.name) === cat);
+						if (items.length === 0) return null;
+						return (
+							<section key={cat} className="mb-10 sm:mb-14">
+								<h2 className="text-lg sm:text-xl font-semibold text-primary mb-4 sm:mb-6">{cat}</h2>
+								<div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 stagger-children">
+									{items.map((item: any, index: number) => (
+										<Dialog key={item.slug}>
+											<DialogTrigger asChild>
+												<div className="card-elegant overflow-hidden animate-scale-in cursor-pointer group" style={{ ['--stagger' as any]: index }}>
+													{item.cover && (
+														<div className="relative h-48 sm:h-56 lg:h-64 bg-muted flex items-center justify-center overflow-hidden">
+															<img src={item.cover} alt={item.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
+															{/* Category badge */}
+															<span className="absolute top-2 sm:top-3 left-2 sm:left-3 rounded-full bg-background/80 backdrop-blur px-2 sm:px-3 py-1 text-xs font-medium border border-border">
+																{deriveCategoryFromName(item?.name)}
+															</span>
+															{Array.isArray(item.images) && item.images.length > 0 && (
+																<span className="absolute top-2 sm:top-3 right-2 sm:right-3 rounded-full bg-background/80 backdrop-blur px-2 sm:px-3 py-1 text-xs font-medium border border-border">
+																	{item.images.length} photos
+																</span>
 															)}
 														</div>
 													)}
-												</>
-											)}
-											<div className="mt-3 sm:mt-4 flex flex-col gap-2 sm:gap-3">
-												<button className="btn-accent flex items-center justify-center gap-2 w-full text-sm sm:text-base py-2 sm:py-3" onClick={(e) => { e.stopPropagation(); addToCart({ slug: item.slug, name: item.name, cover: item.cover || undefined }); toast.success('Aggiunto al carrello'); }}>
-													<ShoppingCart size={16} />
-													Ajouter au panier
-												</button>
-												<button className="btn-outline flex items-center justify-center gap-2 w-full text-sm sm:text-base py-2 sm:py-3">
-													Voir plus
-													<ArrowRight size={14} />
-												</button>
-											</div>
-										</div>
-									</div>
-								</DialogTrigger>
-								<DialogContent className="max-w-[95vw] sm:max-w-4xl md:max-w-5xl mx-2">
-									<div className="space-y-4">
-										<h3 className="heading-sm text-primary sticky top-0 bg-background/80 backdrop-blur z-10 py-1">{item.name}</h3>
-										<ImagesCarousel images={item.images || []} alt={item.name} />
-										{item.slug === 'bibi' ? (
-											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA A3/B3/B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
-											</p>
-										) : item.slug === 'square' ? (
-											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale\n\nAPI SL/CF; ACEA A3/B3\n\nMB 229.1; VW 501.01/505.00"}</p>
-										) : item.slug === 'victoria' ? (
-											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Semi-Synthèse\n\nAPI SN/CF; ACEA A3/B3/B4\n\nVW 501.01/505.00; MB 229.1; RENAULT RN 0700"}</p>
-										) : item.slug === 'done3d' ? (
-											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Synthèse\n\nAPI SL/CF; ACEA A3/B3"}</p>
-										) : item.slug === 'done' ? (
-											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nMID SAPS\n\nACEA C2/C3; API SP\n\n✔ BMW Longlife-04; MB 229.52/229.51/229.31; VW 505.00/505.01\nFiat 9.55535-S1/S3; Opel OV0401547; GM Dexos 2; P.S.A B71 2290 (<2018)"}</p>
-										) : item.slug === 'mezzo' ? (
-											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nPure Plus (Gaz Naturel)\n\nACEA C5\n\nAPI SN\n✔ VW 508.00/509.00\n\n✔ Porsche C20"}</p>
-										) : item.slug === 'trap' ? (
-											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale\n\nAPI SL/CF"}</p>
-										) : item.slug === 'trapx' ? (
-											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nLONG LIFE\n\nAPI SN/CF; ACEA A3/B4\n\n✔ MB- 229.5; PORSCHE A40\n\nBMW Longlife-01 (jusqu’à fin 2018); FORD WWS-M2C937-A; Renault RN0710/0700; VW 502.00/505.00"}</p>
-										) : item.slug === 'fino' ? (
-											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"5W-40\n\nMarque : Motul\n\nCompatibilité : Voiture, SUV, Camion\n\nPoint d’éclair : 228°C (442°F)"}</p>
-										) : (
-											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{item.description}</p>
-										)}
-										{item?.specs && item.slug !== 'bibi' && (
-											<div className="mt-2 text-xs text-muted-foreground space-y-1">
-												<div className="font-medium text-primary/90">Spécifications</div>
-												<ul className="list-disc pl-5">
-													{(item.specs.width_mm || item.specs.height_mm || item.specs.depth_mm) && (
-														<li>Dimensions: {formatDimensions(item.specs)}</li>
+													<div className="p-3 sm:p-4 lg:p-6 xl:p-8">
+														<h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-bold text-primary mb-1 sm:mb-2 leading-tight">{buildTitle(item)}</h3>
+														{item.slug === 'bibi' ? (
+															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+																{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA A3/B3/B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
+															</div>
+														) : item.slug === 'square' ? (
+															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+																{"Minérale\n\nAPI SL/CF; ACEA A3/B3\n\nMB 229.1; VW 501.01/505.00"}
+															</div>
+														) : item.slug === 'victoria' ? (
+															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+																{"Semi-Synthèse\n\nAPI SN/CF; ACEA A3/B3/B4\n\nVW 501.01/505.00; MB 229.1; RENAULT RN 0700"}
+															</div>
+														) : item.slug === 'done3d' ? (
+															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+																{"Synthèse\n\nAPI SL/CF; ACEA A3/B3"}
+															</div>
+														) : item.slug === 'done' ? (
+															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+																{"100% Synthèse\n\nMID SAPS\n\nACEA C2/C3; API SP\n\n✔ BMW Longlife-04; MB 229.52/229.51/229.31; VW 505.00/505.01\nFiat 9.55535-S1/S3; Opel OV0401547; GM Dexos 2; P.S.A B71 2290 (<2018)"}
+															</div>
+														) : item.slug === 'mezzo' ? (
+															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+																{"100% Synthèse\n\nPure Plus (Gaz Naturel)\n\nACEA C5\n\nAPI SN\n✔ VW 508.00/509.00\n\n✔ Porsche C20"}
+															</div>
+														) : item.slug === 'trap' ? (
+															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+																{"Minérale\n\nAPI SL/CF"}
+															</div>
+														) : item.slug === 'trapx' ? (
+															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+																{"100% Synthèse\n\nLONG LIFE\n\nAPI SN/CF; ACEA A3/B4\n\n✔ MB- 229.5; PORSCHE A40\n\nBMW Longlife-01 (jusqu’à fin 2018); FORD WWS-M2C937-A; Renault RN0710/0700; VW 502.00/505.00"}
+															</div>
+														) : item.slug === 'fino' ? (
+															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+																{"5W-40\n\nMarque : Motul\n\nCompatibilité : Voiture, SUV, Camion\n\nPoint d’éclair : 228°C (442°F)"}
+															</div>
+														) : (
+															<></>
+														)}
+														<div className="mt-3 sm:mt-4 flex flex-col gap-2 sm:gap-3">
+															<button className="btn-accent flex items-center justify-center gap-2 w-full text-sm sm:text-base py-2 sm:py-3" onClick={(e) => { e.stopPropagation(); addToCart({ slug: item.slug, name: item.name, cover: item.cover || undefined }); toast.success('Aggiunto al carrello'); }}>
+																<ShoppingCart size={16} />
+																Ajouter au panier
+															</button>
+															<button className="btn-outline flex items-center justify-center gap-2 w-full text-sm sm:text-base py-2 sm:py-3">
+																Voir plus
+																<ArrowRight size={14} />
+															</button>
+														</div>
+													</div>
+												</div>
+											</DialogTrigger>
+											<DialogContent className="max-w-[95vw] sm:max-w-4xl md:max-w-5xl mx-2">
+												<div className="space-y-4">
+													<h3 className="heading-sm text-primary sticky top-0 bg-background/80 backdrop-blur z-10 py-1">{item.name}</h3>
+													<ImagesCarousel images={item.images || []} alt={item.name} />
+													{/* reuse same conditional description blocks here (already exist below) */}
+													{item.slug === 'bibi' ? (
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA A3/B3/B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
+														</p>
+													) : item.slug === 'square' ? (
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale\n\nAPI SL/CF; ACEA A3/B3\n\nMB 229.1; VW 501.01/505.00"}</p>
+													) : item.slug === 'victoria' ? (
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Semi-Synthèse\n\nAPI SN/CF; ACEA A3/B3/B4\n\nVW 501.01/505.00; MB 229.1; RENAULT RN 0700"}</p>
+													) : item.slug === 'done3d' ? (
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Synthèse\n\nAPI SL/CF; ACEA A3/B3"}</p>
+													) : item.slug === 'done' ? (
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nMID SAPS\n\nACEA C2/C3; API SP\n\n✔ BMW Longlife-04; MB 229.52/229.51/229.31; VW 505.00/505.01\nFiat 9.55535-S1/S3; Opel OV0401547; GM Dexos 2; P.S.A B71 2290 (<2018)"}</p>
+													) : item.slug === 'mezzo' ? (
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nPure Plus (Gaz Naturel)\n\nACEA C5\n\nAPI SN\n✔ VW 508.00/509.00\n\n✔ Porsche C20"}</p>
+													) : item.slug === 'trap' ? (
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale\n\nAPI SL/CF"}</p>
+													) : item.slug === 'trapx' ? (
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nLONG LIFE\n\nAPI SN/CF; ACEA A3/B4\n\n✔ MB- 229.5; PORSCHE A40\n\nBMW Longlife-01 (jusqu’à fin 2018); FORD WWS-M2C937-A; Renault RN0710/0700; VW 502.00/505.00"}</p>
+													) : item.slug === 'fino' ? (
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"5W-40\n\nMarque : Motul\n\nCompatibilité : Voiture, SUV, Camion\n\nPoint d’éclair : 228°C (442°F)"}</p>
+													) : (
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{item.description}</p>
 													)}
-													{item.specs.thickness_mm && <li>Épaisseur: {item.specs.thickness_mm / 10}cm</li>}
-													{item.specs.weight_kg && <li>Poids: {item.specs.weight_kg}kg</li>}
-													{item.specs.dimensions_text && <li>Notation: {item.specs.dimensions_text}</li>}
-													{item.specs.techniques && <li>Techniques: {item.specs.techniques}</li>}
-												</ul>
-											</div>
-										)}
-										<div className="flex flex-col sm:flex-row gap-3 pt-2">
-											<button className="btn-accent flex items-center gap-2" onClick={() => { addToCart({ slug: item.slug, name: item.name, cover: item.cover || undefined }); toast.success('Aggiunto al carrello'); }}>
-												<ShoppingCart size={16} />
-												Ajouter au panier
-											</button>
-											<button className="btn-outline inline-flex items-center gap-2" onClick={() => navigate('/cart')}>
-												Aller au panier ({totalItems})
-												<ArrowRight size={14} />
-											</button>
-										</div>
-									</div>
-								</DialogContent>
-							</Dialog>
-						))}
+
+													<div className="flex flex-col sm:flex-row gap-3 pt-2">
+														<button className="btn-accent flex items-center gap-2" onClick={() => { addToCart({ slug: item.slug, name: item.name, cover: item.cover || undefined }); toast.success('Aggiunto al carrello'); }}>
+															<ShoppingCart size={16} />
+															Ajouter au panier
+														</button>
+														<button className="btn-outline inline-flex items-center gap-2" onClick={() => navigate('/cart')}>
+															Aller au panier ({totalItems})
+															<ArrowRight size={14} />
+														</button>
+													</div>
+												</div>
+											</DialogContent>
+										</Dialog>
+									))}
+								</div>
+							</section>
+						);
+					})}
 					</div>
 				</div>
 			</section>
