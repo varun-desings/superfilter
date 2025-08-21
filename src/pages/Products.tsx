@@ -241,7 +241,7 @@ const ProductsPage = () => {
 		}
 		// Shell Helix HX5 15W40
 		if (n.includes('helix hx5') && n.includes('15w40')) {
-			return 'Minérale\n\nAPI SL/CF\n\nNormes : ACEA A3/B3, MB-Approval 229.1\n\nConditionnements : 1L / 5L';
+			return 'Viscosité : 15W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SL/CF\n\nNormes / Homologations : ACEA A3/B3, MB 229.1\n\nVolume : 5 L';
 		}
 		// Shell Spirax S4 TXM
 		if (n.includes('spirax') && n.includes('s4') && n.includes('txm')) {
