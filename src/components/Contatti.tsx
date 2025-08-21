@@ -319,8 +319,7 @@ const Contatti = () => {
                 <div>
                   <h4 className="font-semibold text-primary mb-1">Adresse</h4>
                   <p className="text-muted-foreground">
-                    Tunis, Tunisie<br />
-                    Disponible sur tout le territoire national
+                    24 avenue de france, Ben Arous 2013
                   </p>
                 </div>
               </div>
