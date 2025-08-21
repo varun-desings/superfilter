@@ -579,31 +579,31 @@ const ProductsPage = () => {
 													<ImagesCarousel images={item.images || []} alt={item.name} />
 													{/* reuse same conditional description blocks here (already exist below) */}
 													{getCustomDescription(item) ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{getCustomDescription(item) as string}</p>
+														<p className="text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">{getCustomDescription(item) as string}</p>
 													) : item.slug === 'bibi' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nVW 501.01/505.00; RENAULT RN0700/RN0710"}
+														<p className="text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nVW 501.01/505.00; RENAULT RN0700/RN0710"}
 														</p>
 													) : item.slug === 'acceuil-shell-spirax-s4-txm' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Protection contre l'usure & oxydation\n\nHaute stabilité thermique et longue durée\n\n📦 Disponible en 20L et 209L"}
+														<p className="text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">{"Protection contre l'usure & oxydation\n\nHaute stabilité thermique et longue durée\n\n📦 Disponible en 20L et 209L"}
 														</p>
 													) : item.slug === 'square' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale"}</p>
+														<p className="text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale"}</p>
 													) : item.slug === 'victoria' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Semi-Synthèse"}</p>
+														<p className="text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">{"Semi-Synthèse"}</p>
 													) : item.slug === 'done3d' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Synthèse"}</p>
+														<p className="text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">{"Synthèse"}</p>
 													) : item.slug === 'done' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nMID SAPS"}</p>
+														<p className="text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nMID SAPS"}</p>
 													) : item.slug === 'mezzo' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nPure Plus (Gaz Naturel)"}</p>
+														<p className="text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nPure Plus (Gaz Naturel)"}</p>
 													) : item.slug === 'trap' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale"}</p>
+														<p className="text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale"}</p>
 													) : item.slug === 'trapx' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nLONG LIFE"}</p>
+														<p className="text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nLONG LIFE"}</p>
 													) : item.slug === 'fino' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"5W-40\n\nMarque : Motul\n\nCompatibilité : Voiture, SUV, Camion\n\nPoint d’éclair : 228°C (442°F)"}</p>
+														<p className="text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">{"5W-40\n\nMarque : Motul\n\nCompatibilité : Voiture, SUV, Camion\n\nPoint d’éclair : 228°C (442°F)"}</p>
 													) : (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{item.description}</p>
+														<p className="text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">{item.description}</p>
 													)}
 
 													<div className="flex flex-col sm:flex-row gap-3 pt-2">
