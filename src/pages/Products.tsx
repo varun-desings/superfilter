@@ -245,11 +245,28 @@ const ProductsPage = () => {
 	const byKey: Record<string, any> = {};
 	for (const p of products as any[]) { const k = normalize(p.slug || p.name || ""); if (k) byKey[k] = p; }
 	const oilOrdered = desiredOrder.map(k => byKey[k]).filter(Boolean);
+ 
+	// Use catalogue images: match by name tokens within same category
+	const normalizeText = (s: string = '') => s.toLowerCase();
+	const tokenizeName = (s: string = '') => normalizeText(s).split(/[^a-z0-9]+/).filter(t => t.length >= 3);
+	const matchCatalogueImages = (oil: any): string[] => {
+		const cat = deriveCategoryFromName(oil?.name);
+		const candidates = (catalogueItems as any[]).filter(ci => deriveCategoryFromName(ci?.name) === cat);
+		if (candidates.length === 0) return [];
+		const tokens = tokenizeName(oil?.name || '');
+		const scored = candidates.map(ci => {
+			const name = normalizeText(ci?.name || '');
+			const matches = tokens.filter(t => name.includes(t)).length;
+			return { ci, matches };
+		});
+		const best = scored.filter(s => s.matches > 0).map(s => s.ci);
+		const selected = (best.length > 0 ? best : candidates).slice(0, 8);
+		return selected.flatMap(ci => (ci.images && ci.images.length ? ci.images : [ci.cover])).filter(Boolean);
+	};
 
-	// Merge catalogue items (images, covers) with our oil items by name match fallback
 	const ordered = (oilOrdered as any[]).map((oil) => {
-		const cat = (catalogueItems as any[]).find((ci) => deriveCategoryFromName(ci?.name) === deriveCategoryFromName(oil?.name));
-		return cat ? { ...oil, cover: cat.cover ?? oil.cover, images: cat.images?.length ? cat.images : oil.images } : oil;
+		const imgs = matchCatalogueImages(oil);
+		return { ...oil, cover: imgs[0] ?? oil.cover, images: imgs.length ? imgs : oil.images };
 	});
 
 	const categories = Array.from(new Set((ordered as any[]).map((it) => deriveCategoryFromName(it?.name)))).sort();
