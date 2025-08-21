@@ -325,7 +325,7 @@ const ProductsPage = () => {
 		}
 		// Shell Spirax S4 TXM
 		if (n.includes('spirax') && n.includes('s4') && n.includes('txm')) {
-			return 'Minérale\n\nAPI SF/CD\n\nNormes : MB 226.1 / 227.0 ; MIL-L-2104 D\n\nConditionnements : 20L / 209L';
+			return 'Type : Huile de transmission automatique / synchrone\n\nMarque : Shell\n\nApplication : Boîtes de vitesses et transmissions industrielles\n\nNormes / Homologations : Allison C-4, MAN 341 Type Z4, MB 235.28\n\nVolume : 20 L';
 		}
 		// Shell Tellus S2 M68
 		if (n.includes('tellus') && n.includes('s2') && n.includes('m68')) {
