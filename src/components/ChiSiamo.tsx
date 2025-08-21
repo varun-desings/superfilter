@@ -34,15 +34,6 @@ Basée à Ben Arous, nous accompagnons depuis plus de deux décennies les partic
           </div>
         </div>
 
-        {/* Values */}
-        <div className="max-w-3xl mx-auto mb-12 sm:mb-16">
-          <h3 className="heading-sm text-primary mb-4">Valeurs</h3>
-          <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
-            <li>✅ Qualité et fiabilité des produits</li>
-            <li>✅ Partenariats stratégiques avec de grandes marques</li>
-            <li>✅ Service client réactif et professionnel</li>
-          </ul>
-        </div>
 
         {/* Existing feature grid retained */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 stagger-children">
