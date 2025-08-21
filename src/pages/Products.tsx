@@ -468,7 +468,7 @@ const ProductsPage = () => {
 				<div className="container mx-auto px-4 sm:px-6">
 					<BackLink label="Retour" />
 					<div className="text-center mb-12 sm:mb-16 animate-fade-up">
-						<h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-3 sm:mb-4">Catalogue des produits</h1>
+						<h1 className="heading-lg text-primary mb-3 sm:mb-4">Catalogue des produits</h1>
 						<p className="text-sm sm:text-base lg:text-lg max-w-3xl mx-auto text-muted-foreground px-4">
 							Découvrez nos modèles classés par catégorie. Chaque pièce joue avec la lumière pour créer des ambiances uniques.
 						</p>
@@ -513,10 +513,10 @@ const ProductsPage = () => {
 															)}
 														</div>
 													)}
-													<div className="p-3 sm:p-4 lg:p-6 xl:p-8">
-														<h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-bold text-primary mb-1 sm:mb-2 leading-tight">{buildTitle(item)}</h3>
-														{getCustomDescription(item) ? (
-															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">{getCustomDescription(item) as string}</div>
+																						<div className="p-3 sm:p-4 lg:p-6 xl:p-8">
+										<h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-inter font-bold text-primary mb-1 sm:mb-2 leading-tight">{buildTitle(item)}</h3>
+										{getCustomDescription(item) ? (
+											<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">{getCustomDescription(item) as string}</div>
 														) : item.slug === 'bibi' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
 																{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA A3/B3/B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
