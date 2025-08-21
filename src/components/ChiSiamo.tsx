@@ -28,16 +28,28 @@ const ChiSiamo = () => {
   return (
     <section id="chi-siamo" className="py-24 bg-muted/30">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16 animate-fade-up">
+        <div className="text-center mb-10 sm:mb-12 animate-fade-up">
           <h2 className="heading-lg text-primary mb-6">À propos</h2>
-          <p className="body-lg max-w-3xl mx-auto">
-            L’Élégance de l’Ombre avec Super Filtre — Découvrez Super Filtre, l’innovation en matière de brises soleil en béton. Nos
-            designs uniques ne se contentent pas de protéger votre espace des rayons ardents du soleil, ils transforment chaque
-            rayon en une œuvre d’art. Avec Super Filtre, chaque jour est une nouvelle aventure visuelle, où la lumière et l’ombre
-            dansent sur les murs de votre habitat, créant une ambiance à la fois dynamique et apaisante.
-          </p>
+          <div className="body-lg max-w-3xl mx-auto whitespace-pre-line text-muted-foreground">
+            {`Fondée en 2003, STE SUPER FILTRE est une entreprise tunisienne reconnue dans le domaine des filtres, huiles et lubrifiants automobiles et industriels.
+Grâce à des partenariats solides avec des marques internationales, nous garantissons à nos clients des produits fiables et certifiés.
+
+Notre mission est simple : offrir des solutions de filtration et de lubrification qui assurent performance, sécurité et durabilité à vos équipements.
+Basée à Ben Arous, nous accompagnons depuis plus de deux décennies les particuliers, professionnels et industriels en Tunisie.`}
+          </div>
         </div>
 
+        {/* Values */}
+        <div className="max-w-3xl mx-auto mb-12 sm:mb-16">
+          <h3 className="heading-sm text-primary mb-4">Valeurs</h3>
+          <ul className="space-y-2 text-sm sm:text-base text-muted-foreground">
+            <li>✅ Qualité et fiabilité des produits</li>
+            <li>✅ Partenariats stratégiques avec de grandes marques</li>
+            <li>✅ Service client réactif et professionnel</li>
+          </ul>
+        </div>
+
+        {/* Existing feature grid retained */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 stagger-children">
           {features.map((feature, index) => (
             <div 
@@ -59,7 +71,7 @@ const ChiSiamo = () => {
         <div className="text-center">
           <div className="bg-accent/10 rounded-2xl p-8 md:p-12 animate-fade-up">
             <blockquote className="heading-md text-primary mb-6 italic">
-              "Ne laissez pas le soleil dicter votre confort.<br />Avec Super Filtre, prenez le contrôle de votre environnement lumineux."
+              {"Ne laissez pas le soleil dicter votre confort.<br />Avec Super Filtre, prenez le contrôle de votre environnement lumineux."}
             </blockquote>
             <p className="body-lg max-w-2xl mx-auto">
               Visitez notre site web ou contactez‑nous pour une consultation personnalisée et transformez votre espace dès aujourd’hui !

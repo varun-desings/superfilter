@@ -25,79 +25,20 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto sm:mx-0 mt-16 sm:mt-24 lg:mt-32">
           {/* Content */}
           <div className="animate-fade-up text-white">
-            {/* Main Title - Elegant and sophisticated */}
-            <div className="mb-16 sm:mb-20">
-              <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.15] tracking-[0.02em] mb-8 sm:mb-10 text-white/95">
-                L'Élégance de l'Ombre
+            {/* Main Title */}
+            <div className="mb-10 sm:mb-12">
+              <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.15] tracking-[0.02em] mb-4 sm:mb-6 text-white/95">
+                STE SUPER FILTRE
               </h1>
-              <div className="flex flex-col sm:flex-row items-start sm:items-baseline gap-4 sm:gap-8">
-                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-light tracking-[0.1em] opacity-80 mb-3 sm:mb-0 text-white/90">
-                  avec
-                </span>
-                <span className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-[0.01em] text-white drop-shadow-lg">
-                  Super Filtre
-                </span>
-              </div>
-            </div>
-            
-            {/* Subtitle - Refined and elegant */}
-            <div className="mb-16 sm:mb-20">
-              <p className="font-inter text-base sm:text-lg md:text-xl font-medium tracking-[0.15em] uppercase opacity-90 mb-6 sm:mb-8 text-white/85">
-                Super Filtre
-              </p>
-              <div className="w-20 h-px bg-gradient-to-r from-white/70 via-white/50 to-transparent mb-6 sm:mb-8"></div>
-              <p className="font-inter text-sm sm:text-base md:text-lg font-light tracking-[0.08em] opacity-85 max-w-md text-white/90 leading-relaxed">
-                l'élégance maîtrisée de la lumière
-              </p>
-            </div>
-            
-            {/* Description - Clean and readable */}
-            <div className="mb-12 sm:mb-16">
               <p className="font-inter text-sm sm:text-base md:text-lg leading-relaxed tracking-wide opacity-90 max-w-2xl">
-                Super Filtre crée des brises soleil en béton armé qui allient esthétique, 
-                fonctionnalité et durabilité. Chaque pièce est pensée pour jouer avec la 
-                lumière et projeter des ombres uniques, apportant caractère et harmonie à vos 
-                espaces.
+                Depuis plus de 20 ans, spécialiste des filtres, huiles et lubrifiants en Tunisie.
+              </p>
+              <p className="mt-3 font-inter text-sm sm:text-base md:text-lg leading-relaxed tracking-wide opacity-90 max-w-2xl">
+                Votre partenaire de confiance pour la performance et la longévité de vos moteurs.
               </p>
             </div>
             
-            {/* Stats - Elegant grid with subtle design */}
-            <div className="grid grid-cols-2 gap-6 sm:gap-8 mb-16 sm:mb-20">
-              <div className="text-center group">
-                <div className="font-playfair text-xl sm:text-2xl md:text-3xl font-light mb-2 sm:mb-3 text-white/90">
-                  5
-                </div>
-                <div className="text-xs sm:text-sm opacity-70 font-medium tracking-wide uppercase">
-                  Des années d'expérience
-                </div>
-              </div>
-              <div className="text-center group">
-                <div className="font-playfair text-xl sm:text-2xl md:text-3xl font-light mb-2 sm:mb-3 text-white/90">
-                  120+
-                </div>
-                <div className="text-xs sm:text-sm opacity-70 font-medium tracking-wide uppercase">
-                  Projets terminés
-                </div>
-              </div>
-              <div className="text-center group">
-                <div className="font-playfair text-xl sm:text-2xl md:text-3xl font-light mb-2 sm:mb-3 text-white/90">
-                  10+
-                </div>
-                <div className="text-xs sm:text-sm opacity-70 font-medium tracking-wide uppercase">
-                  Artisans qualifiés
-                </div>
-              </div>
-              <div className="text-center group">
-                <div className="font-playfair text-xl sm:text-2xl md:text-3xl font-light mb-2 sm:mb-3 text-white/90">
-                  100%
-                </div>
-                <div className="text-xs sm:text-sm opacity-70 font-medium tracking-wide uppercase">
-                  Satisfaction des clients
-                </div>
-              </div>
-            </div>
-
-            {/* CTA Buttons - Refined and elegant */}
+            {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-10 sm:gap-10 md:gap-12 justify-center sm:justify-start">
               <button 
                 onClick={() => scrollToSection('progetti')}
