@@ -247,6 +247,10 @@ const ProductsPage = () => {
 		if (n.includes('helix hx5') && n.includes('15w40') && n.includes('(2')) {
 			return 'Viscosité : 15W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SL/CF\n\nNormes / Homologations : ACEA A3/B3, MB 229.1\n\nVolume : 4 L';
 		}
+		// Shell Helix HX5 15W40 (3) - specific variant 3L
+		if (n.includes('helix hx5') && n.includes('15w40') && n.includes('(3')) {
+			return 'Viscosité : 15W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SL/CF\n\nNormes / Homologations : ACEA A3/B3, MB 229.1\n\nVolume : 3 L';
+		}
 		// Shell Helix HX5 15W40
 		if (n.includes('helix hx5') && n.includes('15w40')) {
 			return 'Viscosité : 15W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SL/CF\n\nNormes / Homologations : ACEA A3/B3, MB 229.1\n\nVolume : 5 L';
