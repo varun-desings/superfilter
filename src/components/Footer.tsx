@@ -14,6 +14,13 @@ const Footer = () => {
 					{/* Partners */}
 					<div>
 						<h4 className="font-semibold mb-4">Partenaires</h4>
+						<div className="mb-4">
+							<img 
+								src="/src/ACCEUIL/Partners.JPG" 
+								alt="Nos partenaires" 
+								className="w-full h-auto rounded-lg shadow-md"
+							/>
+						</div>
 						<ul className="space-y-2 text-primary-foreground/80">
 							<li>U.S.P</li>
 							<li>EDT</li>
