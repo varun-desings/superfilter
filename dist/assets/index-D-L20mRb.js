@@ -244,7 +244,17 @@ API : SN/CF
 
 Normes / Homologations : ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00
 
-Volume : 5 L`:d.includes("helix ultra")&&d.includes("5w40")&&!d.includes("ect")?`Synthétique
+Volume : 5 L`:d.includes("helix ultra")&&d.includes("5w40")&&!d.includes("ect")&&d.includes("(2")?`Viscosité : 5W-40
+
+Marque : Shell
+
+Type de véhicule : Voitures particulières, SUV et utilitaires légers
+
+API : SN/CF
+
+Normes / Homologations : ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00
+
+Volume : 1 L`:d.includes("helix ultra")&&d.includes("5w40")&&!d.includes("ect")?`Synthétique
 
 API SN/CF
 
