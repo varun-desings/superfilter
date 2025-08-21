@@ -57,6 +57,10 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		if (/\/src\/ACCEUIL\/.+\/Capture5\.[^.]+$/i.test(absPath) || /\/src\/ACCEUIL\/Capture5\.[^.]+$/i.test(absPath)) {
 			name = 'Shell Spirax S4 TXM';
 		}
+		// Override first AUTRE card in MANN FILTRE to requested label
+		if (/\/src\/CATALOGUE\/MANN FILTRE\/61ZF4lAEncL\._AC_SL1500_\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
+			name = 'mann filter AC SL 1500';
+		}
 		const slug = `${category.toLowerCase()}-${toSlug(name)}`;
 		return {
 			slug,

@@ -75,7 +75,7 @@ Conçu pour un usage extérieur comme intérieur, Bibi s’adapte aux projets r�
             <div className="h-48 sm:h-64 md:h-80 lg:h-auto w-full overflow-hidden lg:overflow-visible rounded-t-2xl">
               <img
                 src={testimonialImage}
-                alt="Façade rénovée avec claustras CLAUSTRAH"
+                alt="Façade rénovée avec claustras Super Filtre"
                 className="w-full h-full lg:h-auto object-cover lg:object-contain"
                 loading="lazy"
                 decoding="async"
@@ -86,10 +86,10 @@ Conçu pour un usage extérieur comme intérieur, Bibi s’adapte aux projets r�
             <Quote className="text-accent flex-shrink-0 mt-1 hidden sm:block" size={32} />
             <div className="flex-1">
               <blockquote className="text-lg sm:text-xl md:text-2xl text-primary mb-4 italic leading-relaxed">
-                "J’ai rénové la maison de mon grand-père avec les claustras de CLAUSTRAH, et le résultat est incroyable.
+                "J’ai rénové la maison de mon grand-père avec les claustras de Super Filtre, et le résultat est incroyable.
                 Ils ont redonné vie à la façade tout en respectant l’âme du lieu.
                 La lumière passe avec douceur, et les ombres créent une ambiance apaisante.
-                C’est à la fois moderne et chargé d’émotion. Merci CLAUSTRAH pour cette belle transformation."
+                C’est à la fois moderne et chargé d’émotion. Merci Super Filtre pour cette belle transformation."
               </blockquote>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
                 <div className="flex text-accent">
@@ -98,7 +98,7 @@ Conçu pour un usage extérieur comme intérieur, Bibi s’adapte aux projets r�
                   ))}
                 </div>
                 <span className="font-semibold text-primary">Hassen Jeljeli</span>
-                <span className="text-muted-foreground text-sm">- Client CLAUSTRAH</span>
+                <span className="text-muted-foreground text-sm">- Client Super Filtre</span>
               </div>
             </div>
           </div>

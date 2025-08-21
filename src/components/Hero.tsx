@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10">
         <img
           src="/products/SQUARE/WhatsApp%20Image%202025-08-03%20at%2019.03.58_7e108c3c.jpg"
-          alt="CLAUSTRAH hero background"
+          alt="Super Filtre hero background"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/60" />
@@ -35,7 +35,7 @@ const Hero = () => {
                   avec
                 </span>
                 <span className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-[0.01em] text-white drop-shadow-lg">
-                  CLAUSTRAH
+                  Super Filtre
                 </span>
               </div>
             </div>
@@ -43,7 +43,7 @@ const Hero = () => {
             {/* Subtitle - Refined and elegant */}
             <div className="mb-16 sm:mb-20">
               <p className="font-inter text-base sm:text-lg md:text-xl font-medium tracking-[0.15em] uppercase opacity-90 mb-6 sm:mb-8 text-white/85">
-                CLAUSTRAH
+                Super Filtre
               </p>
               <div className="w-20 h-px bg-gradient-to-r from-white/70 via-white/50 to-transparent mb-6 sm:mb-8"></div>
               <p className="font-inter text-sm sm:text-base md:text-lg font-light tracking-[0.08em] opacity-85 max-w-md text-white/90 leading-relaxed">
@@ -54,7 +54,7 @@ const Hero = () => {
             {/* Description - Clean and readable */}
             <div className="mb-12 sm:mb-16">
               <p className="font-inter text-sm sm:text-base md:text-lg leading-relaxed tracking-wide opacity-90 max-w-2xl">
-                CLAUSTRAH crée des brises soleil en béton armé qui allient esthétique, 
+                Super Filtre crée des brises soleil en béton armé qui allient esthétique, 
                 fonctionnalité et durabilité. Chaque pièce est pensée pour jouer avec la 
                 lumière et projeter des ombres uniques, apportant caractère et harmonie à vos 
                 espaces.

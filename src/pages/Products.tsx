@@ -259,10 +259,10 @@ const ProductsPage = () => {
 					<div className="flex items-center">
 						<img 
 							src="/favicon.jpg" 
-							alt="CLAUSTRAH Logo" 
+							alt="Super Filtre Logo" 
 							className="w-8 h-8 rounded object-cover mr-2"
 						/>
-						<span className="text-lg font-bold text-primary">Claustrah</span>
+						<span className="text-lg font-bold text-primary">Super Filtre</span>
 					</div>
 					
 					{/* Menu Button on Right */}
@@ -308,12 +308,12 @@ const ProductsPage = () => {
 					<div className="flex items-center justify-between py-4">
 						{/* Logo on Left */}
 						<div className="flex items-center">
-							<img 
-								src="/favicon.jpg" 
-								alt="CLAUSTRAH Logo" 
-								className="w-10 h-10 rounded object-cover mr-3"
-							/>
-							<span className="text-xl font-bold text-primary">Claustrah</span>
+													<img 
+							src="/favicon.jpg" 
+							alt="Super Filtre Logo" 
+							className="w-10 h-10 rounded object-cover mr-3"
+						/>
+							<span className="text-xl font-bold text-primary">Super Filtre</span>
 						</div>
 						
 						{/* Navigation Links */}

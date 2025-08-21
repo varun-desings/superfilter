@@ -38,10 +38,10 @@ const Navigation = () => {
             <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <img 
                 src="/favicon.jpg" 
-                alt="CLAUSTRAH Logo" 
+                alt="Super Filtre Logo" 
                 className="w-8 h-8 rounded object-cover"
               />
-              <div className="heading-sm text-primary">CLAUSTRAH</div>
+              <div className="heading-sm text-primary">Super Filtre</div>
             </Link>
           </div>
 
