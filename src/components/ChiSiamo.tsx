@@ -5,23 +5,18 @@ const ChiSiamo = () => {
   const features = [
     {
       icon: <Award className="text-accent" size={32} />,
-      title: "Durabilité",
-      description: "Nos brise-soleil en ciment armé garantissent une résistance et une longévité exceptionnelles."
+      title: "Qualité et fiabilité",
+      description: "Des produits certifiés et performants, sélectionnés pour leur durabilité."
     },
     {
       icon: <Settings className="text-accent" size={32} />,
-      title: "Personnalisation",
-      description: "Chaque projet est conçu pour répondre à des besoins architecturaux spécifiques."
-    },
-    {
-      icon: <Recycle className="text-accent" size={32} />,
-      title: "Éco‑responsabilité",
-      description: "Des matériaux et des procédés productifs attentifs à l'environnement pour un avenir durable."
+      title: "Partenariats stratégiques",
+      description: "Collaboration avec de grandes marques pour garantir conformité et fiabilité."
     },
     {
       icon: <Users className="text-accent" size={32} />,
-      title: "Expérience",
-      description: "Équipe d'artisans spécialisés avec plus de 5 ans d'expérience dans le secteur."
+      title: "Service client réactif",
+      description: "Accompagnement rapide et professionnel pour particuliers et industriels."
     }
   ];
 
