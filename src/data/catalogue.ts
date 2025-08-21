@@ -79,7 +79,7 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		}
 		// Donaldson filter rename
 		if (/\/src\/CATALOGUE\/AUTRE\/64e8c9dcf25dfe3f312a82e0-b085011-donaldson-air-filter-primary\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
-			name = 'Donaldson Filter';
+			name = 'Donaldson Air Filter Primary';
 		}
 		const slug = `${category.toLowerCase()}-${toSlug(name)}`;
 		return {
