@@ -286,7 +286,17 @@ API SN
 
 Normes : ACEA C3, MB-Approval 229.31/229.51, VW 504.00/507.00, BMW LL-04
 
-Conditionnements : 1L / 5L`:c.includes("helix hx7")&&c.includes("10w40")&&!c.includes("(")?`Viscosité : 10W-40
+Conditionnements : 1L / 5L`:c.includes("rimula")&&c.includes("r4")&&c.includes("15w40")&&!c.includes("(")?`Viscosité : 15W-40
+
+Marque : Shell
+
+Type de véhicule : Moteurs diesel pour véhicules lourds et utilitaires
+
+API : CI-4 / CH-4 / CG-4 / CF-4 / CF
+
+Normes / Homologations : ACEA E7 / E5 / E3, MB 228.3, MAN M3275, Volvo VDS-3
+
+Volume : 20 L`:c.includes("helix hx7")&&c.includes("10w40")&&!c.includes("(")?`Viscosité : 10W-40
 
 Marque : Shell
 
