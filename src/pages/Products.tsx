@@ -224,6 +224,31 @@ const ProductsPage = () => {
 	const baseOptions = Array.from(new Set([...CATEGORIES, ...categories])).sort();
 	const categoryOptions = ['Tous', ...baseOptions];
 	const filtered = activeCategory === 'Tous' ? ordered : (ordered as any[]).filter((it) => deriveCategoryFromName(it?.name) === activeCategory);
+
+	const getCustomDescription = (item: any): string | null => {
+		const n = String(item?.name || '').toLowerCase();
+		// Shell Helix Ultra 5W40
+		if (n.includes('helix ultra') && n.includes('5w40') && !n.includes('ect')) {
+			return 'Synthétique\n\nAPI SN/CF\n\nNormes : ACEA A3/B4, MB-Approval 229.5, VW 502.00/505.00, BMW LL-01\n\nConditionnements : 1L / 5L';
+		}
+		// Shell Helix Ultra ECT 5W30
+		if (n.includes('helix ultra') && n.includes('ect') && n.includes('5w30')) {
+			return 'Synthétique\n\nAPI SN\n\nNormes : ACEA C3, MB-Approval 229.31/229.51, VW 504.00/507.00, BMW LL-04\n\nConditionnements : 1L / 5L';
+		}
+		// Shell Helix HX7 10W40
+		if (n.includes('helix hx7') && n.includes('10w40')) {
+			return 'Semi-synthétique\n\nAPI SN/CF\n\nNormes : ACEA A3/B3, A3/B4, MB-Approval 229.3, VW 502.00/505.00\n\nConditionnements : 1L / 5L';
+		}
+		// Shell Helix HX5 15W40
+		if (n.includes('helix hx5') && n.includes('15w40')) {
+			return 'Minérale\n\nAPI SL/CF\n\nNormes : ACEA A3/B3, MB-Approval 229.1\n\nConditionnements : 1L / 5L';
+		}
+		// Shell Spirax S4 TXM
+		if (n.includes('spirax') && n.includes('s4') && n.includes('txm')) {
+			return 'Minérale\n\nAPI SF/CD\n\nNormes : MB 226.1 / 227.0 ; MIL-L-2104 D\n\nConditionnements : 20L / 209L';
+		}
+		return null;
+	};
 	
 	return (
 		<div className="min-h-screen">
@@ -365,7 +390,9 @@ const ProductsPage = () => {
 													)}
 													<div className="p-3 sm:p-4 lg:p-6 xl:p-8">
 														<h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-bold text-primary mb-1 sm:mb-2 leading-tight">{buildTitle(item)}</h3>
-														{item.slug === 'bibi' ? (
+														{getCustomDescription(item) ? (
+															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">{getCustomDescription(item) as string}</div>
+														) : item.slug === 'bibi' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
 																{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA A3/B3/B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
 															</div>
@@ -426,7 +453,9 @@ const ProductsPage = () => {
 													<h3 className="heading-sm text-primary sticky top-0 bg-background/80 backdrop-blur z-10 py-1">{item.name}</h3>
 													<ImagesCarousel images={item.images || []} alt={item.name} />
 													{/* reuse same conditional description blocks here (already exist below) */}
-													{item.slug === 'bibi' ? (
+													{getCustomDescription(item) ? (
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{getCustomDescription(item) as string}</p>
+													) : item.slug === 'bibi' ? (
 														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA A3/B3/B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
 														</p>
 													) : item.slug === 'acceuil-shell-spirax-s4-txm' ? (
