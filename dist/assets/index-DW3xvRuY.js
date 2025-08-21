@@ -304,7 +304,17 @@ Point d’éclair : 230 °C (approx.)
 
 Fabricant : Shell
 
-Volume : 208,2 L (55 gallons)`:f.includes("motul")&&f.includes("8100")&&f.includes("x-clean")&&f.includes("5w40")?`Viscosité : 5W-40
+Volume : 208,2 L (55 gallons)`:f.includes("motul")&&f.includes("8100")&&f.includes("x-clean")&&f.includes("5w40")&&(f.includes(" 5l")||f.endsWith("5l"))?`Viscosité : 5W-40
+
+Marque : Motul
+
+Type de véhicule : Voitures particulières, SUV et utilitaires légers
+
+API : SN/CF
+
+Normes / Homologations : ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 505.01 / 502.00 / 505.00, Porsche A40, Ford 917A, GM Dexos2
+
+Volume : 5 L`:f.includes("motul")&&f.includes("8100")&&f.includes("x-clean")&&f.includes("5w40")?`Viscosité : 5W-40
 
 Marque : Motul
 

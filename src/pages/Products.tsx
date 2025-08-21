@@ -267,6 +267,10 @@ const ProductsPage = () => {
 		if (n.includes('tellus') && n.includes('s2') && n.includes('m46')) {
 			return 'Viscosité : ISO VG 46\n\nMarque : Shell\n\nType de fluide : Huile hydraulique industrielle\n\nPoint d’éclair : 230 °C (approx.)\n\nFabricant : Shell\n\nVolume : 208,2 L (55 gallons)';
 		}
+		// Motul 8100 X-Clean 5W40 5L (specific variant)
+		if (n.includes('motul') && n.includes('8100') && n.includes('x-clean') && n.includes('5w40') && (n.includes(' 5l') || n.endsWith('5l'))) {
+			return 'Viscosité : 5W-40\n\nMarque : Motul\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 505.01 / 502.00 / 505.00, Porsche A40, Ford 917A, GM Dexos2\n\nVolume : 5 L';
+		}
 		// Motul 8100 X-Clean 5W40
 		if (n.includes('motul') && n.includes('8100') && n.includes('x-clean') && n.includes('5w40')) {
 			return 'Viscosité : 5W-40\n\nMarque : Motul\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nPoint d’éclair : 228 °C\n\nFabricant : Motul\n\nVolume : 5 L (5000 ml)';
