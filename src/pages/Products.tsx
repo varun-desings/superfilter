@@ -230,19 +230,19 @@ const ProductsPage = () => {
 		const n = String(item?.name || '').toLowerCase();
 		// Shell Helix Ultra 5W40 - 209L (drum) base variant (no parentheses)
 		if (n.includes('helix ultra') && n.includes('5w40') && !n.includes('ect') && !n.includes('(')) {
-			return 'Viscosité: 5W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume: 209 L (drum)';
+			return 'Viscosité: 5W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nVolume: 209 L (drum)';
 		}
 		// Shell Helix Ultra 5W40 (1) - specific variant 5L
 		if (n.includes('helix ultra') && n.includes('5w40') && !n.includes('ect') && n.includes('(1')) {
-			return 'Viscosité: 5W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume: 5 L';
+			return 'Viscosité: 5W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nVolume: 5 L';
 		}
 		// Shell Helix Ultra 5W40 (2) - specific variant 1L
 		if (n.includes('helix ultra') && n.includes('5w40') && !n.includes('ect') && n.includes('(2')) {
-			return 'Viscosité: 5W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume: 1 L';
+			return 'Viscosité: 5W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nVolume: 1 L';
 		}
 		// Shell Helix Ultra 5W40
 		if (n.includes('helix ultra') && n.includes('5w40') && !n.includes('ect')) {
-			return 'Synthétique\n\nAPI SN/CF\n\nNormes : ACEA A3/B4, MB-Approval 229.5, VW 502.00/505.00, BMW LL-01\n\nConditionnements : 1L / 5L';
+			return 'Synthétique\n\nConditionnements : 1L / 5L';
 		}
 		// Shell Helix Ultra ECT 5W30 - 1L base variant (no parentheses)
 		if (n.includes('helix ultra') && n.includes('ect') && n.includes('5w30') && !n.includes('(')) {
