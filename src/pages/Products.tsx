@@ -1,4 +1,5 @@
 import products from '@/data/products';
+import CATEGORIES, { deriveCategory as deriveCategoryFromName } from '@/data/categories';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { useCart } from '@/contexts/CartContext';
 import { ShoppingCart, ArrowRight, Menu, X } from 'lucide-react';
@@ -244,20 +245,10 @@ const ProductsPage = () => {
 	for (const p of products as any[]) { const k = normalize(p.slug || p.name || ""); if (k) byKey[k] = p; }
 	const ordered = desiredOrder.map(k => byKey[k]).filter(Boolean);
 
-	// Derive brand category from product name
-	const deriveCategory = (item: any): string => {
-		const n = String(item?.name || '').toUpperCase();
-		if (n.includes('SHELL')) return 'SHELL';
-		if (n.includes('YACCO')) return 'YACCO';
-		if (n.includes('MOTUL')) return 'MOTUL';
-		if (n.includes('ACCOR')) return 'ACCOR';
-		if (n.includes('KENNOL')) return 'KENNOL';
-		return 'AUTRE';
-	};
-
-	const categories = Array.from(new Set((ordered as any[]).map(deriveCategory))).sort();
-	const categoryOptions = ['Tous', ...categories];
-	const filtered = activeCategory === 'Tous' ? ordered : (ordered as any[]).filter((it) => deriveCategory(it) === activeCategory);
+	const categories = Array.from(new Set((ordered as any[]).map((it) => deriveCategoryFromName(it?.name)))).sort();
+	const baseOptions = Array.from(new Set([...CATEGORIES, ...categories])).sort();
+	const categoryOptions = ['Tous', ...baseOptions];
+	const filtered = activeCategory === 'Tous' ? ordered : (ordered as any[]).filter((it) => deriveCategoryFromName(it?.name) === activeCategory);
 	
 	return (
 		<div className="min-h-screen">
@@ -381,7 +372,7 @@ const ProductsPage = () => {
 												<img src={item.cover} alt={item.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]" />
 												{/* Category badge */}
 												<span className="absolute top-2 sm:top-3 left-2 sm:left-3 rounded-full bg-background/80 backdrop-blur px-2 sm:px-3 py-1 text-xs font-medium border border-border">
-													{deriveCategory(item)}
+													{deriveCategoryFromName(item?.name)}
 												</span>
 												{Array.isArray(item.images) && item.images.length > 0 && (
 													<span className="absolute top-2 sm:top-3 right-2 sm:right-3 rounded-full bg-background/80 backdrop-blur px-2 sm:px-3 py-1 text-xs font-medium border border-border">
