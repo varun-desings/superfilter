@@ -242,7 +242,17 @@ API SN/CF
 
 Normes : ACEA A3/B3, A3/B4, MB-Approval 229.3, VW 502.00/505.00
 
-Conditionnements : 1L / 5L`:d.includes("helix hx5")&&d.includes("15w40")?`Viscosité : 15W-40
+Conditionnements : 1L / 5L`:d.includes("helix hx5")&&d.includes("15w40")&&d.includes("(1")?`Viscosité : 15W-40
+
+Marque : Shell
+
+Type de véhicule : Voitures particulières, SUV et utilitaires légers
+
+API : SL/CF
+
+Normes / Homologations : ACEA A3/B3, MB 229.1
+
+Volume : 20 L`:d.includes("helix hx5")&&d.includes("15w40")?`Viscosité : 15W-40
 
 Marque : Shell
 
