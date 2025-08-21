@@ -2,7 +2,7 @@
 import { Mail, Phone, Facebook, Instagram, MapPin, Send, ShoppingCart, X } from 'lucide-react';
 import { useState } from 'react';
 import { useCart } from '@/contexts/CartContext';
-import products from '@/data/products.json';
+import products from '@/data/products';
 
 const Contatti = () => {
   const { items, removeFromCart, increment, decrement, clear, totalItems } = useCart();

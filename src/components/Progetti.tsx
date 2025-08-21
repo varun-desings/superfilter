@@ -1,6 +1,6 @@
 import { Star, Quote } from 'lucide-react';
-import products from '@/data/products.json';
-import testimonialImage from './WhatsApp Image 2025-08-20 at 19.14.20_95bf7fd9.jpg';
+import products from '@/data/products';
+const testimonialImage = '/placeholder.svg';
 
 const Progetti = () => {
   const findProduct = (key: string) => {
