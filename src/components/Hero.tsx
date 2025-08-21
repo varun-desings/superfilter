@@ -14,7 +14,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <img
-          src="/products/SQUARE/WhatsApp%20Image%202025-08-03%20at%2019.03.58_7e108c3c.jpg"
+          src="/src/ACCEUIL/Capture3.PNG"
           alt="Super Filtre hero background"
           className="w-full h-full object-cover"
         />
