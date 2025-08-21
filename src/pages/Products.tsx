@@ -376,7 +376,7 @@ const ProductsPage = () => {
 	};
 	
 	return (
-		<div className="min-h-screen">
+		<div className="min-h-screen font-inter">
 			{/* Mobile Header */}
 			<div className="lg:hidden fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur border-b border-border">
 				<div className="flex items-center justify-between px-4 py-3">
@@ -468,7 +468,7 @@ const ProductsPage = () => {
 				<div className="container mx-auto px-4 sm:px-6">
 					<BackLink label="Retour" />
 					<div className="text-center mb-12 sm:mb-16 animate-fade-up">
-						<h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-3 sm:mb-4">Catalogue des produits</h1>
+						<h1 className="font-playfair text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-3 sm:mb-4">Catalogue des produits</h1>
 						<p className="text-sm sm:text-base lg:text-lg max-w-3xl mx-auto text-muted-foreground px-4">
 							Découvrez nos modèles classés par catégorie. Chaque pièce joue avec la lumière pour créer des ambiances uniques.
 						</p>
@@ -491,9 +491,9 @@ const ProductsPage = () => {
 					{(activeCategory === 'Tous' ? baseOptions : [activeCategory]).map((cat) => {
 						const items = (ordered as any[]).filter((it) => deriveCategoryFromName(it?.name) === cat);
 						if (items.length === 0) return null;
-						return (
-							<section key={cat} className="mb-10 sm:mb-14">
-								<h2 className="text-lg sm:text-xl font-semibold text-primary mb-4 sm:mb-6">{cat}</h2>
+							return (
+								<section key={cat} className="mb-10 sm:mb-14">
+									<h2 className="font-playfair text-lg sm:text-xl font-semibold text-primary mb-4 sm:mb-6">{cat}</h2>
 								<div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 stagger-children">
 									{items.map((item: any, index: number) => (
 										<Dialog key={item.slug}>
@@ -514,7 +514,7 @@ const ProductsPage = () => {
 														</div>
 													)}
 													<div className="p-3 sm:p-4 lg:p-6 xl:p-8">
-														<h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-bold text-primary mb-1 sm:mb-2 leading-tight">{buildTitle(item)}</h3>
+														<h3 className="font-playfair text-sm sm:text-base lg:text-lg xl:text-xl font-bold text-primary mb-1 sm:mb-2 leading-tight">{buildTitle(item)}</h3>
 														{getCustomDescription(item) ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">{getCustomDescription(item) as string}</div>
 														) : item.slug === 'bibi' ? (
