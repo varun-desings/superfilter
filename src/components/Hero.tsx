@@ -45,7 +45,7 @@ const Hero = () => {
                 onClick={() => scrollToSection('progetti')}
                 className="inline-flex items-center justify-center gap-3 bg-white text-black px-8 py-4 rounded-none font-medium tracking-wide text-sm uppercase hover:bg-gray-100 transition-all duration-300 group"
               >
-                Découvrir nos projets
+                						Voir nos produits
                 <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
               </button>
               <button 
