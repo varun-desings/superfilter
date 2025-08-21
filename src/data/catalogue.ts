@@ -52,9 +52,14 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		const pathParts = absPath.split('/');
 		const file = pathParts[pathParts.length - 1];
 		const category = extractCategoryFromPath(absPath);
-		const name = fileNameToName(file);
+		let name = fileNameToName(file);
+		// Override ACCEUIL/Capture5 card name
+		if (/\/src\/ACCEUIL\/.+\/Capture5\.[^.]+$/i.test(absPath) || /\/src\/ACCEUIL\/Capture5\.[^.]+$/i.test(absPath)) {
+			name = 'Shell Spirax S4 TXM';
+		}
+		const slug = `${category.toLowerCase()}-${toSlug(name)}`;
 		return {
-			slug: `${category.toLowerCase()}-${toSlug(name)}`,
+			slug,
 			name,
 			category,
 			cover: url,
