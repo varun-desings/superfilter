@@ -279,6 +279,10 @@ const ProductsPage = () => {
 		if (n.includes('motul') && n.includes('8100') && n.includes('x-clean') && n.includes('5w40')) {
 			return 'Viscosité : 5W-40\n\nMarque : Motul\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nPoint d’éclair : 228 °C\n\nFabricant : Motul\n\nVolume : 5 L (5000 ml)';
 		}
+		// Donaldson Air Filter Primary
+		if (n.includes('donaldson') && n.includes('air') && n.includes('filter') && n.includes('primary')) {
+			return 'Type : Filtre à air primaire\n\nMarque : Donaldson\n\nFonction : Protège le moteur en filtrant la poussière et les particules\n\nApplication : Véhicules légers, camions et machines industrielles (selon modèle)\n\nVolume / Taille : Selon référence spécifique';
+		}
 		return null;
 	};
 	
