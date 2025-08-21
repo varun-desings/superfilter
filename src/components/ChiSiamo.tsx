@@ -63,16 +63,6 @@ Basée à Ben Arous, nous accompagnons depuis plus de deux décennies les partic
           ))}
         </div>
 
-        <div className="text-center">
-          <div className="bg-accent/10 rounded-2xl p-8 md:p-12 animate-fade-up">
-            <blockquote className="heading-md text-primary mb-6 italic">
-              {"Ne laissez pas le soleil dicter votre confort.<br />Avec Super Filtre, prenez le contrôle de votre environnement lumineux."}
-            </blockquote>
-            <p className="body-lg max-w-2xl mx-auto">
-              Visitez notre site web ou contactez‑nous pour une consultation personnalisée et transformez votre espace dès aujourd’hui !
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
