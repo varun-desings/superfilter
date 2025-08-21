@@ -37,7 +37,7 @@ const Navigation = () => {
           <div className="flex-1">
             <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <img 
-                src="/favicon.jpg" 
+                src="/src/components/Ste Super Filtre.jpg" 
                 alt="Super Filtre Logo" 
                 className="w-8 h-8 rounded object-cover"
               />

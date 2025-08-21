@@ -382,7 +382,7 @@ const ProductsPage = () => {
 					{/* Logo on Left */}
 					<div className="flex items-center">
 						<img 
-							src="/favicon.jpg" 
+							src="/src/components/Ste Super Filtre.jpg" 
 							alt="Super Filtre Logo" 
 							className="w-8 h-8 rounded object-cover mr-2"
 						/>
@@ -433,7 +433,7 @@ const ProductsPage = () => {
 						{/* Logo on Left */}
 						<div className="flex items-center">
 													<img 
-							src="/favicon.jpg" 
+							src="/src/components/Ste Super Filtre.jpg" 
 							alt="Super Filtre Logo" 
 							className="w-10 h-10 rounded object-cover mr-3"
 						/>
