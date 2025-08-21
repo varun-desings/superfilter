@@ -73,6 +73,10 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		if (/\/src\/CATALOGUE\/MOTUL\/motul-x-clean-8100-5w-40-5-l-front\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
 			name = 'Motul 8100 X-Clean 5W40 5L';
 		}
+		// MOTUL 1L image rename
+		if (/\/src\/CATALOGUE\/MOTUL\/motul-5w40-8100-1l\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
+			name = 'Motul 8100 X-CLEAN 5W40 – 1 L Front';
+		}
 		const slug = `${category.toLowerCase()}-${toSlug(name)}`;
 		return {
 			slug,
