@@ -9,6 +9,8 @@ export type CatalogueItem = {
 // Import all image assets under src/CATALOGUE and src/ACCEUIL as URLs at build time
 const files = import.meta.glob('/src/{CATALOGUE,ACCEUIL}/**/*.{png,jpg,jpeg,webp,svg,gif}', { eager: true, import: 'default' }) as Record<string, string>;
 
+const EXCLUDED_PATH_REGEX = /partnerrr/i;
+
 function toSlug(input: string): string {
 	return input
 		.toLowerCase()
@@ -42,18 +44,20 @@ function extractCategoryFromPath(path: string): string {
 	return 'AUTRE';
 }
 
-export const catalogueItems: CatalogueItem[] = Object.entries(files).map(([absPath, url]) => {
-	const pathParts = absPath.split('/');
-	const file = pathParts[pathParts.length - 1];
-	const category = extractCategoryFromPath(absPath);
-	const name = fileNameToName(file);
-	return {
-		slug: `${category.toLowerCase()}-${toSlug(name)}`,
-		name,
-		category,
-		cover: url,
-		images: [url],
-	};
-}).sort((a, b) => a.name.localeCompare(b.name));
+export const catalogueItems: CatalogueItem[] = Object.entries(files)
+	.filter(([absPath]) => !EXCLUDED_PATH_REGEX.test(absPath))
+	.map(([absPath, url]) => {
+		const pathParts = absPath.split('/');
+		const file = pathParts[pathParts.length - 1];
+		const category = extractCategoryFromPath(absPath);
+		const name = fileNameToName(file);
+		return {
+			slug: `${category.toLowerCase()}-${toSlug(name)}`,
+			name,
+			category,
+			cover: url,
+			images: [url],
+		};
+	}).sort((a, b) => a.name.localeCompare(b.name));
 
 export default catalogueItems;
