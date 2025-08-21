@@ -436,7 +436,17 @@ API : GL-5
 
 Normes / Homologations : MB 235.0, MAN 342 Type M3, Volvo 97310
 
-Volume : 90 L`:c.includes("spirax")&&c.includes("s4")&&c.includes("txm")?`Minérale
+Volume : 90 L`:c.includes("spirax")&&c.includes("s2")&&c.includes("g")&&c.includes("90")&&c.includes("(1")?`Viscosité : 90
+
+Marque : Shell
+
+Type de véhicule : Transmission et ponts pour véhicules lourds et utilitaires
+
+API : GL-5
+
+Normes / Homologations : MB 235.0, MAN 342 Type M3, Volvo 97310
+
+Volume : 2 L`:c.includes("spirax")&&c.includes("s4")&&c.includes("txm")?`Minérale
 
 API SF/CD
 

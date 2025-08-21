@@ -319,6 +319,10 @@ const ProductsPage = () => {
 		if (n.includes('spirax') && n.includes('s2') && n.includes('g') && n.includes('90') && !n.includes('(')) {
 			return 'Viscosité : 90\n\nMarque : Shell\n\nType de véhicule : Transmission et ponts pour véhicules lourds et utilitaires\n\nAPI : GL-5\n\nNormes / Homologations : MB 235.0, MAN 342 Type M3, Volvo 97310\n\nVolume : 90 L';
 		}
+		// Shell Spirax S2 G 90 (1) - specific variant 2L
+		if (n.includes('spirax') && n.includes('s2') && n.includes('g') && n.includes('90') && n.includes('(1')) {
+			return 'Viscosité : 90\n\nMarque : Shell\n\nType de véhicule : Transmission et ponts pour véhicules lourds et utilitaires\n\nAPI : GL-5\n\nNormes / Homologations : MB 235.0, MAN 342 Type M3, Volvo 97310\n\nVolume : 2 L';
+		}
 		// Shell Spirax S4 TXM
 		if (n.includes('spirax') && n.includes('s4') && n.includes('txm')) {
 			return 'Minérale\n\nAPI SF/CD\n\nNormes : MB 226.1 / 227.0 ; MIL-L-2104 D\n\nConditionnements : 20L / 209L';
