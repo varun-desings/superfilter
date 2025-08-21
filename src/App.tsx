@@ -1,7 +1,7 @@
 import React from "react";
-import Product from "./pages/Product";
+import Produits from "./pages/Produits";
 
 export function App(): React.JSX.Element {
-  return <Product />;
+  return <Produits />;
 }
 
