@@ -392,7 +392,17 @@ API : SL/CF
 
 Normes / Homologations : ACEA A3/B3, MB 229.1
 
-Volume : 5 L`:c.includes("spirax")&&c.includes("s4")&&c.includes("txm")?`Minérale
+Volume : 5 L`:c.includes("spirax")&&c.includes("s2")&&c.includes("a")&&c.includes("80w90")&&!c.includes("(")?`Viscosité : 80W-90
+
+Marque : Shell
+
+Type de véhicule : Transmission et ponts pour véhicules lourds et utilitaires
+
+API : GL-4
+
+Normes / Homologations : MB 235.1, MAN 341 Type Z1, Volvo 97310
+
+Volume : 209 L (drum)`:c.includes("spirax")&&c.includes("s4")&&c.includes("txm")?`Minérale
 
 API SF/CD
 

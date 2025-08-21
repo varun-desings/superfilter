@@ -299,6 +299,10 @@ const ProductsPage = () => {
 		if (n.includes('helix hx5') && n.includes('15w40')) {
 			return 'Viscosité : 15W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SL/CF\n\nNormes / Homologations : ACEA A3/B3, MB 229.1\n\nVolume : 5 L';
 		}
+		// Shell Spirax S2 A 80W90 - 209L (drum) base variant (no parentheses)
+		if (n.includes('spirax') && n.includes('s2') && n.includes('a') && n.includes('80w90') && !n.includes('(')) {
+			return 'Viscosité : 80W-90\n\nMarque : Shell\n\nType de véhicule : Transmission et ponts pour véhicules lourds et utilitaires\n\nAPI : GL-4\n\nNormes / Homologations : MB 235.1, MAN 341 Type Z1, Volvo 97310\n\nVolume : 209 L (drum)';
+		}
 		// Shell Spirax S4 TXM
 		if (n.includes('spirax') && n.includes('s4') && n.includes('txm')) {
 			return 'Minérale\n\nAPI SF/CD\n\nNormes : MB 226.1 / 227.0 ; MIL-L-2104 D\n\nConditionnements : 20L / 209L';
