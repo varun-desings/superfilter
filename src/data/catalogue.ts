@@ -63,7 +63,7 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		}
 		// Override first AUTRE card in MANN FILTRE to requested label
 		if (/\/src\/CATALOGUE\/MANN FILTRE\/61ZF4lAEncL\._AC_SL1500_\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
-			name = 'mann filter AC SL 1500';
+			name = 'Filtre à huile W 1022';
 		}
 		const slug = `${category.toLowerCase()}-${toSlug(name)}`;
 		return {
