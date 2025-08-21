@@ -369,6 +369,10 @@ const ProductsPage = () => {
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
 																{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA A3/B3/B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
 															</div>
+														) : item.slug === 'acceuil-shell-spirax-s4-txm' ? (
+															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+																{"API SF/CD\n\nNormes : MB 226.1 / 227.0 ; MIL-L-2104 D\n\nProtection contre l’usure & oxydation\n\nHaute stabilité thermique et longue durée\n\n📦 Disponible en 20L et 209L"}
+															</div>
 														) : item.slug === 'square' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
 																{"Minérale\n\nAPI SL/CF; ACEA A3/B3\n\nMB 229.1; VW 501.01/505.00"}
@@ -424,6 +428,9 @@ const ProductsPage = () => {
 													{/* reuse same conditional description blocks here (already exist below) */}
 													{item.slug === 'bibi' ? (
 														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA A3/B3/B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
+														</p>
+													) : item.slug === 'acceuil-shell-spirax-s4-txm' ? (
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"API SF/CD\n\nNormes : MB 226.1 / 227.0 ; MIL-L-2104 D\n\nProtection contre l’usure & oxydation\n\nHaute stabilité thermique et longue durée\n\n📦 Disponible en 20L et 209L"}
 														</p>
 													) : item.slug === 'square' ? (
 														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale\n\nAPI SL/CF; ACEA A3/B3\n\nMB 229.1; VW 501.01/505.00"}</p>

@@ -240,7 +240,15 @@ Pure Plus (Gaz Naturel)
 
 API SN PLUS; ACEA A3/B3/B4
 
-MB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710`}):p.slug==="square"?c.jsx("div",{className:"mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line",children:`Minérale
+MB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710`}):p.slug==="acceuil-shell-spirax-s4-txm"?c.jsx("div",{className:"mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line",children:`API SF/CD
+
+Normes : MB 226.1 / 227.0 ; MIL-L-2104 D
+
+Protection contre l’usure & oxydation
+
+Haute stabilité thermique et longue durée
+
+📦 Disponible en 20L et 209L`}):p.slug==="square"?c.jsx("div",{className:"mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line",children:`Minérale
 
 API SL/CF; ACEA A3/B3
 
@@ -288,7 +296,15 @@ Pure Plus (Gaz Naturel)
 
 API SN PLUS; ACEA A3/B3/B4
 
-MB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710`}):p.slug==="square"?c.jsx("p",{className:"text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed",children:`Minérale
+MB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710`}):p.slug==="acceuil-shell-spirax-s4-txm"?c.jsx("p",{className:"text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed",children:`API SF/CD
+
+Normes : MB 226.1 / 227.0 ; MIL-L-2104 D
+
+Protection contre l’usure & oxydation
+
+Haute stabilité thermique et longue durée
+
+📦 Disponible en 20L et 209L`}):p.slug==="square"?c.jsx("p",{className:"text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed",children:`Minérale
 
 API SL/CF; ACEA A3/B3
 
