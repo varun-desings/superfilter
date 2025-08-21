@@ -100,7 +100,7 @@ const ProductsPage = () => {
 	};
 
 	const buildTitle = (item: any): string => {
-		if (item?.slug === 'bibi' || item?.slug === 'square' || item?.slug === 'victoria') return String(item?.name || '');
+		if (item?.slug === 'bibi' || item?.slug === 'square' || item?.slug === 'victoria' || item?.slug === 'done3d') return String(item?.name || '');
 		const size = extractPrimarySizeInches(item?.description);
 		const parts = [item?.name, size && size, 'Cement Breeze Block'].filter(Boolean);
 		return parts.join(' ');
@@ -375,6 +375,10 @@ const ProductsPage = () => {
 												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
 													{"Semi-Synthèse\n\nAPI SN/CF; ACEA A3/B3/B4\n\nVW 501.01/505.00; MB 229.1; RENAULT RN 0700"}
 												</div>
+											) : item.slug === 'done3d' ? (
+												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+													{"Synthèse\n\nAPI SL/CF; ACEA A3/B3"}
+												</div>
 											) : (
 												<>
 													{buildDimensionsCm(item) && (
@@ -420,6 +424,8 @@ const ProductsPage = () => {
 											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale\n\nAPI SL/CF; ACEA A3/B3\n\nMB 229.1; VW 501.01/505.00"}</p>
 										) : item.slug === 'victoria' ? (
 											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Semi-Synthèse\n\nAPI SN/CF; ACEA A3/B3/B4\n\nVW 501.01/505.00; MB 229.1; RENAULT RN 0700"}</p>
+										) : item.slug === 'done3d' ? (
+											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Synthèse\n\nAPI SL/CF; ACEA A3/B3"}</p>
 										) : (
 											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{item.description}</p>
 										)}

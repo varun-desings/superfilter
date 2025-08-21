@@ -28,7 +28,7 @@ export const products: Product[] = [
   },
   { slug: "square", name: "Huile Moteur KENNOL XTURBO 15W50", category: "square", cover: "/placeholder.svg" },
   { slug: "victoria", name: "Huile Moteur ACCOR HUSYNN 10W40", category: "victoria", cover: "/placeholder.svg" },
-  { slug: "done3d", name: "Done 3D", category: "Done 3D", cover: "/placeholder.svg" },
+  { slug: "done3d", name: "Huile Moteur YACCO VX 600 5W30", category: "done3d", cover: "/placeholder.svg" },
   { slug: "done", name: "DONE", category: "DONE", cover: "/placeholder.svg" },
   { slug: "mezzo", name: "Mezzo", category: "Mezzo", cover: "/placeholder.svg" },
   { slug: "trap", name: "Trap", category: "Trap", cover: "/placeholder.svg" },
