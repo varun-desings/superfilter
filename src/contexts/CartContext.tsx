@@ -19,7 +19,7 @@ type CartContextValue = {
 
 const CartContext = createContext<CartContextValue | undefined>(undefined);
 
-const STORAGE_KEY = 'claustrah.cart.v1';
+const STORAGE_KEY = 'superfiltre.cart.v1';
 
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 	const [items, setItems] = useState<CartItem[]>([]);

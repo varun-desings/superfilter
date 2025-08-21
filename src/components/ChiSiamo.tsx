@@ -31,9 +31,9 @@ const ChiSiamo = () => {
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="heading-lg text-primary mb-6">À propos</h2>
           <p className="body-lg max-w-3xl mx-auto">
-            L’Élégance de l’Ombre avec CLAUSTRAH — Découvrez CLAUSTRAH, l’innovation en matière de brises soleil en béton . Nos
+            L’Élégance de l’Ombre avec Super Filtre — Découvrez Super Filtre, l’innovation en matière de brises soleil en béton. Nos
             designs uniques ne se contentent pas de protéger votre espace des rayons ardents du soleil, ils transforment chaque
-            rayon en une œuvre d’art. Avec CLAUSTRAH, chaque jour est une nouvelle aventure visuelle, où la lumière et l’ombre
+            rayon en une œuvre d’art. Avec Super Filtre, chaque jour est une nouvelle aventure visuelle, où la lumière et l’ombre
             dansent sur les murs de votre habitat, créant une ambiance à la fois dynamique et apaisante.
           </p>
         </div>
@@ -59,7 +59,7 @@ const ChiSiamo = () => {
         <div className="text-center">
           <div className="bg-accent/10 rounded-2xl p-8 md:p-12 animate-fade-up">
             <blockquote className="heading-md text-primary mb-6 italic">
-              "Ne laissez pas le soleil dicter votre confort.<br />Avec CLAUSTRAH, prenez le contrôle de votre environnement lumineux."
+              "Ne laissez pas le soleil dicter votre confort.<br />Avec Super Filtre, prenez le contrôle de votre environnement lumineux."
             </blockquote>
             <p className="body-lg max-w-2xl mx-auto">
               Visitez notre site web ou contactez‑nous pour une consultation personnalisée et transformez votre espace dès aujourd’hui !
