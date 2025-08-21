@@ -214,60 +214,11 @@ const ProductsPage = () => {
 	};
 
 	// Minimal: compute ordered array by provided sequence (no styling changes)
-	const normalize = (s: string) => s?.toLowerCase().replace(/\s+/g, "").replace(/-/g, "");
-	const alias: Record<string, string> = { toeur: "tozeur", tegla: "telga" };
-	const desiredOrder = [
-		"bibi",
-		"square",
-		"victoria",
-		"done3d",
-		"done",
-		"mezzo",
-		"trap",
-		"trapx",
-		"fino",
-		"fleur",
-		"petal",
-		"45",
-		"jk1",
-		"jk2",
-		"scarpa",
-		"jk3",
-		"jk4",
-		"jk30",
-		"jk25",
-		"tozeur",
-		"triangle",
-		"venicien",
-		"delta",
-		"telga",
-	];
-	const byKey: Record<string, any> = {};
-	for (const p of products as any[]) { const k = normalize(p.slug || p.name || ""); if (k) byKey[k] = p; }
-	const oilOrdered = desiredOrder.map(k => byKey[k]).filter(Boolean);
- 
-	// Use catalogue images: match by name tokens within same category
-	const normalizeText = (s: string = '') => s.toLowerCase();
-	const tokenizeName = (s: string = '') => normalizeText(s).split(/[^a-z0-9]+/).filter(t => t.length >= 3);
-	const matchCatalogueImages = (oil: any): string[] => {
-		const cat = deriveCategoryFromName(oil?.name);
-		const candidates = (catalogueItems as any[]).filter(ci => deriveCategoryFromName(ci?.name) === cat);
-		if (candidates.length === 0) return [];
-		const tokens = tokenizeName(oil?.name || '');
-		const scored = candidates.map(ci => {
-			const name = normalizeText(ci?.name || '');
-			const matches = tokens.filter(t => name.includes(t)).length;
-			return { ci, matches };
-		});
-		const best = scored.filter(s => s.matches > 0).map(s => s.ci);
-		const selected = (best.length > 0 ? best : candidates).slice(0, 8);
-		return selected.flatMap(ci => (ci.images && ci.images.length ? ci.images : [ci.cover])).filter(Boolean);
-	};
+	// Using catalogue items directly; sections below will group by category
+		// Using catalogueItems directly as the data source; one card per file already
 
-	const ordered = (oilOrdered as any[]).map((oil) => {
-		const imgs = matchCatalogueImages(oil);
-		return { ...oil, cover: imgs[0] ?? oil.cover, images: imgs.length ? imgs : oil.images };
-	});
+
+	const ordered = catalogueItems as any[];
 
 	const categories = Array.from(new Set((ordered as any[]).map((it) => deriveCategoryFromName(it?.name)))).sort();
 	const baseOptions = Array.from(new Set([...CATEGORIES, ...categories])).sort();
