@@ -246,15 +246,15 @@ const ProductsPage = () => {
 		}
 		// Shell Helix Ultra ECT 5W30 - 1L base variant (no parentheses)
 		if (n.includes('helix ultra') && n.includes('ect') && n.includes('5w30') && !n.includes('(')) {
-			return 'Viscosité: 5W-30\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume: 1 L';
+			return 'Viscosité: 5W-30\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nVolume: 1 L';
 		}
 		// Shell Helix Ultra ECT 5W30 (1) - specific variant 5L
 		if (n.includes('helix ultra') && n.includes('ect') && n.includes('5w30') && n.includes('(1')) {
-			return 'Viscosité: 5W-30\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume: 5 L';
+			return 'Viscosité: 5W-30\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nVolume: 5 L';
 		}
 		// Shell Helix Ultra ECT 5W30
 		if (n.includes('helix ultra') && n.includes('ect') && n.includes('5w30')) {
-			return 'Synthétique\n\nAPI SN\n\nNormes: ACEA C3, MB-Approval 229.31/229.51, VW 504.00/507.00, BMW LL-04\n\nConditionnements: 1L / 5L';
+			return 'Synthétique\n\nConditionnements: 1L / 5L';
 		}
 		// Shell Rimula R4 X 15W40 - 20L base variant (no parentheses)
 		if (n.includes('rimula') && n.includes('r4') && n.includes('15w40') && !n.includes('(')) {
@@ -262,27 +262,27 @@ const ProductsPage = () => {
 		}
 		// Shell Rimula R4 X 15W40 (1) - specific variant 5L
 		if (n.includes('rimula') && n.includes('r4') && n.includes('15w40') && n.includes('(1')) {
-			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Moteurs diesel pour véhicules lourds et utilitaires\n\n\n\nNormes / Homologations: ACEA E7 / E5 / E3, MB 228.3, MAN M3275, Volvo VDS-3\n\nVolume: 5 L';
+			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Moteurs diesel pour véhicules lourds et utilitaires\n\nVolume: 5 L';
 		}
 		// Shell Rimula R4 X 15W40 (2) - specific variant 209L
 		if (n.includes('rimula') && n.includes('r4') && n.includes('15w40') && n.includes('(2')) {
-			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Moteurs diesel pour véhicules lourds et utilitaires\n\nAPI: CI-4 / CH-4 / CG-4 / CF-4 / CF\n\nNormes / Homologations: ACEA E7 / E5 / E3, MB 228.3, MAN M3275, Volvo VDS-3\n\nVolume: 209 L';
+			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Moteurs diesel pour véhicules lourds et utilitaires\n\nVolume: 209 L';
 		}
 		// Shell Helix HX7 10W40 - 209L (drum) base variant (no parentheses)
 		if (n.includes('helix hx7') && n.includes('10w40') && !n.includes('(')) {
-			return 'Viscosité: 10W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA A3/B4, MB 229.3\n\nVolume: 209 L (drum)';
+			return 'Viscosité: 10W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nVolume: 209 L (drum)';
 		}
 		// Shell Helix HX7 10W40 (1) - specific variant 5L
 		if (n.includes('helix hx7') && n.includes('10w40') && n.includes('(1')) {
-			return 'Viscosité: 10W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA A3/B4, MB 229.3\n\nVolume: 5 L';
+			return 'Viscosité: 10W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nVolume: 5 L';
 		}
 		// Shell Helix HX7 10W40 (2) - specific variant 1L
 		if (n.includes('helix hx7') && n.includes('10w40') && n.includes('(2')) {
-			return 'Viscosité: 10W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologation: ACEA A3/B4, MB 229.3\n\nVolume: 1 L';
+			return 'Viscosité: 10W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nVolume: 1 L';
 		}
 		// Shell Helix HX7 10W40
 		if (n.includes('helix hx7') && n.includes('10w40')) {
-			return 'Semi-synthétique\n\nAPI SN/CF\n\nNormes: A3/B4, MB-Approval 229.3, VW 502.00/505.00\n\nConditionnements: 1L / 5L';
+			return 'Semi-synthétique\n\nConditionnements: 1L / 5L';
 		}
 		// Shell Helix HX5 15W40 (1) - specific variant 20L
 		if (n.includes('helix hx5') && n.includes('15w40') && n.includes('(1')) {
@@ -302,31 +302,31 @@ const ProductsPage = () => {
 		}
 		// Shell Spirax S2 A 80W90 - 209L (drum) base variant (no parentheses)
 		if (n.includes('spirax') && n.includes('s2') && n.includes('a') && n.includes('80w90') && !n.includes('(')) {
-			return 'Viscosité: 80W-90\n\nMarque: Shell\n\nType de véhicule: Transmission et ponts pour véhicules lourds et utilitaires\n\nAPI: GL-4\n\nNormes / Homologations: MB 235.1, MAN 341 Type Z1, Volvo 97310\n\nVolume: 209 L (drum)';
+			return 'Viscosité: 80W-90\n\nMarque: Shell\n\nType de véhicule: Transmission et ponts pour véhicules lourds et utilitaires\n\nVolume: 209 L (drum)';
 		}
 		// Shell Spirax S2 ATF D2 - 1L base variant (no parentheses)
 		if (n.includes('spirax') && n.includes('s2') && n.includes('atf') && n.includes('d2') && !n.includes('(')) {
-			return 'Type: Huile de transmission automatique (ATF)\n\nMarque: Shell\n\nApplication: Boîtes automatiques et systèmes hydrauliques légers\n\nNormes / Homologations: Dexron® II D, Allison C‑4, MB 236.1 / 236.5\n\nVolume: 1 L';
+			return 'Type: Huile de transmission automatique (ATF)\n\nMarque: Shell\n\nApplication: Boîtes automatiques et systèmes hydrauliques légers\n\nVolume: 1 L';
 		}
 		// Shell Spirax S2 ATF D2 (1) - specific variant 20L
 		if (n.includes('spirax') && n.includes('s2') && n.includes('atf') && n.includes('d2') && n.includes('(1')) {
-			return 'Type: Huile de transmission automatique (ATF)\n\nMarque: Shell\n\nApplication: Boîtes automatiques et systèmes hydrauliques légers\n\nNormes / Homologations: Dexron® II D, Allison C‑4, MB 236.1 / 236.5\n\nVolume: 20 L';
+			return 'Type: Huile de transmission automatique (ATF)\n\nMarque: Shell\n\nApplication: Boîtes automatiques et systèmes hydrauliques légers\n\nVolume: 20 L';
 		}
 		// Shell Spirax S2 ATF D2 (2) - specific variant 209L
 		if (n.includes('spirax') && n.includes('s2') && n.includes('atf') && n.includes('d2') && n.includes('(2')) {
-			return 'Type: Huile de transmission automatique (ATF)\n\nMarque: Shell\n\nApplication: Boîtes automatiques et systèmes hydrauliques légers\n\nNormes / Homologations: Dexron® II D, Allison C‑4, MB 236.1 / 236.5\n\nVolume: 209 L (drum)';
+			return 'Type: Huile de transmission automatique (ATF)\n\nMarque: Shell\n\nApplication: Boîtes automatiques et systèmes hydrauliques légers\n\nVolume: 209 L (drum)';
 		}
 		// Shell Spirax S2 G 90 - 90L base variant (no parentheses)
 		if (n.includes('spirax') && n.includes('s2') && n.includes('g') && n.includes('90') && !n.includes('(')) {
-			return 'Viscosité: 90\n\nMarque: Shell\n\nType de véhicule: Transmission et ponts pour véhicules lourds et utilitaires\n\nAPI: GL-5\n\nNormes / Homologations: MB 235.0, MAN 342 Type M3, Volvo 97310\n\nVolume: 90 L';
+			return 'Viscosité: 90\n\nMarque: Shell\n\nType de véhicule: Transmission et ponts pour véhicules lourds et utilitaires\n\nVolume: 90 L';
 		}
 		// Shell Spirax S2 G 90 (1) - specific variant 2L
 		if (n.includes('spirax') && n.includes('s2') && n.includes('g') && n.includes('90') && n.includes('(1')) {
-			return 'Viscosité: 90\n\nMarque: Shell\n\nType de véhicule: Transmission et ponts pour véhicules lourds et utilitaires\n\nAPI: GL-5\n\nNormes / Homologations: MB 235.0, MAN 342 Type M3, Volvo 97310\n\nVolume: 2 L';
+			return 'Viscosité: 90\n\nMarque: Shell\n\nType de véhicule: Transmission et ponts pour véhicules lourds et utilitaires\n\nVolume: 2 L';
 		}
 		// Shell Spirax S4 TXM
 		if (n.includes('spirax') && n.includes('s4') && n.includes('txm')) {
-			return 'Type: Huile de transmission automatique / synchrone\n\nMarque: Shell\n\nApplication: Boîtes de vitesses et transmissions industrielles\n\nNormes / Homologations: Allison C-4, MAN 341 Type Z4, MB 235.28\n\nVolume: 20 L';
+			return 'Type: Huile de transmission automatique / synchrone\n\nMarque: Shell\n\nApplication: Boîtes de vitesses et transmissions industrielles\n\nVolume: 20 L';
 		}
 		// Shell Tellus S2 M68
 		if (n.includes('tellus') && n.includes('s2') && n.includes('m68')) {
@@ -350,11 +350,11 @@ const ProductsPage = () => {
 		}
 		// Motul 8100 X-Clean 5W40 5L (specific variant)
 		if (n.includes('motul') && n.includes('8100') && n.includes('x-clean') && n.includes('5w40') && (n.includes(' 5l') || n.endsWith('5l'))) {
-			return 'Viscosité: 5W-40\n\nMarque: Motul\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 505.01 / 502.00 / 505.00, Porsche A40, Ford 917A, GM Dexos2\n\nVolume: 5 L';
+			return 'Viscosité: 5W-40\n\nMarque: Motul\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nVolume: 5 L';
 		}
 		// Motul 8100 X-Clean 5W40 1L (specific variant)
 		if (n.includes('motul') && n.includes('8100') && n.includes('x-clean') && n.includes('5w40') && (n.includes(' 1 l') || n.includes('1l') || (n.includes('front') && n.includes('1')))) {
-			return 'Viscosité: 5W-40\n\nMarque: Motul\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 505.01 / 502.00 / 505.00, Porsche A40, Ford 917A, GM Dexos2\n\nVolume: 1 L';
+			return 'Viscosité: 5W-40\n\nMarque: Motul\n\nVolume: 1 L';
 		}
 		// Motul 8100 X-Clean 5W40
 		if (n.includes('motul') && n.includes('8100') && n.includes('x-clean') && n.includes('5w40')) {
@@ -519,19 +519,19 @@ const ProductsPage = () => {
 											<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">{getCustomDescription(item) as string}</div>
 														) : item.slug === 'bibi' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-																{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
+																{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nVW 501.01/505.00; RENAULT RN0700/RN0710"}
 															</div>
 														) : item.slug === 'acceuil-shell-spirax-s4-txm' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-																{"API SF/CD\n\nNormes : MB 226.1 / 227.0 ; MIL-L-2104 D\n\nProtection contre l’usure & oxydation\n\nHaute stabilité thermique et longue durée\n\n📦 Disponible en 20L et 209L"}
+																{"Protection contre l'usure & oxydation\n\nHaute stabilité thermique et longue durée\n\n📦 Disponible en 20L et 209L"}
 															</div>
 														) : item.slug === 'square' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-																{"Minérale\n\nVW 501.01/505.00"}
+																{"Minérale"}
 															</div>
 														) : item.slug === 'victoria' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-																{"Semi-Synthèse\n\nVW 501.01/505.00; RENAULT RN 0700"}
+																{"Semi-Synthèse"}
 															</div>
 														) : item.slug === 'done3d' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
@@ -539,11 +539,11 @@ const ProductsPage = () => {
 															</div>
 														) : item.slug === 'done' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-																{"100% Synthèse\n\nMID SAPS\n\nACEA C2/C3; API SP\n\n✔ BMW Longlife-04; MB 229.52/229.51/229.31; VW 505.00/505.01\nFiat 9.55535-S1/S3; Opel OV0401547; GM Dexos 2; P.S.A B71 2290 (<2018)"}
+																{"100% Synthèse\n\nMID SAPS"}
 															</div>
 														) : item.slug === 'mezzo' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-																{"100% Synthèse\n\nPure Plus (Gaz Naturel)\n\nACEA C5\n\nAPI SN\n✔ VW 508.00/509.00\n\n✔ Porsche C20"}
+																{"100% Synthèse\n\nPure Plus (Gaz Naturel)"}
 															</div>
 														) : item.slug === 'trap' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
@@ -551,7 +551,7 @@ const ProductsPage = () => {
 															</div>
 														) : item.slug === 'trapx' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-																{"100% Synthèse\n\nLONG LIFE\n\nAPI SN/CF; ACEA A3/B4\n\n✔ MB- 229.5; PORSCHE A40\n\nBMW Longlife-01 (jusqu’à fin 2018); FORD WWS-M2C937-A; Renault RN0710/0700; VW 502.00/505.00"}
+																{"100% Synthèse\n\nLONG LIFE"}
 															</div>
 														) : item.slug === 'fino' ? (
 															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
@@ -581,25 +581,25 @@ const ProductsPage = () => {
 													{getCustomDescription(item) ? (
 														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{getCustomDescription(item) as string}</p>
 													) : item.slug === 'bibi' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nVW 501.01/505.00; RENAULT RN0700/RN0710"}
 														</p>
 													) : item.slug === 'acceuil-shell-spirax-s4-txm' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"API SF/CD\n\nNormes : MB 226.1 / 227.0 ; MIL-L-2104 D\n\nProtection contre l’usure & oxydation\n\nHaute stabilité thermique et longue durée\n\n📦 Disponible en 20L et 209L"}
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Protection contre l'usure & oxydation\n\nHaute stabilité thermique et longue durée\n\n📦 Disponible en 20L et 209L"}
 														</p>
 													) : item.slug === 'square' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale\n\nVW 501.01/505.00"}</p>
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale"}</p>
 													) : item.slug === 'victoria' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Semi-Synthèse\n\nVW 501.01/505.00; RENAULT RN 0700"}</p>
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Semi-Synthèse"}</p>
 													) : item.slug === 'done3d' ? (
 														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Synthèse"}</p>
 													) : item.slug === 'done' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nMID SAPS\n\nACEA C2/C3; API SP\n\n✔ BMW Longlife-04; MB 229.52/229.51/229.31; VW 505.00/505.01\nFiat 9.55535-S1/S3; Opel OV0401547; GM Dexos 2; P.S.A B71 2290 (<2018)"}</p>
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nMID SAPS"}</p>
 													) : item.slug === 'mezzo' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nPure Plus (Gaz Naturel)\n\nACEA C5\n\nAPI SN\n✔ VW 508.00/509.00\n\n✔ Porsche C20"}</p>
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nPure Plus (Gaz Naturel)"}</p>
 													) : item.slug === 'trap' ? (
 														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Minérale"}</p>
 													) : item.slug === 'trapx' ? (
-														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nLONG LIFE\n\nAPI SN/CF; ACEA A3/B4\n\n✔ MB- 229.5; PORSCHE A40\n\nBMW Longlife-01 (jusqu’à fin 2018); FORD WWS-M2C937-A; Renault RN0710/0700; VW 502.00/505.00"}</p>
+														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nLONG LIFE"}</p>
 													) : item.slug === 'fino' ? (
 														<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"5W-40\n\nMarque : Motul\n\nCompatibilité : Voiture, SUV, Camion\n\nPoint d’éclair : 228°C (442°F)"}</p>
 													) : (
