@@ -1,4 +1,4 @@
-import products from '@/data/products.json';
+import products from '@/data/products';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { useCart } from '@/contexts/CartContext';
 import { ShoppingCart, ArrowRight, Menu, X } from 'lucide-react';

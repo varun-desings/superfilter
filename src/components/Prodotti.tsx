@@ -1,6 +1,6 @@
 
 import { ArrowRight } from 'lucide-react';
-import products from '@/data/products.json';
+import products from '@/data/products';
 
 const Prodotti = () => {
   const homepageItems = (products as any[]).slice(0, 8);
