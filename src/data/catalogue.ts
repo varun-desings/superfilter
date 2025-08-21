@@ -45,10 +45,15 @@ function extractCategoryFromPath(path: string): string {
 	if (rootIdx >= 0) {
 		const root = parts[rootIdx].toUpperCase();
 		const next = parts[rootIdx + 1];
-		// If there is a subfolder under the root, use that as category for CATALOGUE; for ACCEUIL without subfolder, use root name
-		if (next && next.includes('.')) {
-			return root; // next is a file, so no subfolder
+		// For CATALOGUE, use the first subfolder as category
+		if (root === 'CATALOGUE' && next && !next.includes('.')) {
+			return next.toUpperCase();
 		}
+		// For ACCEUIL, use the root name
+		if (root === 'ACCEUIL') {
+			return root;
+		}
+		// Fallback
 		return (next ?? root).toUpperCase();
 	}
 	return 'AUTRE';

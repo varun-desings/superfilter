@@ -489,7 +489,7 @@ const ProductsPage = () => {
 
 					{/* Grouped Sections */}
 					{(activeCategory === 'Tous' ? baseOptions : [activeCategory]).map((cat) => {
-						const items = (ordered as any[]).filter((it) => deriveCategoryFromName(it?.name) === cat);
+						const items = (ordered as any[]).filter((it) => (it?.category || deriveCategoryFromName(it?.name)) === cat);
 						if (items.length === 0) return null;
 						return (
 							<section key={cat} className="mb-10 sm:mb-14">
@@ -504,7 +504,7 @@ const ProductsPage = () => {
 															<img src={item.cover} alt={item.name} className="max-w-full max-h-full object-contain" />
 															{/* Category badge */}
 															<span className="absolute top-2 sm:top-3 left-2 sm:left-3 rounded-full bg-background/80 backdrop-blur px-2 sm:px-3 py-1 text-xs font-medium border border-border">
-																{deriveCategoryFromName(item?.name)}
+																{item?.category || deriveCategoryFromName(item?.name)}
 															</span>
 															{Array.isArray(item.images) && item.images.length > 0 && (
 																<span className="absolute top-2 sm:top-3 right-2 sm:right-3 rounded-full bg-background/80 backdrop-blur px-2 sm:px-3 py-1 text-xs font-medium border border-border">
