@@ -513,7 +513,7 @@ const ProductsPage = () => {
 															)}
 														</div>
 													)}
-																						<div className="p-3 sm:p-4 lg:p-6 xl:p-8">
+																						<div className="p-2 sm:p-3 lg:p-4 xl:p-6">
 										<h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-inter font-bold text-primary mb-1 sm:mb-2 leading-tight">{buildTitle(item)}</h3>
 										{getCustomDescription(item) ? (
 											<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">{getCustomDescription(item) as string}</div>
