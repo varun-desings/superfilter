@@ -315,6 +315,10 @@ const ProductsPage = () => {
 		if (n.includes('spirax') && n.includes('s2') && n.includes('atf') && n.includes('d2') && n.includes('(2')) {
 			return 'Type : Huile de transmission automatique (ATF)\n\nMarque : Shell\n\nApplication : Boîtes automatiques et systèmes hydrauliques légers\n\nNormes / Homologations : Dexron® II D, Allison C‑4, MB 236.1 / 236.5\n\nVolume : 209 L (drum)';
 		}
+		// Shell Spirax S2 G 90 - 90L base variant (no parentheses)
+		if (n.includes('spirax') && n.includes('s2') && n.includes('g') && n.includes('90') && !n.includes('(')) {
+			return 'Viscosité : 90\n\nMarque : Shell\n\nType de véhicule : Transmission et ponts pour véhicules lourds et utilitaires\n\nAPI : GL-5\n\nNormes / Homologations : MB 235.0, MAN 342 Type M3, Volvo 97310\n\nVolume : 90 L';
+		}
 		// Shell Spirax S4 TXM
 		if (n.includes('spirax') && n.includes('s4') && n.includes('txm')) {
 			return 'Minérale\n\nAPI SF/CD\n\nNormes : MB 226.1 / 227.0 ; MIL-L-2104 D\n\nConditionnements : 20L / 209L';
