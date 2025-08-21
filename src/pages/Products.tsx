@@ -104,7 +104,7 @@ const ProductsPage = () => {
 	const buildTitle = (item: any): string => {
 		if (item?.slug === 'bibi' || item?.slug === 'square' || item?.slug === 'victoria' || item?.slug === 'done3d' || item?.slug === 'done' || item?.slug === 'mezzo' || item?.slug === 'trap' || item?.slug === 'trapx' || item?.slug === 'fino') return String(item?.name || '');
 		const size = extractPrimarySizeInches(item?.description);
-		const parts = [item?.name, size && size, 'Cement Breeze Block'].filter(Boolean);
+		const parts = [item?.name, size && size].filter(Boolean);
 		return parts.join(' ');
 	};
 

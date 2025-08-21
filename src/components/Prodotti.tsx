@@ -32,7 +32,7 @@ const Prodotti = () => {
                 </div>
               )}
               <div className="p-6">
-                <h3 className="text-[16px] md:text-[20px] font-bold text-primary mb-1">{`${item.name} Cement Breeze Block`}</h3>
+                <h3 className="text-[16px] md:text-[20px] font-bold text-primary mb-1">{item.name}</h3>
                 <div className="mt-1 text-[12px] md:text-[14px] text-muted-foreground"></div>
               </div>
             </div>
