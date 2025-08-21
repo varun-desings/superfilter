@@ -52,6 +52,11 @@
     font-variation-settings: "opsz" 32;
   }
   
+  /* Use distinct font for all native headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+  
   /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
@@ -73,7 +78,7 @@
   }
   
   .heading-sm {
-    @apply font-inter text-lg sm:text-xl md:text-2xl font-semibold leading-snug;
+    @apply font-playfair text-lg sm:text-xl md:text-2xl font-semibold leading-snug;
   }
   
   .body-lg {
