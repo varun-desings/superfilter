@@ -17,7 +17,7 @@ const Hero = () => {
         <img
           src={heroBg}
           alt="Super Filtre hero background"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-top sm:object-center"
         />
         <div className="absolute inset-0 bg-black/60" />
       </div>
