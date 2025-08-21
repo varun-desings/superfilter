@@ -21,41 +21,6 @@ const Progetti = () => {
           </p>
         </div>
 
-        {/* Testimonial Highlight */}
-        <div className="card-elegant p-6 sm:p-8 md:p-12 mb-16 animate-fade-up">
-          <div className="mb-6 sm:mb-8 -mx-6 sm:-mx-8 -mt-6 sm:-mt-8 md:-mx-12 md:-mt-12">
-            <div className="h-48 sm:h-64 md:h-80 lg:h-auto w-full overflow-hidden lg:overflow-visible rounded-t-2xl">
-              <img
-                src={testimonialImage}
-                alt="Façade rénovée avec claustras Super Filtre"
-                className="w-full h-full lg:h-auto object-cover lg:object-contain"
-                loading="lazy"
-                decoding="async"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col sm:flex-row items-start gap-4 mb-6">
-            <Quote className="text-accent flex-shrink-0 mt-1 hidden sm:block" size={32} />
-            <div className="flex-1">
-              <blockquote className="text-lg sm:text-xl md:text-2xl text-primary mb-4 italic leading-relaxed">
-                {`"J’ai rénové la maison de mon grand-père avec les claustras de Super Filtre, et le résultat est incroyable.
-Ils ont redonné vie à la façade tout en respectant l’âme du lieu.
-La lumière passe avec douceur, et les ombres créent une ambiance apaisante.
-C’est à la fois moderne et chargé d’émotion. Merci Super Filtre pour cette belle transformation."`}
-              </blockquote>
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
-                <div className="flex text-accent">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={16} fill="currentColor" />
-                  ))}
-                </div>
-                <span className="font-semibold text-primary">Hassen Jeljeli</span>
-                <span className="text-muted-foreground text-sm">- Client Super Filtre</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Featured Products Grid (replaces projects grid) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 stagger-children">
           {featuredProducts.map((item: any, index: number) => (
