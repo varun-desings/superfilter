@@ -1,5 +1,6 @@
 
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import products from '@/data/products';
 
 const Prodotti = () => {
@@ -25,7 +26,12 @@ const Prodotti = () => {
         {/* Main Products Grid (homepage preview) */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 stagger-children">
           {homepageItems.map((item, index) => (
-            <div key={item.slug} className="card-elegant overflow-hidden animate-scale-in group cursor-pointer" style={{ '--stagger': index } as React.CSSProperties}>
+            <Link
+              key={item.slug}
+              to="/products"
+              className="card-elegant overflow-hidden animate-scale-in group cursor-pointer"
+              style={{ '--stagger': index } as React.CSSProperties}
+            >
               {item.cover && (
                 <div className="h-40 bg-muted flex items-center justify-center overflow-hidden">
                   <img src={item.cover} alt={item.name} className="max-w-full max-h-full object-contain" />
@@ -35,7 +41,7 @@ const Prodotti = () => {
                 <h3 className="text-[16px] md:text-[20px] font-bold text-primary mb-1">{item.name}</h3>
                 <div className="mt-1 text-[12px] md:text-[14px] text-muted-foreground"></div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
