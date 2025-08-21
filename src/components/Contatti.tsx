@@ -282,9 +282,14 @@ const Contatti = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-primary mb-1">Email</h4>
-                  <a href="mailto:info@claustrah.com" className="text-muted-foreground hover:text-accent transition-colors duration-300">
-                    info@claustrah.com
-                  </a>
+                  <div className="space-y-2">
+                    <a href="mailto:Superfiltre2@gnet.tn" className="block text-muted-foreground hover:text-accent transition-colors duration-300">
+                      Superfiltre2@gnet.tn
+                    </a>
+                    <a href="mailto:ibtissembelili@gnet.tn" className="block text-muted-foreground hover:text-accent transition-colors duration-300">
+                      ibtissembelili@gnet.tn
+                    </a>
+                  </div>
                 </div>
               </div>
 
