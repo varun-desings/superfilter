@@ -100,7 +100,7 @@ const ProductsPage = () => {
 	};
 
 	const buildTitle = (item: any): string => {
-		if (item?.slug === 'bibi' || item?.slug === 'square' || item?.slug === 'victoria' || item?.slug === 'done3d') return String(item?.name || '');
+		if (item?.slug === 'bibi' || item?.slug === 'square' || item?.slug === 'victoria' || item?.slug === 'done3d' || item?.slug === 'done') return String(item?.name || '');
 		const size = extractPrimarySizeInches(item?.description);
 		const parts = [item?.name, size && size, 'Cement Breeze Block'].filter(Boolean);
 		return parts.join(' ');
@@ -379,6 +379,10 @@ const ProductsPage = () => {
 												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
 													{"Synthèse\n\nAPI SL/CF; ACEA A3/B3"}
 												</div>
+											) : item.slug === 'done' ? (
+												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+													{"100% Synthèse\n\nMID SAPS\n\nACEA C2/C3; API SP\n\n✔ BMW Longlife-04; MB 229.52/229.51/229.31; VW 505.00/505.01\nFiat 9.55535-S1/S3; Opel OV0401547; GM Dexos 2; P.S.A B71 2290 (<2018)"}
+												</div>
 											) : (
 												<>
 													{buildDimensionsCm(item) && (
@@ -426,6 +430,8 @@ const ProductsPage = () => {
 											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Semi-Synthèse\n\nAPI SN/CF; ACEA A3/B3/B4\n\nVW 501.01/505.00; MB 229.1; RENAULT RN 0700"}</p>
 										) : item.slug === 'done3d' ? (
 											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Synthèse\n\nAPI SL/CF; ACEA A3/B3"}</p>
+										) : item.slug === 'done' ? (
+											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nMID SAPS\n\nACEA C2/C3; API SP\n\n✔ BMW Longlife-04; MB 229.52/229.51/229.31; VW 505.00/505.01\nFiat 9.55535-S1/S3; Opel OV0401547; GM Dexos 2; P.S.A B71 2290 (<2018)"}</p>
 										) : (
 											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{item.description}</p>
 										)}
