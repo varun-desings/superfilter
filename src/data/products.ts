@@ -30,7 +30,7 @@ export const products: Product[] = [
   { slug: "victoria", name: "Huile Moteur ACCOR HUSYNN 10W40", category: "victoria", cover: "/placeholder.svg" },
   { slug: "done3d", name: "Huile Moteur YACCO VX 600 5W30", category: "done3d", cover: "/placeholder.svg" },
   { slug: "done", name: "Huile Moteur YACCO VX 1000 LE 5W30 C2/C3", category: "done", cover: "/placeholder.svg" },
-  { slug: "mezzo", name: "Mezzo", category: "Mezzo", cover: "/placeholder.svg" },
+  { slug: "mezzo", name: "Huile Moteur SHELL HELIX ULTRA PRO AV-L 0W20", category: "mezzo", cover: "/placeholder.svg" },
   { slug: "trap", name: "Trap", category: "Trap", cover: "/placeholder.svg" },
   { slug: "trapx", name: "Trap X", category: "Trap X", cover: "/placeholder.svg" },
   { slug: "fino", name: "Fino", category: "Fino", cover: "/placeholder.svg" },

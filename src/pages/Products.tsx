@@ -100,7 +100,7 @@ const ProductsPage = () => {
 	};
 
 	const buildTitle = (item: any): string => {
-		if (item?.slug === 'bibi' || item?.slug === 'square' || item?.slug === 'victoria' || item?.slug === 'done3d' || item?.slug === 'done') return String(item?.name || '');
+		if (item?.slug === 'bibi' || item?.slug === 'square' || item?.slug === 'victoria' || item?.slug === 'done3d' || item?.slug === 'done' || item?.slug === 'mezzo') return String(item?.name || '');
 		const size = extractPrimarySizeInches(item?.description);
 		const parts = [item?.name, size && size, 'Cement Breeze Block'].filter(Boolean);
 		return parts.join(' ');
@@ -383,6 +383,10 @@ const ProductsPage = () => {
 												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
 													{"100% Synthèse\n\nMID SAPS\n\nACEA C2/C3; API SP\n\n✔ BMW Longlife-04; MB 229.52/229.51/229.31; VW 505.00/505.01\nFiat 9.55535-S1/S3; Opel OV0401547; GM Dexos 2; P.S.A B71 2290 (<2018)"}
 												</div>
+											) : item.slug === 'mezzo' ? (
+												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+													{"100% Synthèse\n\nPure Plus (Gaz Naturel)\n\nACEA C5\n\nAPI SN\n✔ VW 508.00/509.00\n\n✔ Porsche C20"}
+												</div>
 											) : (
 												<>
 													{buildDimensionsCm(item) && (
@@ -432,6 +436,8 @@ const ProductsPage = () => {
 											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Synthèse\n\nAPI SL/CF; ACEA A3/B3"}</p>
 										) : item.slug === 'done' ? (
 											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nMID SAPS\n\nACEA C2/C3; API SP\n\n✔ BMW Longlife-04; MB 229.52/229.51/229.31; VW 505.00/505.01\nFiat 9.55535-S1/S3; Opel OV0401547; GM Dexos 2; P.S.A B71 2290 (<2018)"}</p>
+										) : item.slug === 'mezzo' ? (
+											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"100% Synthèse\n\nPure Plus (Gaz Naturel)\n\nACEA C5\n\nAPI SN\n✔ VW 508.00/509.00\n\n✔ Porsche C20"}</p>
 										) : (
 											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{item.description}</p>
 										)}
