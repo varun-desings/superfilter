@@ -1,8 +1,10 @@
 import { Star, Quote } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import catalogueItems from '@/data/catalogue';
 const testimonialImage = '/placeholder.svg';
 
 const Progetti = () => {
+  const navigate = useNavigate();
   const excerpt = (text?: string, len: number = 180) => {
     if (!text) return '';
     const t = String(text).replace(/\s+/g, ' ').trim();
@@ -71,9 +73,9 @@ const Progetti = () => {
 
         {/* See more button */}
         <div className="text-center mt-12 animate-fade-up">
-          <a href="/products" className="btn-outline">
+          <button onClick={() => navigate('/products')} className="btn-outline">
             Voir plus de produits
-          </a>
+          </button>
         </div>
       </div>
     </section>
