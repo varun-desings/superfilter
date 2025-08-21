@@ -41,7 +41,6 @@ const Navigation = () => {
                 alt="Super Filtre Logo" 
                 className="w-24 h-24 rounded object-cover"
               />
-              <div className="heading-sm text-primary">Super Filtre</div>
             </Link>
           </div>
 
