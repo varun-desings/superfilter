@@ -7,7 +7,7 @@ export type CatalogueItem = {
 };
 
 // Import all image assets under src/CATALOGUE and src/ACCEUIL as URLs at build time
-const files = import.meta.glob('/src/{CATALOGUE,ACCEUIL}/**/*.{png,jpg,jpeg,webp,svg,gif}', { eager: true, import: 'default' }) as Record<string, string>;
+const files = import.meta.glob('/src/{CATALOGUE,ACCEUIL}/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,webp,WEBP,svg,SVG,gif,GIF}', { eager: true, import: 'default' }) as Record<string, string>;
 
 const EXCLUDED_PATH_REGEX = /partnerrr/i;
 
