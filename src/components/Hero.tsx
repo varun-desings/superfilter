@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 pb-24 sm:pb-32 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center pt-12 pb-16 sm:pb-24 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <img
@@ -23,7 +23,7 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto sm:mx-0 mt-16 sm:mt-24 lg:mt-32">
+        <div className="max-w-4xl mx-auto sm:mx-0 mt-8 sm:mt-16 lg:mt-24">
           {/* Content */}
           <div className="animate-fade-up text-white">
             {/* Main Title */}
