@@ -230,15 +230,15 @@ const ProductsPage = () => {
 		const n = String(item?.name || '').toLowerCase();
 		// Shell Helix Ultra 5W40 - 209L (drum) base variant (no parentheses)
 		if (n.includes('helix ultra') && n.includes('5w40') && !n.includes('ect') && !n.includes('(')) {
-			return 'Viscosité : 5W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume : 209 L (drum)';
+			return 'Viscosité: 5W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume: 209 L (drum)';
 		}
 		// Shell Helix Ultra 5W40 (1) - specific variant 5L
 		if (n.includes('helix ultra') && n.includes('5w40') && !n.includes('ect') && n.includes('(1')) {
-			return 'Viscosité : 5W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume : 5 L';
+			return 'Viscosité: 5W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume: 5 L';
 		}
 		// Shell Helix Ultra 5W40 (2) - specific variant 1L
 		if (n.includes('helix ultra') && n.includes('5w40') && !n.includes('ect') && n.includes('(2')) {
-			return 'Viscosité : 5W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume : 1 L';
+			return 'Viscosité: 5W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume: 1 L';
 		}
 		// Shell Helix Ultra 5W40
 		if (n.includes('helix ultra') && n.includes('5w40') && !n.includes('ect')) {
@@ -246,115 +246,115 @@ const ProductsPage = () => {
 		}
 		// Shell Helix Ultra ECT 5W30 - 1L base variant (no parentheses)
 		if (n.includes('helix ultra') && n.includes('ect') && n.includes('5w30') && !n.includes('(')) {
-			return 'Viscosité : 5W-30\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume : 1 L';
+			return 'Viscosité: 5W-30\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume: 1 L';
 		}
 		// Shell Helix Ultra ECT 5W30 (1) - specific variant 5L
 		if (n.includes('helix ultra') && n.includes('ect') && n.includes('5w30') && n.includes('(1')) {
-			return 'Viscosité : 5W-30\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume : 5 L';
+			return 'Viscosité: 5W-30\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 504.00 / 507.00\n\nVolume: 5 L';
 		}
 		// Shell Helix Ultra ECT 5W30
 		if (n.includes('helix ultra') && n.includes('ect') && n.includes('5w30')) {
-			return 'Synthétique\n\nAPI SN\n\nNormes : ACEA C3, MB-Approval 229.31/229.51, VW 504.00/507.00, BMW LL-04\n\nConditionnements : 1L / 5L';
+			return 'Synthétique\n\nAPI SN\n\nNormes: ACEA C3, MB-Approval 229.31/229.51, VW 504.00/507.00, BMW LL-04\n\nConditionnements: 1L / 5L';
 		}
 		// Shell Rimula R4 X 15W40 - 20L base variant (no parentheses)
 		if (n.includes('rimula') && n.includes('r4') && n.includes('15w40') && !n.includes('(')) {
-			return 'Viscosité : 15W-40\n\nMarque : Shell\n\nType de véhicule : Moteurs diesel pour véhicules lourds et utilitaires\n\nAPI : CI-4 / CH-4 / CG-4 / CF-4 / CF\n\nNormes / Homologations : ACEA E7 / E5 / E3, MB 228.3, MAN M3275, Volvo VDS-3\n\nVolume : 20 L';
+			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Moteurs diesel pour véhicules lourds et utilitaires\n\n\n\ Volvo VDS-3\n\nVolume : 20 L';
 		}
 		// Shell Rimula R4 X 15W40 (1) - specific variant 5L
 		if (n.includes('rimula') && n.includes('r4') && n.includes('15w40') && n.includes('(1')) {
-			return 'Viscosité : 15W-40\n\nMarque : Shell\n\nType de véhicule : Moteurs diesel pour véhicules lourds et utilitaires\n\nAPI : CI-4 / CH-4 / CG-4 / CF-4 / CF\n\nNormes / Homologations : ACEA E7 / E5 / E3, MB 228.3, MAN M3275, Volvo VDS-3\n\nVolume : 5 L';
+			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Moteurs diesel pour véhicules lourds et utilitaires\n\n\n\nNormes / Homologations: ACEA E7 / E5 / E3, MB 228.3, MAN M3275, Volvo VDS-3\n\nVolume: 5 L';
 		}
 		// Shell Rimula R4 X 15W40 (2) - specific variant 209L
 		if (n.includes('rimula') && n.includes('r4') && n.includes('15w40') && n.includes('(2')) {
-			return 'Viscosité : 15W-40\n\nMarque : Shell\n\nType de véhicule : Moteurs diesel pour véhicules lourds et utilitaires\n\nAPI : CI-4 / CH-4 / CG-4 / CF-4 / CF\n\nNormes / Homologations : ACEA E7 / E5 / E3, MB 228.3, MAN M3275, Volvo VDS-3\n\nVolume : 209 L';
+			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Moteurs diesel pour véhicules lourds et utilitaires\n\nAPI: CI-4 / CH-4 / CG-4 / CF-4 / CF\n\nNormes / Homologations: ACEA E7 / E5 / E3, MB 228.3, MAN M3275, Volvo VDS-3\n\nVolume: 209 L';
 		}
 		// Shell Helix HX7 10W40 - 209L (drum) base variant (no parentheses)
 		if (n.includes('helix hx7') && n.includes('10w40') && !n.includes('(')) {
-			return 'Viscosité : 10W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA A3/B4, MB 229.3\n\nVolume : 209 L (drum)';
+			return 'Viscosité: 10W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA A3/B4, MB 229.3\n\nVolume: 209 L (drum)';
 		}
 		// Shell Helix HX7 10W40 (1) - specific variant 5L
 		if (n.includes('helix hx7') && n.includes('10w40') && n.includes('(1')) {
-			return 'Viscosité : 10W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA A3/B4, MB 229.3\n\nVolume : 5 L';
+			return 'Viscosité: 10W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA A3/B4, MB 229.3\n\nVolume: 5 L';
 		}
 		// Shell Helix HX7 10W40 (2) - specific variant 1L
 		if (n.includes('helix hx7') && n.includes('10w40') && n.includes('(2')) {
-			return 'Viscosité : 10W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA A3/B4, MB 229.3\n\nVolume : 1 L';
+			return 'Viscosité: 10W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologation: ACEA A3/B4, MB 229.3\n\nVolume: 1 L';
 		}
 		// Shell Helix HX7 10W40
 		if (n.includes('helix hx7') && n.includes('10w40')) {
-			return 'Semi-synthétique\n\nAPI SN/CF\n\nNormes : ACEA A3/B3, A3/B4, MB-Approval 229.3, VW 502.00/505.00\n\nConditionnements : 1L / 5L';
+			return 'Semi-synthétique\n\nAPI SN/CF\n\nNormes: ACEA A3/B3, A3/B4, MB-Approval 229.3, VW 502.00/505.00\n\nConditionnements: 1L / 5L';
 		}
 		// Shell Helix HX5 15W40 (1) - specific variant 20L
 		if (n.includes('helix hx5') && n.includes('15w40') && n.includes('(1')) {
-			return 'Viscosité : 15W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SL/CF\n\nNormes / Homologations : ACEA A3/B3, MB 229.1\n\nVolume : 20 L';
+			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SL/CF\n\nNormes / Homologations: ACEA A3/B3, MB 229.1\n\nVolume: 20 L';
 		}
 		// Shell Helix HX5 15W40 (2) - specific variant 4L
 		if (n.includes('helix hx5') && n.includes('15w40') && n.includes('(2')) {
-			return 'Viscosité : 15W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SL/CF\n\nNormes / Homologations : ACEA A3/B3, MB 229.1\n\nVolume : 4 L';
+			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SL/CF\n\nNormes / Homologations: ACEA A3/B3, MB 229.1\n\nVolume: 4 L';
 		}
 		// Shell Helix HX5 15W40 (3) - specific variant 3L
 		if (n.includes('helix hx5') && n.includes('15w40') && n.includes('(3')) {
-			return 'Viscosité : 15W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SL/CF\n\nNormes / Homologations : ACEA A3/B3, MB 229.1\n\nVolume : 3 L';
+			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SL/CF\n\nNormes / Homologations: ACEA A3/B3, MB 229.1\n\nVolume: 3 L';
 		}
 		// Shell Helix HX5 15W40
 		if (n.includes('helix hx5') && n.includes('15w40')) {
-			return 'Viscosité : 15W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SL/CF\n\nNormes / Homologations : ACEA A3/B3, MB 229.1\n\nVolume : 5 L';
+			return 'Viscosité: 15W-40\n\nMarque: Shell\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SL/CF\n\nNormes / Homologations: ACEA A3/B3, MB 229.1\n\nVolume: 5 L';
 		}
 		// Shell Spirax S2 A 80W90 - 209L (drum) base variant (no parentheses)
 		if (n.includes('spirax') && n.includes('s2') && n.includes('a') && n.includes('80w90') && !n.includes('(')) {
-			return 'Viscosité : 80W-90\n\nMarque : Shell\n\nType de véhicule : Transmission et ponts pour véhicules lourds et utilitaires\n\nAPI : GL-4\n\nNormes / Homologations : MB 235.1, MAN 341 Type Z1, Volvo 97310\n\nVolume : 209 L (drum)';
+			return 'Viscosité: 80W-90\n\nMarque: Shell\n\nType de véhicule: Transmission et ponts pour véhicules lourds et utilitaires\n\nAPI: GL-4\n\nNormes / Homologations: MB 235.1, MAN 341 Type Z1, Volvo 97310\n\nVolume: 209 L (drum)';
 		}
 		// Shell Spirax S2 ATF D2 - 1L base variant (no parentheses)
 		if (n.includes('spirax') && n.includes('s2') && n.includes('atf') && n.includes('d2') && !n.includes('(')) {
-			return 'Type : Huile de transmission automatique (ATF)\n\nMarque : Shell\n\nApplication : Boîtes automatiques et systèmes hydrauliques légers\n\nNormes / Homologations : Dexron® II D, Allison C‑4, MB 236.1 / 236.5\n\nVolume : 1 L';
+			return 'Type: Huile de transmission automatique (ATF)\n\nMarque: Shell\n\nApplication: Boîtes automatiques et systèmes hydrauliques légers\n\nNormes / Homologations: Dexron® II D, Allison C‑4, MB 236.1 / 236.5\n\nVolume: 1 L';
 		}
 		// Shell Spirax S2 ATF D2 (1) - specific variant 20L
 		if (n.includes('spirax') && n.includes('s2') && n.includes('atf') && n.includes('d2') && n.includes('(1')) {
-			return 'Type : Huile de transmission automatique (ATF)\n\nMarque : Shell\n\nApplication : Boîtes automatiques et systèmes hydrauliques légers\n\nNormes / Homologations : Dexron® II D, Allison C‑4, MB 236.1 / 236.5\n\nVolume : 20 L';
+			return 'Type: Huile de transmission automatique (ATF)\n\nMarque: Shell\n\nApplication: Boîtes automatiques et systèmes hydrauliques légers\n\nNormes / Homologations: Dexron® II D, Allison C‑4, MB 236.1 / 236.5\n\nVolume: 20 L';
 		}
 		// Shell Spirax S2 ATF D2 (2) - specific variant 209L
 		if (n.includes('spirax') && n.includes('s2') && n.includes('atf') && n.includes('d2') && n.includes('(2')) {
-			return 'Type : Huile de transmission automatique (ATF)\n\nMarque : Shell\n\nApplication : Boîtes automatiques et systèmes hydrauliques légers\n\nNormes / Homologations : Dexron® II D, Allison C‑4, MB 236.1 / 236.5\n\nVolume : 209 L (drum)';
+			return 'Type: Huile de transmission automatique (ATF)\n\nMarque: Shell\n\nApplication: Boîtes automatiques et systèmes hydrauliques légers\n\nNormes / Homologations: Dexron® II D, Allison C‑4, MB 236.1 / 236.5\n\nVolume: 209 L (drum)';
 		}
 		// Shell Spirax S2 G 90 - 90L base variant (no parentheses)
 		if (n.includes('spirax') && n.includes('s2') && n.includes('g') && n.includes('90') && !n.includes('(')) {
-			return 'Viscosité : 90\n\nMarque : Shell\n\nType de véhicule : Transmission et ponts pour véhicules lourds et utilitaires\n\nAPI : GL-5\n\nNormes / Homologations : MB 235.0, MAN 342 Type M3, Volvo 97310\n\nVolume : 90 L';
+			return 'Viscosité: 90\n\nMarque: Shell\n\nType de véhicule: Transmission et ponts pour véhicules lourds et utilitaires\n\nAPI: GL-5\n\nNormes / Homologations: MB 235.0, MAN 342 Type M3, Volvo 97310\n\nVolume: 90 L';
 		}
 		// Shell Spirax S2 G 90 (1) - specific variant 2L
 		if (n.includes('spirax') && n.includes('s2') && n.includes('g') && n.includes('90') && n.includes('(1')) {
-			return 'Viscosité : 90\n\nMarque : Shell\n\nType de véhicule : Transmission et ponts pour véhicules lourds et utilitaires\n\nAPI : GL-5\n\nNormes / Homologations : MB 235.0, MAN 342 Type M3, Volvo 97310\n\nVolume : 2 L';
+			return 'Viscosité: 90\n\nMarque: Shell\n\nType de véhicule: Transmission et ponts pour véhicules lourds et utilitaires\n\nAPI: GL-5\n\nNormes / Homologations: MB 235.0, MAN 342 Type M3, Volvo 97310\n\nVolume: 2 L';
 		}
 		// Shell Spirax S4 TXM
 		if (n.includes('spirax') && n.includes('s4') && n.includes('txm')) {
-			return 'Type : Huile de transmission automatique / synchrone\n\nMarque : Shell\n\nApplication : Boîtes de vitesses et transmissions industrielles\n\nNormes / Homologations : Allison C-4, MAN 341 Type Z4, MB 235.28\n\nVolume : 20 L';
+			return 'Type: Huile de transmission automatique / synchrone\n\nMarque: Shell\n\nApplication: Boîtes de vitesses et transmissions industrielles\n\nNormes / Homologations: Allison C-4, MAN 341 Type Z4, MB 235.28\n\nVolume: 20 L';
 		}
 		// Shell Tellus S2 M68
 		if (n.includes('tellus') && n.includes('s2') && n.includes('m68')) {
-			return 'Viscosité : ISO VG 68\n\nMarque : Shell\n\nType de fluide : Huile hydraulique industrielle\n\nPoint d’éclair : 235 °C (approx.)\n\nFabricant : Shell\n\nVolume : 208,2 L (55 gallons)';
+			return 'Viscosité: ISO VG 68\n\nMarque: Shell\n\nType de fluide: Huile hydraulique industrielle\n\nPoint d’éclair: 235 °C (approx.)\n\nFabricant: Shell\n\nVolume: 208,2 L (55 gallons)';
 		}
 		// Shell Tellus S2 M46 (3) - specific variant 1L
 		if (n.includes('tellus') && n.includes('s2') && n.includes('m46') && n.includes('(3')) {
-			return 'Viscosité : ISO VG 46\n\nMarque : Shell\n\nType de fluide : Huile hydraulique industrielle\n\nPoint d’éclair : 230 °C (approx.)\n\nFabricant : Shell\n\nVolume : 1 L (1000 ml)';
+			return 'Viscosité: ISO VG 46\n\nMarque: Shell\n\nType de fluide: Huile hydraulique industrielle\n\nPoint d’éclair: 230 °C (approx.)\n\nFabricant: Shell\n\nVolume: 1 L (1000 ml)';
 		}
 		// Shell Tellus S2 M46 (1) - specific variant 20L
 		if (n.includes('tellus') && n.includes('s2') && n.includes('m46') && n.includes('(1')) {
-			return 'Viscosité : ISO VG 46\n\nMarque : Shell\n\nType de fluide : Huile hydraulique industrielle\n\nPoint d’éclair : 230 °C (approx.)\n\nFabricant : Shell\n\nVolume : 20 L';
+			return 'Viscosité: ISO VG 46\n\nMarque: Shell\n\nType de fluide: Huile hydraulique industrielle\n\nPoint d’éclair: 230 °C (approx.)\n\nFabricant: Shell\n\nVolume: 20 L';
 		}
 		// Shell Tellus S2 M46 (2) - specific variant 5L
 		if (n.includes('tellus') && n.includes('s2') && n.includes('m46') && n.includes('(2')) {
-			return 'Viscosité : ISO VG 46\n\nMarque : Shell\n\nType de fluide : Huile hydraulique industrielle\n\nPoint d’éclair : 230 °C (approx.)\n\nFabricant : Shell\n\nVolume : 5 L (5000 ml)';
+			return 'Viscosité: ISO VG 46\n\nMarque: Shell\n\nType de fluide: Huile hydraulique industrielle\n\nPoint d’éclair: 230 °C (approx.)\n\nFabricant: Shell\n\nVolume: 5 L (5000 ml)';
 		}
 		// Shell Tellus S2 M46
 		if (n.includes('tellus') && n.includes('s2') && n.includes('m46')) {
-			return 'Viscosité : ISO VG 46\n\nMarque : Shell\n\nType de fluide : Huile hydraulique industrielle\n\nPoint d’éclair : 230 °C (approx.)\n\nFabricant : Shell\n\nVolume : 208,2 L (55 gallons)';
+			return 'Viscosité: ISO VG 46\n\nMarque: Shell\n\nType de fluide: Huile hydraulique industrielle\n\nPoint d’éclair: 230 °C (approx.)\n\nFabricant: Shell\n\nVolume: 208,2 L (55 gallons)';
 		}
 		// Motul 8100 X-Clean 5W40 5L (specific variant)
 		if (n.includes('motul') && n.includes('8100') && n.includes('x-clean') && n.includes('5w40') && (n.includes(' 5l') || n.endsWith('5l'))) {
-			return 'Viscosité : 5W-40\n\nMarque : Motul\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 505.01 / 502.00 / 505.00, Porsche A40, Ford 917A, GM Dexos2\n\nVolume : 5 L';
+			return 'Viscosité: 5W-40\n\nMarque: Motul\n\nType de véhicule: Voitures particulières, SUV et utilitaires légers\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 505.01 / 502.00 / 505.00, Porsche A40, Ford 917A, GM Dexos2\n\nVolume: 5 L';
 		}
 		// Motul 8100 X-Clean 5W40 1L (specific variant)
 		if (n.includes('motul') && n.includes('8100') && n.includes('x-clean') && n.includes('5w40') && (n.includes(' 1 l') || n.includes('1l') || (n.includes('front') && n.includes('1')))) {
-			return 'Viscosité : 5W-40\n\nMarque : Motul\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 505.01 / 502.00 / 505.00, Porsche A40, Ford 917A, GM Dexos2\n\nVolume : 1 L';
+			return 'Viscosité: 5W-40\n\nMarque: Motul\n\nAPI: SN/CF\n\nNormes / Homologations: ACEA C3, MB 229.51 / 229.31, BMW LL-04, VW 505.01 / 502.00 / 505.00, Porsche A40, Ford 917A, GM Dexos2\n\nVolume: 1 L';
 		}
 		// Motul 8100 X-Clean 5W40
 		if (n.includes('motul') && n.includes('8100') && n.includes('x-clean') && n.includes('5w40')) {
@@ -362,7 +362,7 @@ const ProductsPage = () => {
 		}
 		// Donaldson Air Filter Primary
 		if (n.includes('donaldson') && n.includes('air') && n.includes('filter') && n.includes('primary')) {
-			return 'Type : Filtre à air primaire\n\nMarque : Donaldson\n\nFonction : Protège le moteur en filtrant la poussière et les particules\n\nApplication : Véhicules légers, camions et machines industrielles (selon modèle)\n\nVolume / Taille : Selon référence spécifique';
+			return 'Type: Filtre à air primaire\n\nMarque: Donaldson\n\nFonction: Protège le moteur en filtrant la poussière et les particules\n\nApplication: Véhicules légers, camions et machines industrielles (selon modèle)\n\nVolume / Taille: Selon référence spécifique';
 		}
 		// MANN-FILTER W 1022 (Oil Filter)
 		if (
@@ -370,7 +370,7 @@ const ProductsPage = () => {
 			(n.includes('w 1022') || n.includes('w1022') || n.includes('w-1022')) &&
 			(n.includes('oil filter') || n.includes('filtre à huile') || n.includes('filter'))
 		) {
-			return 'Type : Filtre à huile\n\nMarque : MANN-FILTER\n\nRéférence : W 1022\n\nFonction : Élimine les impuretés et particules de l’huile pour protéger le moteur\n\nApplication : Véhicules particuliers et utilitaires légers (selon compatibilité)';
+			return 'Type: Filtre à huile\n\nMarque: MANN-FILTER\n\nRéférence: W 1022\n\nFonction: Élimine les impuretés et particules de l’huile pour protéger le moteur\n\nApplication: Véhicules particuliers et utilitaires légers (selon compatibilité)';
 		}
 		return null;
 	};
