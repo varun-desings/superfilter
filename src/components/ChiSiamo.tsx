@@ -26,11 +26,9 @@ const ChiSiamo = () => {
         <div className="text-center mb-10 sm:mb-12 animate-fade-up">
           <h2 className="heading-lg text-primary mb-6">À propos</h2>
           <div className="body-lg max-w-3xl mx-auto whitespace-pre-line text-muted-foreground">
-            {`Fondée en 2003, STE SUPER FILTRE est une entreprise tunisienne reconnue dans le domaine des filtres, huiles et lubrifiants automobiles et industriels.
-Grâce à des partenariats solides avec des marques internationales, nous garantissons à nos clients des produits fiables et certifiés.
+            {`En quelques mots, vous comprenez que le patron de la Société Super Filtre maîtrise son sujet au point de vous faire gagner de l’argent, en venant vous approvisionner chez lui. Comment ? Découvrez-le dans ce reportage inédit !
 
-Notre mission est simple : offrir des solutions de filtration et de lubrification qui assurent performance, sécurité et durabilité à vos équipements.
-Basée à Ben Arous, nous accompagnons depuis plus de deux décennies les particuliers, professionnels et industriels en Tunisie.`}
+Un bandeau jaune vif surplombe la façade de STE SUPER FILTRE, un bandeau sur lequel vous retrouvez le nom de la société et aussi celui de Shell, parce que le distributeur que l’on vient voir, exerce également une activité dans le lubrifiant. Mais quand vous entrez dans le magasin, l’effet très flashy du bandeau s’estompe rapidement pour laisser place à une société de distribution très classique, où l’on est loin de soupçonner que nous sommes chez l’un des plus grands spécialistes du filtre pour poids lourd. Pourtant, Adel Askri n’était pas destiné à exercer ce métier, et c’est peut-être pour cela qu’il a su trouver la plus-value attachée à l’activité de la filtration poids lourds et engins. En effet, ses études l’ont conduit à l’obtention d’une maîtrise de marketing international, qui s’est traduite rapidement par des stages dans le secteur bancaire. Cela lui a suffi pour comprendre que passer sa vie derrière un bureau ou un ordinateur n’était pas fait pour lui ! Une semaine après avoir terminé sa maîtrise, un ami de la famille lui propose de faire un essai dans la vente de pièces détachées pour les engins. Ses premiers pas dans le secteur de la pièce de rechange se concrétisent par des fonctions de responsable commercial, puis de directeur commercial, toujours dans ce secteur. Et c’est en 2003, qu’il ouvre son propre bureau (20 m², il commence raisonnablement !) et choisit le secteur de la filtration..`}
           </div>
         </div>
 
