@@ -235,6 +235,10 @@ const ProductsPage = () => {
 		if (n.includes('helix ultra') && n.includes('ect') && n.includes('5w30')) {
 			return 'Synthétique\n\nAPI SN\n\nNormes : ACEA C3, MB-Approval 229.31/229.51, VW 504.00/507.00, BMW LL-04\n\nConditionnements : 1L / 5L';
 		}
+		// Shell Helix HX7 10W40 - 209L (drum) base variant (no parentheses)
+		if (n.includes('helix hx7') && n.includes('10w40') && !n.includes('(')) {
+			return 'Viscosité : 10W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA A3/B4, MB 229.3\n\nVolume : 209 L (drum)';
+		}
 		// Shell Helix HX7 10W40
 		if (n.includes('helix hx7') && n.includes('10w40')) {
 			return 'Semi-synthétique\n\nAPI SN/CF\n\nNormes : ACEA A3/B3, A3/B4, MB-Approval 229.3, VW 502.00/505.00\n\nConditionnements : 1L / 5L';

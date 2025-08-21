@@ -236,7 +236,17 @@ API SN
 
 Normes : ACEA C3, MB-Approval 229.31/229.51, VW 504.00/507.00, BMW LL-04
 
-Conditionnements : 1L / 5L`:d.includes("helix hx7")&&d.includes("10w40")?`Semi-synthétique
+Conditionnements : 1L / 5L`:d.includes("helix hx7")&&d.includes("10w40")&&!d.includes("(")?`Viscosité : 10W-40
+
+Marque : Shell
+
+Type de véhicule : Voitures particulières, SUV et utilitaires légers
+
+API : SN/CF
+
+Normes / Homologations : ACEA A3/B4, MB 229.3
+
+Volume : 209 L (drum)`:d.includes("helix hx7")&&d.includes("10w40")?`Semi-synthétique
 
 API SN/CF
 
