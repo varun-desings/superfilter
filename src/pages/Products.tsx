@@ -243,6 +243,10 @@ const ProductsPage = () => {
 		if (n.includes('helix hx7') && n.includes('10w40') && n.includes('(1')) {
 			return 'Viscosité : 10W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA A3/B4, MB 229.3\n\nVolume : 5 L';
 		}
+		// Shell Helix HX7 10W40 (2) - specific variant 1L
+		if (n.includes('helix hx7') && n.includes('10w40') && n.includes('(2')) {
+			return 'Viscosité : 10W-40\n\nMarque : Shell\n\nType de véhicule : Voitures particulières, SUV et utilitaires légers\n\nAPI : SN/CF\n\nNormes / Homologations : ACEA A3/B4, MB 229.3\n\nVolume : 1 L';
+		}
 		// Shell Helix HX7 10W40
 		if (n.includes('helix hx7') && n.includes('10w40')) {
 			return 'Semi-synthétique\n\nAPI SN/CF\n\nNormes : ACEA A3/B3, A3/B4, MB-Approval 229.3, VW 502.00/505.00\n\nConditionnements : 1L / 5L';

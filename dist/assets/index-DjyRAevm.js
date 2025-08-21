@@ -256,7 +256,17 @@ API : SN/CF
 
 Normes / Homologations : ACEA A3/B4, MB 229.3
 
-Volume : 5 L`:d.includes("helix hx7")&&d.includes("10w40")?`Semi-synthétique
+Volume : 5 L`:d.includes("helix hx7")&&d.includes("10w40")&&d.includes("(2")?`Viscosité : 10W-40
+
+Marque : Shell
+
+Type de véhicule : Voitures particulières, SUV et utilitaires légers
+
+API : SN/CF
+
+Normes / Homologations : ACEA A3/B4, MB 229.3
+
+Volume : 1 L`:d.includes("helix hx7")&&d.includes("10w40")?`Semi-synthétique
 
 API SN/CF
 
