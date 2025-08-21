@@ -50,7 +50,7 @@ const Hero = () => {
               </button>
               <button 
                 onClick={() => scrollToSection('chi-siamo')}
-                className="inline-flex items-center justify-center border border-white/60 text-white px-8 py-3 sm:py-4 rounded-none font-medium tracking-wide text-base sm:text-sm uppercase hover:bg-white/10 hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white/40"
+                className="inline-flex items-center justify-center border border-white/60 text-white px-8 py-3 sm:py-4 rounded-none font-medium tracking-wide text-base sm:text-sm uppercase hover:bg-white/10 hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white/40 mt-5 sm:mt-0"
               >
                 À propos
               </button>
