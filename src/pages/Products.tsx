@@ -513,54 +513,54 @@ const ProductsPage = () => {
 															)}
 														</div>
 													)}
-																						<div className="p-2 sm:p-3 lg:p-4 xl:p-6">
-										<h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-inter font-bold text-primary mb-1 sm:mb-2 leading-tight">{buildTitle(item)}</h3>
+																						<div className="p-3 sm:p-4 lg:p-6 xl:p-8">
+										<h3 className="text-base sm:text-lg lg:text-xl xl:text-2xl font-inter font-bold text-primary mb-2 sm:mb-3 leading-tight">{buildTitle(item)}</h3>
 										{getCustomDescription(item) ? (
-											<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">{getCustomDescription(item) as string}</div>
+											<div className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">{getCustomDescription(item) as string}</div>
 														) : item.slug === 'bibi' ? (
-															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+															<div className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">
 																{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nVW 501.01/505.00; RENAULT RN0700/RN0710"}
 															</div>
 														) : item.slug === 'acceuil-shell-spirax-s4-txm' ? (
-															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+															<div className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">
 																{"Protection contre l'usure & oxydation\n\nHaute stabilité thermique et longue durée\n\n📦 Disponible en 20L et 209L"}
 															</div>
 														) : item.slug === 'square' ? (
-															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+															<div className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">
 																{"Minérale"}
 															</div>
 														) : item.slug === 'victoria' ? (
-															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+															<div className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">
 																{"Semi-Synthèse"}
 															</div>
 														) : item.slug === 'done3d' ? (
-															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+															<div className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">
 																{"Synthèse"}
 															</div>
 														) : item.slug === 'done' ? (
-															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+															<div className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">
 																{"100% Synthèse\n\nMID SAPS"}
 															</div>
 														) : item.slug === 'mezzo' ? (
-															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+															<div className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">
 																{"100% Synthèse\n\nPure Plus (Gaz Naturel)"}
 															</div>
 														) : item.slug === 'trap' ? (
-															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+															<div className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">
 																{"Minérale"}
 															</div>
 														) : item.slug === 'trapx' ? (
-															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+															<div className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">
 																{"100% Synthèse\n\nLONG LIFE"}
 															</div>
 														) : item.slug === 'fino' ? (
-															<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
-																{"5W-40\n\nMarque : Motul\n\nCompatibilité : Voiture, SUV, Camion\n\nPoint d’éclair : 228°C (442°F)"}
+															<div className="mt-2 sm:mt-3 text-sm sm:text-base text-muted-foreground whitespace-pre-line leading-relaxed">
+																{"5W-40\n\nMarque : Motul\n\nCompatibilité : Voiture, SUV, Camion\n\nPoint d'éclair : 228°C (442°F)"}
 															</div>
 														) : (
 															<></>
 														)}
-														<div className="mt-3 sm:mt-4 flex flex-col gap-2 sm:gap-3">
+														<div className="mt-4 sm:mt-5 flex flex-col gap-2 sm:gap-3">
 															<button className="btn-accent flex items-center justify-center gap-2 w-full text-sm sm:text-base py-2 sm:py-3" onClick={(e) => { e.stopPropagation(); addToCart({ slug: item.slug, name: item.name, cover: item.cover || undefined }); toast.success('Aggiunto al carrello'); }}>
 																<ShoppingCart size={16} />
 																Ajouter au panier
