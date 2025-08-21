@@ -12,9 +12,6 @@ const accueilFiles = import.meta.glob('/src/ACCEUIL/**/Capture5.{png,PNG,jpg,JPG
 const files = { ...catalogueFiles, ...accueilFiles } as Record<string, string>;
 
 const EXCLUDED_PATH_REGEX = /partnerrr/i;
-const EXCLUDED_FILE_REGEXES: RegExp[] = [
-	/\/src\/CATALOGUE\/MANN FILTRE\/61ZF4lAEncL\._AC_SL1500_\.(?:png|jpe?g|webp|gif|svg)$/i,
-];
 
 function toSlug(input: string): string {
 	return input
@@ -55,7 +52,7 @@ function extractCategoryFromPath(path: string): string {
 }
 
 export const catalogueItems: CatalogueItem[] = Object.entries(files)
-	.filter(([absPath]) => !EXCLUDED_PATH_REGEX.test(absPath) && !EXCLUDED_FILE_REGEXES.some((r) => r.test(absPath)))
+	.filter(([absPath]) => !EXCLUDED_PATH_REGEX.test(absPath))
 	.map(([absPath, url]) => {
 		const pathParts = absPath.split('/');
 		const file = pathParts[pathParts.length - 1];
@@ -65,9 +62,9 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		if (/\/src\/ACCEUIL\/.+\/Capture5\.[^.]+$/i.test(absPath) || /\/src\/ACCEUIL\/Capture5\.[^.]+$/i.test(absPath)) {
 			name = 'Shell Spirax S4 TXM';
 		}
-		// Override only the specific MANN image to requested label (avoid duplicates)
+		// Override only the specific MANN image to requested label
 		if (/\/src\/CATALOGUE\/MANN FILTRE\/61ZF4lAEncL\._AC_SL1500_\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
-			name = 'Filtre à huile W 1022';
+			name = 'oil filter W 1022';
 		}
 		const slug = `${category.toLowerCase()}-${toSlug(name)}`;
 		return {
@@ -77,6 +74,9 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 			cover: url,
 			images: [url],
 		};
-	}).sort((a, b) => a.name.localeCompare(b.name));
+	})
+	// Remove any items with missing or placeholder name
+	.filter((it) => Boolean(it.name && it.name.trim() && it.name.trim() !== '.'))
+	.sort((a, b) => a.name.localeCompare(b.name));
 
 export default catalogueItems;
