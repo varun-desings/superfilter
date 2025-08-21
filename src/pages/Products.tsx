@@ -100,6 +100,7 @@ const ProductsPage = () => {
 	};
 
 	const buildTitle = (item: any): string => {
+		if (item?.slug === 'bibi') return String(item?.name || '');
 		const size = extractPrimarySizeInches(item?.description);
 		const parts = [item?.name, size && size, 'Cement Breeze Block'].filter(Boolean);
 		return parts.join(' ');
@@ -362,22 +363,30 @@ const ProductsPage = () => {
 										)}
 										<div className="p-3 sm:p-4 lg:p-6 xl:p-8">
 											<h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-bold text-primary mb-1 sm:mb-2 leading-tight">{buildTitle(item)}</h3>
-											{buildDimensionsCm(item) && (
-												<div className="mt-1 text-xs sm:text-sm text-muted-foreground">{buildDimensionsCm(item)}</div>
-											)}
-											<div className="mt-1 text-xs sm:text-sm text-muted-foreground">{buildStockLine(item)}</div>
-											{item?.specs && (
-												<div className="mt-2 text-xs text-muted-foreground flex flex-wrap gap-x-2 sm:gap-x-3 gap-y-1">
-													{(item.specs.width_mm || item.specs.height_mm || item.specs.depth_mm) && (
-														<span>Dimensions: {formatDimensions(item.specs)}</span>
-													)}
-													{item.specs.thickness_mm && (
-														<span>Épaisseur: {item.specs.thickness_mm / 10}cm</span>
-													)}
-													{item.specs.weight_kg && (
-														<span>Poids: {item.specs.weight_kg}kg</span>
-													)}
+											{item.slug === 'bibi' ? (
+												<div className="mt-1 text-xs sm:text-sm text-muted-foreground whitespace-pre-line">
+													{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA A3/B3/B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
 												</div>
+											) : (
+												<>
+													{buildDimensionsCm(item) && (
+														<div className="mt-1 text-xs sm:text-sm text-muted-foreground">{buildDimensionsCm(item)}</div>
+													)}
+													<div className="mt-1 text-xs sm:text-sm text-muted-foreground">{buildStockLine(item)}</div>
+													{item?.specs && (
+														<div className="mt-2 text-xs text-muted-foreground flex flex-wrap gap-x-2 sm:gap-x-3 gap-y-1">
+															{(item.specs.width_mm || item.specs.height_mm || item.specs.depth_mm) && (
+																<span>Dimensions: {formatDimensions(item.specs)}</span>
+															)}
+															{item.specs.thickness_mm && (
+																<span>Épaisseur: {item.specs.thickness_mm / 10}cm</span>
+															)}
+															{item.specs.weight_kg && (
+																<span>Poids: {item.specs.weight_kg}kg</span>
+															)}
+														</div>
+													)}
+												</>
 											)}
 											<div className="mt-3 sm:mt-4 flex flex-col gap-2 sm:gap-3">
 												<button className="btn-accent flex items-center justify-center gap-2 w-full text-sm sm:text-base py-2 sm:py-3" onClick={(e) => { e.stopPropagation(); addToCart({ slug: item.slug, name: item.name, cover: item.cover || undefined }); toast.success('Aggiunto al carrello'); }}>
@@ -396,8 +405,13 @@ const ProductsPage = () => {
 									<div className="space-y-4">
 										<h3 className="heading-sm text-primary sticky top-0 bg-background/80 backdrop-blur z-10 py-1">{item.name}</h3>
 										<ImagesCarousel images={item.images || []} alt={item.name} />
-										<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{item.description}</p>
-										{item?.specs && (
+										{item.slug === 'bibi' ? (
+											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{"Technologie de Synthèse\n\nPure Plus (Gaz Naturel)\n\nAPI SN PLUS; ACEA A3/B3/B4\n\nMB 229.3; VW 501.01/505.00; RENAULT RN0700/RN0710"}
+											</p>
+										) : (
+											<p className="text-xs sm:text-sm text-muted-foreground whitespace-pre-line leading-relaxed">{item.description}</p>
+										)}
+										{item?.specs && item.slug !== 'bibi' && (
 											<div className="mt-2 text-xs text-muted-foreground space-y-1">
 												<div className="font-medium text-primary/90">Spécifications</div>
 												<ul className="list-disc pl-5">

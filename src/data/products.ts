@@ -21,7 +21,7 @@ export type Product = {
 export const products: Product[] = [
   {
     slug: "bibi",
-    name: "Huile Moteur SHELL HELIX ULTRA PRO AV-L 0W20",
+    name: "Huile Moteur SHELL Helix HX7 10W40",
     category: "bibi",
     cover: "/placeholder.svg",
     images: [],
