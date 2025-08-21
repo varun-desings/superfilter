@@ -12,6 +12,9 @@ const accueilFiles = import.meta.glob('/src/ACCEUIL/**/Capture5.{png,PNG,jpg,JPG
 const files = { ...catalogueFiles, ...accueilFiles } as Record<string, string>;
 
 const EXCLUDED_PATH_REGEX = /partnerrr/i;
+const EXCLUDED_FILE_REGEXES: RegExp[] = [
+	/\/src\/CATALOGUE\/MANN FILTRE\/71S-pVk2d-L\._AC_SL1500_\.(?:png|jpe?g|webp|gif|svg)$/i,
+];
 
 function toSlug(input: string): string {
 	return input
@@ -52,7 +55,7 @@ function extractCategoryFromPath(path: string): string {
 }
 
 export const catalogueItems: CatalogueItem[] = Object.entries(files)
-	.filter(([absPath]) => !EXCLUDED_PATH_REGEX.test(absPath))
+	.filter(([absPath]) => !EXCLUDED_PATH_REGEX.test(absPath) && !EXCLUDED_FILE_REGEXES.some((r) => r.test(absPath)))
 	.map(([absPath, url]) => {
 		const pathParts = absPath.split('/');
 		const file = pathParts[pathParts.length - 1];
@@ -62,15 +65,9 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		if (/\/src\/ACCEUIL\/.+\/Capture5\.[^.]+$/i.test(absPath) || /\/src\/ACCEUIL\/Capture5\.[^.]+$/i.test(absPath)) {
 			name = 'Shell Spirax S4 TXM';
 		}
-		// Overrides
+		// Keep only the 61ZF4lAEncL MANN image as W 1022
 		if (/\/src\/CATALOGUE\/MANN FILTRE\/61ZF4lAEncL\._AC_SL1500_\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
 			name = 'mann filter oil filter W 1022';
-		}
-		if (/\/src\/CATALOGUE\/MANN FILTRE\/71S-pVk2d-L\._AC_SL1500_\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
-			name = 'mann filter oil filter W 1022';
-		}
-		if (/\/src\/CATALOGUE\/MOTUL\/motul-5w40-8100-1l\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
-			name = 'Motul 8100 X-Clean 5W40';
 		}
 		const slug = `${category.toLowerCase()}-${toSlug(name)}`;
 		return {
