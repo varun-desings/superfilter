@@ -57,7 +57,7 @@ const Progetti = () => {
               </div>
 
               <div className="p-6 sm:p-8">
-                <h3 className="heading-sm text-primary mb-3">{item.name}</h3>
+                <h3 className="heading-sm text-primary mb-3">{String(item.name || '').toLowerCase().replace(/(^|[\s\-_/])([a-zà-ÿ])/g, (_, p1, p2) => p1 + p2.toUpperCase())}</h3>
                 {item.description && (
                   <p className="body-md mb-4 text-muted-foreground leading-relaxed">
                     {excerpt(item.description, 140)}

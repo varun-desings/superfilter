@@ -104,9 +104,15 @@ const ProductsPage = () => {
 	};
 
 	const buildTitle = (item: any): string => {
-		if (item?.slug === 'bibi' || item?.slug === 'square' || item?.slug === 'victoria' || item?.slug === 'done3d' || item?.slug === 'done' || item?.slug === 'mezzo' || item?.slug === 'trap' || item?.slug === 'trapx' || item?.slug === 'fino') return String(item?.name || '');
+		const toTitleCase = (s?: string) => {
+			if (!s) return '';
+			return s
+				.toLowerCase()
+				.replace(/(^|[\s\-_/])([a-zà-ÿ])/g, (_, p1, p2) => p1 + p2.toUpperCase());
+		};
+		const baseName = toTitleCase(String(item?.name || ''));
 		const size = extractPrimarySizeInches(item?.description);
-		const parts = [item?.name, size && size].filter(Boolean);
+		const parts = [baseName, size && size].filter(Boolean);
 		return parts.join(' ');
 	};
 
@@ -576,7 +582,7 @@ const ProductsPage = () => {
 																							<DialogContent className="w-[calc(100vw-1rem)] max-w-[calc(100vw-1rem)] sm:max-w-4xl md:max-w-5xl">
 												<div className="space-y-4">
 													<BackLink label="Retour" />
-													<h3 className="heading-sm text-primary sticky top-0 bg-background/80 backdrop-blur z-10 py-1">{item.name}</h3>
+													<h3 className="heading-sm text-primary sticky top-0 bg-background/80 backdrop-blur z-10 py-1">{buildTitle(item)}</h3>
 													<ImagesCarousel images={item.images || []} alt={item.name} />
 													{/* reuse same conditional description blocks here (already exist below) */}
 													{getCustomDescription(item) ? (
