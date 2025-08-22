@@ -414,7 +414,7 @@ const ProductsPage = () => {
 						<img 
 							src={logoImg} 
 							alt="Super Filtre Logo" 
-							className="w-16 h-16 rounded object-cover"
+							className="w-24 h-24 rounded object-contain"
 						/>
 					</div>
 					
@@ -464,7 +464,7 @@ const ProductsPage = () => {
 							<img 
 								src={logoImg} 
 								alt="Super Filtre Logo" 
-								className="w-24 h-24 rounded object-cover"
+								className="w-32 h-32 rounded object-contain"
 							/>
 						</div>
 						

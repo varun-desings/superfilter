@@ -39,7 +39,7 @@ const Navigation = () => {
               <img 
                 src={logoImg} 
                 alt="Super Filtre Logo" 
-                className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded object-cover"
+                className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded object-contain"
               />
             </Link>
           </div>
