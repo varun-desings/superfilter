@@ -28,7 +28,7 @@ const Hero = () => {
           <div className="animate-fade-up text-white mt-12 sm:mt-8">
             {/* Main Title */}
             <div className="mb-6 sm:mb-12">
-              <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-semibold leading-[1.1] sm:leading-[1.15] tracking-[0.02em] mb-4 sm:mb-6 text-white/95">
+              <h1 className="font-montserrat font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-6xl leading-[1.1] sm:leading-[1.15] tracking-[0.02em] mb-4 sm:mb-6 text-white/95">
                 STE SUPER FILTRE
               </h1>
               <p className="font-inter text-base sm:text-lg md:text-xl leading-[1.4] sm:leading-relaxed tracking-wide opacity-90 max-w-2xl">
