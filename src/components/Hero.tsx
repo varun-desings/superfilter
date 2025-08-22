@@ -32,7 +32,7 @@ const Hero = () => {
                 STE SUPER FILTRE
               </h1>
               <p className="font-inter text-base sm:text-lg md:text-xl leading-[1.4] sm:leading-relaxed tracking-wide opacity-90 max-w-2xl">
-                Depuis plus de 20 ans, spécialiste des filtres, huiles et lubrifiants en Tunisie.
+                Depuis plus de 20 ans, spécialiste des filtres,  lubrifiants en Tunisie.
               </p>
               <p className="mt-3 sm:mt-3 font-inter text-base sm:text-lg md:text-xl leading-[1.4] sm:leading-relaxed tracking-wide opacity-90 max-w-2xl">
                 Votre partenaire de confiance pour la performance et la longévité de vos moteurs.
