@@ -90,6 +90,10 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		if (/\/src\/CATALOGUE\/WhatsApp Image 2025-08-22 at 02\.55\.16_e4f15ec2\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
 			name = 'Delo 600 ADF SAE 10W-30';
 		}
+		// CATALOGUE root WhatsApp image -> dasty plastic Renewer for car 750ml
+		if (/\/src\/CATALOGUE\/WhatsApp Image 2025-08-22 at 02\.57\.22_18b3e4c6\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
+			name = 'dasty plastic Renewer for car 750ml';
+		}
 		
 		// Category overrides
 		if (/\/src\/CATALOGUE\/donaldson filter\/64e8c9dcf25dfe3f312a82e0-b085011-donaldson-air-filter-primary\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
