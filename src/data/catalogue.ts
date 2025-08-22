@@ -86,6 +86,10 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		if (/\/src\/CATALOGUE\/donaldson filter\/64e8c9dcf25dfe3f312a82e0-b085011-donaldson-air-filter-primary\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
 			name = 'Donaldson Air Filter Primary';
 		}
+		// CATALOGUE root WhatsApp image -> Delo 600 ADF SAE 10W-30
+		if (/\/src\/CATALOGUE\/WhatsApp Image 2025-08-22 at 02\.55\.16_e4f15ec2\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
+			name = 'Delo 600 ADF SAE 10W-30';
+		}
 		
 		// Category overrides
 		if (/\/src\/CATALOGUE\/donaldson filter\/64e8c9dcf25dfe3f312a82e0-b085011-donaldson-air-filter-primary\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
