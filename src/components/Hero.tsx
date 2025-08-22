@@ -1,6 +1,6 @@
 
 import { ArrowRight } from 'lucide-react';
-import heroBg from '@/ACCEUIL/Capture3.PNG';
+import heroBg from '@/components/home-bg.jpg';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
