@@ -31,27 +31,35 @@ const Footer = () => {
 							<li>AFRILUB</li>
 							<li>WIXFILTER</li>
 						</ul>
-						<div className="grid grid-cols-2 md:grid-cols-4 gap-4 justify-items-center items-center">
-							<img 
-								src={partnersImage} 
-								alt="Nos partenaires" 
-								className="w-full h-24 object-contain rounded-lg shadow-md bg-white"
-							/>
-							<img 
-								src={partnerrImage} 
-								alt="Nos partenaires" 
-								className="w-full h-24 object-contain rounded-lg shadow-md bg-white"
-							/>
-							<img 
-								src={partnerrrImage} 
-								alt="Nos partenaires" 
-								className="w-full h-24 object-contain rounded-lg shadow-md bg-white"
-							/>
-							<img
-								src={partnerssImage}
-								alt="Nos partenaires"
-								className="w-full h-24 object-contain rounded-lg shadow-md bg-white"
-							/>
+						<div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 justify-items-center items-center">
+							<div className="w-full h-20 sm:h-24 md:h-28 lg:h-32 bg-white rounded-lg shadow-md flex items-center justify-center p-2 sm:p-3">
+								<img 
+									src={partnersImage} 
+									alt="Nos partenaires" 
+									className="max-h-full w-auto object-contain"
+								/>
+							</div>
+							<div className="w-full h-20 sm:h-24 md:h-28 lg:h-32 bg-white rounded-lg shadow-md flex items-center justify-center p-2 sm:p-3">
+								<img 
+									src={partnerrImage} 
+									alt="Nos partenaires" 
+									className="max-h-full w-auto object-contain"
+								/>
+							</div>
+							<div className="w-full h-20 sm:h-24 md:h-28 lg:h-32 bg-white rounded-lg shadow-md flex items-center justify-center p-2 sm:p-3">
+								<img 
+									src={partnerrrImage} 
+									alt="Nos partenaires" 
+									className="max-h-full w-auto object-contain"
+								/>
+							</div>
+							<div className="w-full h-20 sm:h-24 md:h-28 lg:h-32 bg-white rounded-lg shadow-md flex items-center justify-center p-2 sm:p-3">
+								<img
+									src={partnerssImage}
+									alt="Nos partenaires"
+									className="max-h-full w-auto object-contain"
+								/>
+							</div>
 						</div>
 					</div>
 
