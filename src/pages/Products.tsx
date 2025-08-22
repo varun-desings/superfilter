@@ -391,9 +391,8 @@ const ProductsPage = () => {
 						<img 
 							src={logoImg} 
 							alt="Super Filtre Logo" 
-							className="w-8 h-8 rounded object-cover mr-2"
+							className="w-16 h-16 rounded object-cover"
 						/>
-						<span className="text-lg font-bold text-primary">Super Filtre</span>
 					</div>
 					
 					{/* Menu Button on Right */}
@@ -439,12 +438,11 @@ const ProductsPage = () => {
 					<div className="flex items-center justify-between py-4">
 						{/* Logo on Left */}
 						<div className="flex items-center">
-													<img 
-							src={logoImg} 
-							alt="Super Filtre Logo" 
-							className="w-10 h-10 rounded object-cover mr-3"
-						/>
-							<span className="text-xl font-bold text-primary">Super Filtre</span>
+							<img 
+								src={logoImg} 
+								alt="Super Filtre Logo" 
+								className="w-24 h-24 rounded object-cover"
+							/>
 						</div>
 						
 						{/* Navigation Links */}
