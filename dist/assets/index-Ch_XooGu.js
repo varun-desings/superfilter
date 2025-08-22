@@ -462,13 +462,13 @@ Marque: Chevron
 Type de véhicule: Camions lourds, bus, engins agricoles, flottes mixtes diesel et gaz naturel comprimé (CNG)
 Chevron Lubricants
 
-Volume: 5 L`:c.includes("dasty")&&c.includes("plastic")&&(c.includes("renewer")||c.includes("renewer"))&&(c.includes("750")||c.includes("750ml"))?`Viscosité : Non spécifiée
+Volume: 5 L`:c.includes("dasty")&&c.includes("plastic")&&(c.includes("renewer")||c.includes("renewer"))&&(c.includes("750")||c.includes("750ml"))?`Viscosité: Non spécifiée
 
-Marque : Dasty
+Marque: Dasty
 
-Type de véhicule : Voitures particulières, SUV, camions légers
+Type de véhicule: Voitures particulières, SUV, camions légers
 
-Volume : 750 ml`:c==="donaldson"?`Viscosité : Non applicable
+Volume: 750 ml`:c==="donaldson"?`Viscosité : Non applicable
 
 Marque : Donaldson
 

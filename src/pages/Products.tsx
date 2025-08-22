@@ -391,7 +391,7 @@ const ProductsPage = () => {
 		}
 		// Dasty plastic Renewer for car 750ml
 		if (n.includes('dasty') && n.includes('plastic') && (n.includes('renewer') || n.includes('renewer')) && (n.includes('750') || n.includes('750ml'))) {
-			return 'Viscosité : Non spécifiée\n\nMarque : Dasty\n\nType de véhicule : Voitures particulières, SUV, camions légers\n\nVolume : 750 ml';
+			return 'Viscosité: Non spécifiée\n\nMarque: Dasty\n\nType de véhicule: Voitures particulières, SUV, camions légers\n\nVolume: 750 ml';
 		}
 		// Donaldson (generic)
 		if (n === 'donaldson') {
