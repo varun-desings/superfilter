@@ -98,6 +98,10 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		if (/\/src\/CATALOGUE\/WhatsApp Image 2025-08-22 at 03\.00\.57_e5ba6f63\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
 			name = 'Donaldson';
 		}
+		// CATALOGUE root WhatsApp image -> Castrol  mengnatec stop-start 5W-30 A5
+		if (/\/src\/CATALOGUE\/WhatsApp Image 2025-08-22 at 03\.03\.31_5d83b510\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
+			name = 'Castrol  mengnatec stop-start 5W-30 A5';
+		}
 		
 		// Category overrides
 		if (/\/src\/CATALOGUE\/donaldson filter\/64e8c9dcf25dfe3f312a82e0-b085011-donaldson-air-filter-primary\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
