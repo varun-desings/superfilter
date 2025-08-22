@@ -15,6 +15,8 @@ const CartPage = () => {
 			const cartItems = items.map(i => `${i.name} (Qty: ${i.quantity})`).join('\n');
 			const formData = new FormData();
 			formData.append('access_key', '8788a892-b38f-4ef9-ae05-44b79506701c');
+			formData.append('to', 'superfilter10@gmail.com');
+			formData.append('reply_to', form.email);
 			formData.append('name', form.name);
 			formData.append('email', form.email);
 			formData.append('phone', form.phone);
