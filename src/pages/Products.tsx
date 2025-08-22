@@ -385,6 +385,10 @@ const ProductsPage = () => {
 		) {
 			return 'Viscosité: 15W-40\n\nMarque: Castrol\n\nType de véhicule: Tracteurs, machines agricoles, engins industriels\n\nVolume: 20 L';
 		}
+		// Delo 600 ADF SAE 10W-30
+		if (n.includes('delo') && n.includes('600') && n.includes('adf') && (n.includes('10w-30') || n.includes('10w30'))) {
+			return 'Viscosité: 10W-30\n\nMarque: Chevron\n\nType de véhicule: Camions lourds, bus, engins agricoles, flottes mixtes diesel et gaz naturel comprimé (CNG)\nChevron Lubricants\n\nVolume: 5 L';
+		}
 		return null;
 	};
 	
