@@ -573,7 +573,7 @@ const ProductsPage = () => {
 													</div>
 												</div>
 											</DialogTrigger>
-											<DialogContent className="max-w-[95vw] sm:max-w-4xl md:max-w-5xl mx-2">
+																							<DialogContent className="w-[calc(100vw-1rem)] max-w-[calc(100vw-1rem)] sm:max-w-4xl md:max-w-5xl">
 												<div className="space-y-4">
 													<BackLink label="Retour" />
 													<h3 className="heading-sm text-primary sticky top-0 bg-background/80 backdrop-blur z-10 py-1">{item.name}</h3>
