@@ -378,6 +378,13 @@ const ProductsPage = () => {
 		) {
 			return 'Type: Filtre à huile\n\nMarque: MANN-FILTER\n\nRéférence: W 1022\n\nFonction: Élimine les impuretés et particules de l’huile pour protéger le moteur\n\nApplication: Véhicules particuliers et utilitaires légers (selon compatibilité)';
 		}
+		// Castrol transmax agri MP 15W-40
+		if (
+			n.includes('castrol') && n.includes('transmax') && n.includes('agri') &&
+			(n.includes(' mp') || n.includes('mp ')) && (n.includes('15w-40') || n.includes('15w40'))
+		) {
+			return 'Viscosité: 15W-40\n\nMarque: Castrol\n\nType de véhicule: Tracteurs, machines agricoles, engins industriels\n\nVolume: 20 L';
+		}
 		return null;
 	};
 	
