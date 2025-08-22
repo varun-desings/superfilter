@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-import logoImg from './components/WhatsApp Image 2025-08-22 at 02.52.50_2329ead5.jpg'
+import logoImg from './components/WhatsApp Image 2025-08-22 at 02.46.20_f58f132a.jpg'
 
 // Set favicon dynamically using bundled logo image
 (() => {
