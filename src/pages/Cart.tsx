@@ -14,7 +14,7 @@ const CartPage = () => {
 		try {
 			const cartItems = items.map(i => `${i.name} (Qty: ${i.quantity})`).join('\n');
 			const formData = new FormData();
-			formData.append('access_key', '8788a892-b38f-4ef9-ae05-44b79506701c');
+			formData.append('access_key', import.meta.env.VITE_WEB3FORMS_KEY as string);
 			formData.append('to', 'superfilter10@gmail.com');
 			formData.append('reply_to', form.email);
 			formData.append('name', form.name);
@@ -86,7 +86,7 @@ const CartPage = () => {
 					<form onSubmit={handleSubmit} className="space-y-6">
 						<h2 className="heading-sm text-primary">Coordonnées</h2>
 						<div className="grid sm:grid-cols-2 gap-4">
-													<input className="w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg text-sm sm:text-base" placeholder="Nom complet" required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
+											<input className="w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg text-sm sm:text-base" placeholder="Nom complet" required value={form.name} onChange={e => setForm({ ...form, name: e.target.value })} />
 						<input type="email" className="w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg text-sm sm:text-base" placeholder="Email" required value={form.email} onChange={e => setForm({ ...form, email: e.target.value })} />
 						</div>
 						<input className="w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg text-sm sm:text-base" placeholder="Téléphone" value={form.phone} onChange={e => setForm({ ...form, phone: e.target.value })} />
