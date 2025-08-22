@@ -25,7 +25,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="max-w-4xl mx-auto sm:mx-0 mt-0 sm:mt-16 lg:mt-24">
           {/* Content */}
-          <div className="animate-fade-up text-white mt-12 sm:mt-8">
+          <div className="animate-fade-up text-white mt-14 sm:mt-12 md:mt-14 lg:mt-16">
             {/* Main Title */}
             <div className="mb-6 sm:mb-12">
               <h1 className="font-montserrat font-extrabold text-4xl sm:text-5xl md:text-6xl lg:text-6xl leading-[1.1] sm:leading-[1.15] tracking-[0.02em] mb-4 sm:mb-6 text-white/95">
