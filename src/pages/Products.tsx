@@ -575,6 +575,7 @@ const ProductsPage = () => {
 											</DialogTrigger>
 											<DialogContent className="max-w-[95vw] sm:max-w-4xl md:max-w-5xl mx-2">
 												<div className="space-y-4">
+													<BackLink label="Retour" />
 													<h3 className="heading-sm text-primary sticky top-0 bg-background/80 backdrop-blur z-10 py-1">{item.name}</h3>
 													<ImagesCarousel images={item.images || []} alt={item.name} />
 													{/* reuse same conditional description blocks here (already exist below) */}
