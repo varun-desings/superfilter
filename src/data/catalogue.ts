@@ -102,6 +102,10 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		if (/\/src\/CATALOGUE\/WhatsApp Image 2025-08-22 at 03\.03\.31_5d83b510\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
 			name = 'Castrol  mengnatec stop-start 5W-30 A5';
 		}
+		// CATALOGUE root WhatsApp image -> filter a air moteur cylindrique
+		if (/\/src\/CATALOGUE\/WhatsApp Image 2025-08-22 at 03\.07\.08_e174a28e\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
+			name = 'filter a air moteur cylindrique';
+		}
 		
 		// Category overrides
 		if (/\/src\/CATALOGUE\/donaldson filter\/64e8c9dcf25dfe3f312a82e0-b085011-donaldson-air-filter-primary\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
