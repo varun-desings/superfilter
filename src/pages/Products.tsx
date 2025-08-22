@@ -397,6 +397,10 @@ const ProductsPage = () => {
 		if (n === 'donaldson') {
 			return 'Viscosité : Non applicable\n\nMarque : Donaldson\n\nType de véhicule : Camions lourds, engins agricoles, flottes mixtes diesel et gaz naturel comprimé (CNG)\n\nVolume : Non applicable';
 		}
+		// Castrol Magnatec Stop-Start 5W-30 A5
+		if (n.includes('castrol') && (n.includes('magnatec') || n.includes('mengnatec') || n.includes('mgnatec')) && (n.includes('stop-start') || n.includes('stop start')) && (n.includes('5w-30') || n.includes('5w30')) && n.includes('a5')) {
+			return 'Viscosité: 5W-30\n\nMarque: Castrol\nIndustrial Lubricant Services\n\nType de véhicule: Voitures particulières, SUV, utilitaires légers\n\nVolume: 5 L';
+		}
 		return null;
 	};
 	
