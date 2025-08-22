@@ -6,10 +6,11 @@ export type CatalogueItem = {
 	images: string[];
 };
 
-// Import all image assets under src/CATALOGUE (all) and only Capture5.* under src/ACCEUIL
+// Import all image assets under src/CATALOGUE (all), only Capture5.* under src/ACCEUIL, and the specific WhatsApp image under components
 const catalogueFiles = import.meta.glob('/src/CATALOGUE/**/*.{png,PNG,jpg,JPG,jpeg,JPEG,webp,WEBP,svg,SVG,gif,GIF}', { eager: true, import: 'default' }) as Record<string, string>;
 const accueilFiles = import.meta.glob('/src/ACCEUIL/**/Capture5.{png,PNG,jpg,JPG,jpeg,JPEG,webp,WEBP,svg,SVG,gif,GIF}', { eager: true, import: 'default' }) as Record<string, string>;
-const files = { ...catalogueFiles, ...accueilFiles } as Record<string, string>;
+const componentsFiles = import.meta.glob('/src/components/WhatsApp Image 2025-08-22 at 02.52.50_2329ead5.{png,PNG,jpg,JPG,jpeg,JPEG,webp,WEBP,svg,SVG,gif,GIF}', { eager: true, import: 'default' }) as Record<string, string>;
+const files = { ...catalogueFiles, ...accueilFiles, ...componentsFiles } as Record<string, string>;
 
 const EXCLUDED_PATH_REGEX = /partnerrr/i;
 const EXCLUDED_FILE_REGEXES: RegExp[] = [
@@ -113,6 +114,10 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		// CATALOGUE root WhatsApp image -> filter a air moteur avec prefilter en mousse/tissu
 		if (/\/src\/CATALOGUE\/WhatsApp Image 2025-08-22 at 03\.09\.21_0555da46\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
 			name = 'filter a air moteur avec prefilter en mousse/tissu';
+		}
+		// COMPONENTS root WhatsApp image -> Castrol transmax agri MP 15W-40
+		if (/\/src\/components\/WhatsApp Image 2025-08-22 at 02\.52\.50_2329ead5\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
+			name = 'Castrol transmax agri MP 15W-40';
 		}
 		
 		// Category overrides
