@@ -53,8 +53,8 @@ function extractCategoryFromPath(path: string): string {
 		if (root === 'ACCEUIL') {
 			return root;
 		}
-		// Fallback
-		return (next ?? root).toUpperCase();
+		// Fallback: if next looks like a file (contains a dot), use the root; otherwise use next
+		return (next && !next.includes('.') ? next : root).toUpperCase();
 	}
 	return 'AUTRE';
 }
