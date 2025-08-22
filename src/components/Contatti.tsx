@@ -340,16 +340,10 @@ const Contatti = () => {
               <div>
                 <h4 className="font-semibold text-primary mb-4 font-inter">Suivez‑nous</h4>
                 <div className="flex gap-4">
-                  					<a 
-						href="https://www.facebook.com/VitaneufTN" 
-						className="p-3 bg-accent/10 rounded-full hover:bg-accent hover:text-white transition-all duration-300"
-						title="Facebook: VitaneufTN"
-					>
-						<Facebook size={24} />
-					</a>
                   <a 
-                    href="https://www.instagram.com/claustrah" 
+                    href="https://www.instagram.com/superfiltretn" 
                     className="p-3 bg-accent/10 rounded-full hover:bg-accent hover:text-white transition-all duration-300"
+                    title="Instagram: superfiltretn"
                   >
                     <Instagram size={24} />
                   </a>
