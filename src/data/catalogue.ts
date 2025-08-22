@@ -106,6 +106,10 @@ export const catalogueItems: CatalogueItem[] = Object.entries(files)
 		if (/\/src\/CATALOGUE\/WhatsApp Image 2025-08-22 at 03\.07\.08_e174a28e\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
 			name = 'filter a air moteur cylindrique';
 		}
+		// CATALOGUE root WhatsApp image -> Ensemble filter a air moteur primaire et secondaire
+		if (/\/src\/CATALOGUE\/WhatsApp Image 2025-08-22 at 03\.08\.16_f661eb39\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
+			name = 'Ensemble filter a air moteur primaire et secondaire';
+		}
 		
 		// Category overrides
 		if (/\/src\/CATALOGUE\/donaldson filter\/64e8c9dcf25dfe3f312a82e0-b085011-donaldson-air-filter-primary\.(?:png|jpe?g|webp|gif|svg)$/i.test(absPath)) {
