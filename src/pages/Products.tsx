@@ -1,7 +1,7 @@
 import products from '@/data/products';
 import catalogueItems from '@/data/catalogue';
 import CATEGORIES, { deriveCategory as deriveCategoryFromName } from '@/data/categories';
-import logoImg from '@/components/Ste Super Filtre.jpg';
+import logoImg from '@/components/WhatsApp Image 2025-08-22 at 02.52.50_2329ead5.jpg';
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { useCart } from '@/contexts/CartContext';
 import { ShoppingCart, ArrowRight, Menu, X } from 'lucide-react';

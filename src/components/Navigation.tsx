@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import CartMini from './CartMini';
-import logoImg from '@/components/WhatsApp Image 2025-08-22 at 00.09.29_3097a421.jpg';
+import logoImg from '@/components/WhatsApp Image 2025-08-22 at 02.52.50_2329ead5.jpg';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
