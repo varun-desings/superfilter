@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-8 pb-4 sm:pt-12 sm:pb-8 overflow-hidden">
+    <section id="home" className="relative py-12 sm:py-16 overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
         <img
@@ -23,12 +23,12 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6">
-        <div className="max-w-4xl mx-auto sm:mx-0 mt-4 sm:mt-8 lg:mt-12">
+        <div className="max-w-4xl mx-auto sm:mx-0">
           {/* Content */}
           <div className="animate-fade-up text-white">
             {/* Main Title */}
             <div className="mb-6 sm:mb-8">
-              <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] sm:leading-[1.15] tracking-[0.02em] mb-4 sm:mb-4 text-white/95">
+              <h1 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.1] sm:leading-[1.15] tracking-[0.02em] mb-4 text-white/95">
                 STE SUPER FILTRE
               </h1>
               <p className="font-inter text-base sm:text-lg md:text-xl leading-[1.4] sm:leading-relaxed tracking-wide opacity-90 max-w-2xl mb-3">
@@ -43,14 +43,14 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center sm:justify-start mt-6 sm:mt-8">
               <button 
                 onClick={() => scrollToSection('progetti')}
-                className="inline-flex items-center justify-center gap-3 bg-white text-black px-6 sm:px-8 py-3 sm:py-3 rounded-none font-medium tracking-wide text-sm sm:text-base md:text-lg uppercase hover:bg-gray-100 transition-all duration-300 group"
+                className="inline-flex items-center justify-center gap-3 bg-white text-black px-6 sm:px-8 py-3 rounded-none font-medium tracking-wide text-sm sm:text-base md:text-lg uppercase hover:bg-gray-100 transition-all duration-300 group"
               >
                 Voir nos produits
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </button>
               <button 
                 onClick={() => scrollToSection('chi-siamo')}
-                className="inline-flex items-center justify-center border border-white/60 text-white px-6 sm:px-8 py-3 sm:py-3 rounded-none font-medium tracking-wide text-sm sm:text-base md:text-lg uppercase hover:bg-white/10 hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white/40"
+                className="inline-flex items-center justify-center border border-white/60 text-white px-6 sm:px-8 py-3 rounded-none font-medium tracking-wide text-sm sm:text-base md:text-lg uppercase hover:bg-white/10 hover:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white/40"
               >
                 À propos
               </button>
