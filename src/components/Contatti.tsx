@@ -45,6 +45,8 @@ const Contatti = () => {
         },
         body: JSON.stringify({
           access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          to: 'superfilter10@gmail.com',
+          reply_to: formData.email,
           name: formData.name,
           email: formData.email,
           phone: formData.phone,
