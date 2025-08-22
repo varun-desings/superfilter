@@ -31,7 +31,7 @@ const Navigation = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
-      <div className="container mx-auto px-6 py-1">
+      <div className="container mx-auto px-6 py-0">
         <div className="flex items-center">
           {/* Left: Logo */}
           <div className="flex-1">
@@ -39,7 +39,7 @@ const Navigation = () => {
               <img 
                 src={logoImg} 
                 alt="Super Filtre Logo" 
-                className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 rounded object-contain"
+                className="w-14 h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 rounded object-contain"
               />
             </Link>
           </div>
