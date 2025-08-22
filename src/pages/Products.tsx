@@ -561,9 +561,9 @@ const ProductsPage = () => {
 															<></>
 														)}
 														<div className="mt-4 sm:mt-5 flex flex-col gap-2 sm:gap-3">
-															<button className="btn-accent flex items-center justify-center gap-2 w-full text-sm sm:text-base py-2 sm:py-3" onClick={(e) => { e.stopPropagation(); addToCart({ slug: item.slug, name: item.name, cover: item.cover || undefined }); toast.success('Aggiunto al carrello'); }}>
-																<ShoppingCart size={16} />
-																Ajouter au panier
+																											<button className="btn-accent flex items-center justify-center gap-2 w-full text-sm sm:text-base py-2 sm:py-3" onClick={(e) => { e.stopPropagation(); addToCart({ slug: item.slug, name: item.name, cover: item.cover || undefined }); toast.success('Aggiunto al carrello'); }}>
+													<ShoppingCart size={16} />
+													Demander un devis
 															</button>
 															<button className="btn-outline flex items-center justify-center gap-2 w-full text-sm sm:text-base py-2 sm:py-3">
 																Voir plus
@@ -607,9 +607,9 @@ const ProductsPage = () => {
 													)}
 
 													<div className="flex flex-col sm:flex-row gap-3 pt-2">
-														<button className="btn-accent flex items-center gap-2" onClick={() => { addToCart({ slug: item.slug, name: item.name, cover: item.cover || undefined }); toast.success('Aggiunto al carrello'); }}>
-															<ShoppingCart size={16} />
-															Ajouter au panier
+																										<button className="btn-accent flex items-center gap-2" onClick={() => { addToCart({ slug: item.slug, name: item.name, cover: item.cover || undefined }); toast.success('Aggiunto al carrello'); }}>
+													<ShoppingCart size={16} />
+													Demander un devis
 														</button>
 														<button className="btn-outline inline-flex items-center gap-2" onClick={() => navigate('/cart')}>
 															Aller au panier ({totalItems})
