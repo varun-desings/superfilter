@@ -1,5 +1,5 @@
 import { Star, Quote } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import catalogueItems from '@/data/catalogue';
 const testimonialImage = '/placeholder.svg';
 
@@ -26,9 +26,9 @@ const Progetti = () => {
         {/* Featured Products Grid (replaces projects grid) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 stagger-children">
           {featuredProducts.map((item: any, index: number) => (
-            <a
+            <Link
               key={item.slug}
-              href="/products"
+              to="/products"
               className="card-elegant overflow-hidden animate-scale-in group cursor-pointer"
               style={{ ['--stagger' as any]: index }}
             >
@@ -67,7 +67,7 @@ const Progetti = () => {
                   Voir la fiche produit →
                 </div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 
