@@ -389,6 +389,10 @@ const ProductsPage = () => {
 		if (n.includes('delo') && n.includes('600') && n.includes('adf') && (n.includes('10w-30') || n.includes('10w30'))) {
 			return 'Viscosité: 10W-30\n\nMarque: Chevron\n\nType de véhicule: Camions lourds, bus, engins agricoles, flottes mixtes diesel et gaz naturel comprimé (CNG)\nChevron Lubricants\n\nVolume: 5 L';
 		}
+		// Dasty plastic Renewer for car 750ml
+		if (n.includes('dasty') && n.includes('plastic') && (n.includes('renewer') || n.includes('renewer')) && (n.includes('750') || n.includes('750ml'))) {
+			return 'Viscosité : Non spécifiée\n\nMarque : Dasty\n\nType de véhicule : Voitures particulières, SUV, camions légers\n\nVolume : 750 ml';
+		}
 		return null;
 	};
 	
