@@ -96,6 +96,18 @@ const Contatti = () => {
           {/* Contact Form */}
           <div className="animate-fade-up">
             <h3 className="heading-md text-primary mb-8 font-inter">Demander un devis</h3>
+
+            {/* Map (above the contact form) */}
+            <div className="mb-8 rounded-lg border overflow-hidden bg-muted/20">
+              <iframe
+                src="https://www.google.com/maps/dir//SUPER+FILTRE,+%C3%80+proximit%C3%A9+de+Jardin+des+bons+vivants,+30+Av.+de+France,+El+Mourouj+2074/@36.7579246,10.2220016,714m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x12fd370e8fa7b3ad:0xf00b80e3c7a0a6de!2m2!1d10.2219387!2d36.7579755?entry=ttu&g_ep=EgoyMDI1MDgxOS4wIKXMDSoASAFQAw%3D%3D&output=embed"
+                className="w-full h-64 sm:h-80"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
+              />
+            </div>
             
             {/* Cart Summary */}
             {totalItems > 0 && (
